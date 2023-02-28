@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Menu from '@/components/menu'
-import { Box, Container, H1, H3, Text, CTA } from '@/components/globals'
+import { Box, Hero, Container, H1, H3, Text, CTA } from '@/components/globals'
 
 export default function Home() {
   return (
@@ -17,16 +17,19 @@ export default function Home() {
       <main className={styles.main}>
         <Menu></Menu>
         
-        <Container style={{backgroundImage:"url('/Landing.svg')", width:"100%", height:"100vh", backgroundRepeat:"no-repeat", backgroundSize:"cover", justifyContent:"center", alignItems:"flex-end", margin:"-120px 0px 500px -10px"}}>
-          <Box flexDir="column" width="40%" minHeight="fit-content" padding="0 30px">
+        <Hero className="hero" width="100%" minHeight="99vh" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" margin="-100px 0px 0px -10px" justCont="flex-start" aliIt="center" >
+          <Box className="heroCont" flexDir="column" width="40%" minHeight="fit-content" margin="300px 50px 0px 50px">
             <H3 color="#B23C87" fSize="25px" padding="10px 0">FRONT-END DEVELOPER</H3>
             <H1 color='#EA638D' fSize="65px" padding="10px 0">Ana Arango</H1>
             <Text color="white" padding="50px 0">A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications.</Text>
             <CTA>Don't Be A Stranger</CTA>
           </Box>
-          <Box width="50%">
+          <Box className="heroCont" width="50%">
             <Image src="/Hero.gif" width={150} height={100} style={{width:"100%", height:"fit-content"}}></Image>
           </Box>
+        </Hero>
+        <Container width="100%" height="100vh">
+
         </Container>
 
       </main>

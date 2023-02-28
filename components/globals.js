@@ -77,6 +77,11 @@ export const Hero = styled.div`
     right:${props=>props.right};
     transform: ${props=>props.transform};
     z-index:${props=>props.zIndex};
+    display:flex;
+    justify-content:${props=>props.justCont};
+    align-items:${props=>props.aliIt};
+    flex-direction:${props=>props.flexDir};
+    min-height:${props=>props.minHeight};
 `
 
 export const Box = styled.div`
