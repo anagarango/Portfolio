@@ -51,8 +51,28 @@ export const Text = styled.p`
     display:flex;
     justify-content:${props=>props.justCont};
     align-items:${props=>props.aliIt};
-    color: ${props=>props.color};
-    font-weight:${props=>props.fontWeight}
+    color: ${props=>props.color || "white"};
+    font-weight:${props=>props.fontWeight};
+    background-color:${props=>props.bgColor};
+    border-radius:${props=>props.borderRadius};
+    min-width: ${props=>props.minWidth};
+    cursor:${props=>props.cursor};
+`
+
+export const Span = styled.span`
+    width:${props=>props.width};
+    height:${props=>props.height};
+    text-align:${props=>props.textAlign};
+    margin:${props=>props.margin};
+    padding:${props=>props.padding};
+    display:${props=>props.display || "flex"};
+    justify-content:${props=>props.justCont};
+    align-items:${props=>props.aliIt};
+    color: ${props=>props.color || "white"};
+    font-weight:${props=>props.fontWeight};
+    background-color:${props=>props.bgColor};
+    border-radius:${props=>props.borderRadius};
+    min-width: ${props=>props.minWidth};
 `
 
 export const Image = styled.img`
@@ -81,13 +101,15 @@ export const Hero = styled.div`
     justify-content:${props=>props.justCont};
     align-items:${props=>props.aliIt};
     flex-direction:${props=>props.flexDir};
-    min-height:${props=>props.minHeight};
+    min-height:${props=>props.minHeight}; 
+    border: ${props=>props.border};
+    overflow-y:${props=>props.overflow};
 `
 
 export const Box = styled.div`
-    width:${props=>props.width || "100vw"};
-    max-width: ${props=>props.width};
-    height:${props=>props.height || "fit-content"};
+    width:${props=>props.width};
+    max-width: ${props=>props.maxWidth};
+    height:${props=>props.height};
     min-height:${props=>props.minHeight};
     background-color:${props=>props.bgColor};
     display:flex;
@@ -97,7 +119,7 @@ export const Box = styled.div`
     flex-direction:${props=>props.flexDir};
     margin:${props=>props.margin};
     flex-wrap:${props=>props.flexWrap};
-    overflow:${props=>props.overflow};
+    overflow-x:${props=>props.overflow};
     border-radius:${props=>props.borderRadius};
     position:${props=>props.position};
     top:${props=>props.top};
@@ -107,6 +129,7 @@ export const Box = styled.div`
     box-shadow:${props=>props.boxShadow};
     z-index:${props=>props.zIndex};
     border:${props=>props.border};
+
 `
 export const PullQuote = styled.blockquote`
     font-size:22px;
