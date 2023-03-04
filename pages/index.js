@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
-import Menu from '@/components/menu'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
 import { Box, Hero, Container, H1, H3, H4, Text, Span, CTA } from '@/components/globals'
 import { Skills } from '@/data/skills'
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,19 +11,19 @@ import { Tech } from '@/data/tools'
 import TechSlideshow from '@/components/slideshow'
 
 export default function Home() {
-  const [skill, setSkill] = useState(Skills[0].title)
+  const [skill, setSkill] = useState(0)
   const [skillObject, setSkillObject] = useState(Skills[0])
 
   const currentYear = new Date().getFullYear();
 
-  function Browser(){
-    for(var x = 0; x < Skills.length; x++){
-      if(skill === Skills[x].title){
-        setSkillObject(Skills[x])
+  // function Browser(){
+  //   for(var x = 0; x < Skills.length; x++){
+  //     if(skill === Skills[x].title){
+  //       setSkillObject(Skills[x])
         
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
   return (
     <>
       <Head>
@@ -33,7 +34,8 @@ export default function Home() {
       </Head>
       
       <main>
-        {/* <Menu></Menu> */}
+        <Header/>
+        <Footer/>
         
         <Hero className="hero" minHeight="99vh" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" margin="-100px 0px 0px -10px" justCont="flex-start" aliIt="center" >
           <Box className="heroCont" flexDir="column" width="40%" minHeight="fit-content" margin="300px 50px 0px 50px">
@@ -50,7 +52,7 @@ export default function Home() {
         <Container flexDir="column" width="100%" aliIt="flex-end" padding="50px" margin="30px 0 0 0" className='aboutme'>
           <H3 color='#B23C87' padding="10px 0">About Me</H3>
           <Box display="inline" width="100%">
-              <img className='aboutmeimage' src="/aboutme.png" width={200} height={200} style={{width:"30%", height:"100%", float:"left", margin:"0px 30px 30px 50px", minWidth:"350px"}}></img>
+              <Image className='aboutmeimage' src="/aboutme.png" width={200} height={200} style={{width:"40%", height:"100%", float:"left", margin:"0px 30px 30px 50px", minWidth:"350px"}}></Image>
               <Text width="100%" textAlign="end" padding="0 0 30px 0">I’m Ana Arango, {currentYear-2003} year old front-end developer, from Vancouver, Canada.</Text>
               <Text width="100%" textAlign="end" padding="0 0 30px 0">From straight of high school, I started my post-secondary education in the Digital Design and Development with no prior knowledge of programming, but after 2 years, I’ve learned many new technologies a front-end developer needs to create functional appealing websites and web-applications.</Text>
               <Text width="100%" textAlign="end" padding="0 0 30px 0">Fueled by new ideas, I enjoy designing coding things from scratch as it continues putting new challenges on myself. I’m passionate, expressive, and naturally curious in exploring new techniques and technologies to keep up with the ever-evolving web development landscape.</Text>
@@ -58,28 +60,12 @@ export default function Home() {
               <Text width="100%" textAlign="end" padding="0 0 30px 0">About 90% the traits of being of ISFJ personality type defines me, as I would describe myself as reliable, supportive, and hardworking. Fun fact, Pam Beesly shares the same personality, so that’s the type of person my employer could expect if they hire me.</Text>
               <Text width="100%" textAlign="end" padding="0 0 30px 0" fontWeight="700">Take a look at my portfolio to see some of my recent work and get in touch if you're interested in working together.</Text>
           </Box>
+
           <H4 color='#9DFFFF' fSize="25px" padding="10px 0" margin="70px 0 10px 0" width="100%">What I Value</H4>
-          <Box width="100%" minHeight="200px" border="1px solid grey" borderRadius="10px" flexDir="column" >
-            <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" >
-              <Box width="100%" height="100%" margin="0 0 0 100px" aliIt="center" style={{overflowX: "scroll", whiteSpace: "nowrap"}}>
-                {Skills.map((o,i) => (
-                  <Text onClick={()=>{setSkillObject(o)}} key={i} cursor="pointer" aliIt="center" height="fit-content" minWidth="fit-content" padding="5px 10px" bgColor={skillObject === Skills[i] ? "#A399E2" : "#28284D"} style={{transition: "background-color 0.5s ease-out"}} borderRadius="6px" margin="0 10px 0 0">{o.title}</Text>
-                ))}
-              </Box>
-            </Hero>
-            <AnimatePresence mode='wait'>
-                <motion.div key={skillObject ? skillObject.title : "empty"} initial={{ opacity: 0, display:"none" }} animate={{ opacity: 1, display:"flex"}} exit={{ opacity: 0, display:"none"}} transition={{ duration: 0.7}} style={{display:"flex", flexDirection:"column", padding:"25px", transition: "0.5s ease-out"}}>
-                  <Text fontWeight="700" padding="0 0 15px 0">{skillObject.title}</Text>
-                  <Text padding="0 0 10px 0">{skillObject.p1}</Text>
-                  <Text padding="0 0 10px 0">{skillObject.p2}</Text>
-                  <p style={{color:"white"}}><strong style={{fontWeight:"800", color:"#EA638D"}}>{skillObject.projectName}</strong>{skillObject.project}</p>
-                </motion.div>
-            </AnimatePresence>
-          </Box>
-          {/* <BrowserModel onClick={(event)=>{setSkill(event.target.innerText); Browser()}} state={skillObject} array={Skills}></BrowserModel> */}
-          <H4 color='#9DFFFF' fSize="25px" padding="10px 0" margin="70px 0 10px 0" width="100%">Tools and Technologies I've Used</H4>
-          <TechSlideshow></TechSlideshow>
-          
+          <BrowserModel onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={Skills}/>
+
+          <H4 color='#9DFFFF' fSize="25px" padding="10px 0" margin="70px 0 10px 0" width="100%">Tools and Technologies I Use</H4>
+          <TechSlideshow/>
         </Container>
         
 
