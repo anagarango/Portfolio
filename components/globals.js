@@ -56,6 +56,7 @@ export const Text = styled.p`
     background-color:${props=>props.bgColor};
     border-radius:${props=>props.borderRadius};
     min-width: ${props=>props.minWidth};
+    max-width: ${props=>props.maxWidth};
     cursor:${props=>props.cursor};
 `
 

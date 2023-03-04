@@ -1,14 +1,27 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Menu from '@/components/menu'
 import { Box, Hero, Container, H1, H3, Text, Span, CTA } from '@/components/globals'
 import { Skills } from '@/data/skills'
+import { motion, AnimatePresence } from "framer-motion";
+import BrowserModel from '@/components/browserModel'
 
 
 export default function Home() {
-  const [skill, setSkill] = useState(0)
+  const [skill, setSkill] = useState(Skills[0].title)
+  const [skillObject, setSkillObject] = useState(Skills[0])
 
+  const currentYear = new Date().getFullYear();
+
+  function Browser(){
+    for(var x = 0; x < Skills.length; x++){
+      if(skill === Skills[x].title){
+        setSkillObject(Skills[x])
+        
+      }
+    }
+  }
   return (
     <>
       <Head>
@@ -33,21 +46,32 @@ export default function Home() {
           </Box>
         </Hero>
 
-        <Container width="90%" minHeight="200px" margin="0 50px 200px 50px" border="1px solid grey" borderRadius="10px" flexDir="column">
-          <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" >
-            <Box width="100%" height="100%" margin="0 0 0 100px" aliIt="center" style={{overflowX: "scroll", whiteSpace: "nowrap"}}>
-              {Skills.map((o,i) => (
-                <Text onClick={()=>{setSkill(i); console.log(o)}} key={i} cursor="pointer" aliIt="center" height="fit-content" minWidth="fit-content" padding="5px 10px" bgColor={skill === i ? "#A399E2" : "#28284D"} borderRadius="6px" margin="0 10px 0 0">{o.title}</Text>
-              ))}
-            </Box>
-          </Hero>
-          <Box flexDir="column" padding="25px">
-            <Text fontWeight="700" padding="0 0 15px 0">{Skills[skill].title}</Text>
-            <Text padding="0 0 10px 0">{Skills[skill].p1}</Text>
-            <Text padding="0 0 10px 0">{Skills[skill].p2}</Text>
-            <p style={{color:"white"}}><strong style={{fontWeight:"800", color:"#EA638D"}}>{Skills[skill].projectName}</strong>{Skills[skill].project}</p>
-            
+        <Container flexDir="column" width="100%" aliIt="flex-end" padding="50px">
+          <H3 color='#B23C87' fSize="25px" padding="10px 0">About Me</H3>
+          <Text textAlign="end" padding="0 0 25px 0" maxWidth="850px">I’m Ana Arango, {currentYear-2003} year old front-end developer, from Vancouver, Canada.</Text>
+          <Text textAlign="end" padding="0 0 25px 0" maxWidth="850px">From straight of high school, I started my post-secondary education in the Digital Design and Development with no prior knowledge of programming, but after 2 years, I’ve learned many new technologies a front-end developer needs to create functional appealing websites and web-applications.</Text>
+          <Text textAlign="end" padding="0 0 25px 0" maxWidth="850px">Fueled by new ideas, I enjoy designing coding things from scratch as it continues putting new challenges on myself. I’m passionate, expressive, and naturally curious in exploring new techniques and technologies to keep up with the ever-evolving web development landscape. I can use to create cooler web solutions.</Text>
+          <Text textAlign="end" padding="0 0 25px 0" maxWidth="850px">I have a strong foundation in design principles and user experience after working on various projects with group mates and clients. Everything I have done, either small tasks or big projects, has led me to where I am today.</Text>
+          <Text textAlign="end" padding="0 0 25px 0" maxWidth="850px">About 90% the traits of being of ISFJ personality type defines me, as I would describe myself as reliable, supportive, and hardworking. Fun fact, Pam Beesly shares the same personality, so that’s the type of person my employer could expect if they hire me.</Text>
+          <Text textAlign="end" padding="0 0 25px 0" maxWidth="850px">Take a look at my portfolio to see some of my recent work and get in touch if you're interested in working together."</Text>
+          <Box width="90%" minHeight="200px" margin="0 50px 200px 50px" border="1px solid grey" borderRadius="10px" flexDir="column">
+            <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" >
+              <Box width="100%" height="100%" margin="0 0 0 100px" aliIt="center" style={{overflowX: "scroll", whiteSpace: "nowrap"}}>
+                {Skills.map((o,i) => (
+                  <Text onClick={()=>{setSkillObject(o)}} key={i} cursor="pointer" aliIt="center" height="fit-content" minWidth="fit-content" padding="5px 10px" bgColor={skillObject === Skills[i] ? "#A399E2" : "#28284D"} style={{transition: "background-color 0.5s ease-out"}} borderRadius="6px" margin="0 10px 0 0">{o.title}</Text>
+                ))}
+              </Box>
+            </Hero>
+            <AnimatePresence mode='wait'>
+                <motion.div key={skillObject ? skillObject.title : "empty"} initial={{ opacity: 0, display:"none" }} animate={{ opacity: 1, display:"flex"}} exit={{ opacity: 0, display:"none"}} transition={{ duration: 0.7}} style={{display:"flex", flexDirection:"column", padding:"25px", transition: "0.5s ease-out"}}>
+                  <Text fontWeight="700" padding="0 0 15px 0">{skillObject.title}</Text>
+                  <Text padding="0 0 10px 0">{skillObject.p1}</Text>
+                  <Text padding="0 0 10px 0">{skillObject.p2}</Text>
+                  <p style={{color:"white"}}><strong style={{fontWeight:"800", color:"#EA638D"}}>{skillObject.projectName}</strong>{skillObject.project}</p>
+                </motion.div>
+            </AnimatePresence>
           </Box>
+          {/* <BrowserModel onClick={(event)=>{setSkill(event.target.innerText); Browser()}} state={skillObject} array={Skills}></BrowserModel> */}
         </Container>
         
 
