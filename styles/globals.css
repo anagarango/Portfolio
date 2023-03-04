@@ -39,6 +39,34 @@ div.scrollmenu a:hover {
   background-color: #777;
 }
 
+.techLogo:hover{
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+.sheesh{
+  animation: scroll 40s linear infinite;
+}
+.sheesh::before, .sheesh::after{
+  background: linear-gradient(to right, rgba(10,0,44,1) 0%, rgba(10,0,44,0) 100%);
+  height:100%;
+  position:absolute
+}
+
+.sheesh:hover{
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translateX(calc(-160px * 20));
+  }
+  
+}
+
 @media (max-width:900px){
   .hero{
     flex-direction: column-reverse !important;
@@ -59,4 +87,16 @@ div.scrollmenu a:hover {
     max-width: 90%;
     min-width: 90%;
   }
+
+  .aboutme{
+    padding: 30px !important;
+  }
+}
+
+@media (max-width:750px){
+  .aboutmeimage{
+    margin: 0px 0px 30px 0 !important;
+    min-width: 100% !important
+  }
+
 }
