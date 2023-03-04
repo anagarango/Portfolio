@@ -31,7 +31,7 @@ export const H3 = styled.h3`
     cursor: ${props=>props.cursor};
     text-align:${props=>props.textAlign};
     width:${props=>props.width};
-    font-size:${props=>props.fSize};
+    font-size:${props=>props.fSize || "30px"};
     font-family: 'Staatliches';
 `
 export const H4 = styled.h4`
@@ -40,6 +40,7 @@ export const H4 = styled.h4`
     margin:${props=>props.margin};
     text-align:${props=>props.textAlign};
     font-weight:${props=>props.fontWeight};
+    width:${props=>props.width}
 `
 
 export const Text = styled.p`
@@ -48,7 +49,6 @@ export const Text = styled.p`
     text-align:${props=>props.textAlign};
     margin:${props=>props.margin};
     padding:${props=>props.padding};
-    display:flex;
     justify-content:${props=>props.justCont};
     align-items:${props=>props.aliIt};
     color: ${props=>props.color || "white"};
@@ -98,7 +98,7 @@ export const Hero = styled.div`
     right:${props=>props.right};
     transform: ${props=>props.transform};
     z-index:${props=>props.zIndex};
-    display:flex;
+    display:${props=>props.display || "flex"};
     justify-content:${props=>props.justCont};
     align-items:${props=>props.aliIt};
     flex-direction:${props=>props.flexDir};
@@ -113,7 +113,7 @@ export const Box = styled.div`
     height:${props=>props.height};
     min-height:${props=>props.minHeight};
     background-color:${props=>props.bgColor};
-    display:flex;
+    display:${props=>props.display || "flex"};
     justify-content:${props=>props.justCont};
     align-items:${props=>props.aliIt};
     padding:${props=>props.padding};
