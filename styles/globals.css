@@ -11,9 +11,32 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: inherit;
+main{
+  display: flex;
+  flex-direction: column;
+  background-color: #0a002c;
+  padding: 0 0 0 70px;
+  align-items: center;
+  width: 100vw;
+  height: fit-content;
+}
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
   text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
 }
 
 @media (max-width:900px){
