@@ -43,7 +43,7 @@ export default function Home() {
         <Header/>
         <Footer/>
         
-        <Hero className="hero" minHeight="99vh" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" margin="-100px 0px 0px -10px" justCont="flex-start" aliIt="center" >
+        <Hero id="Home" className="hero" minHeight="99vh" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" margin="-100px 0px 0px -10px" justCont="flex-start" aliIt="center" >
           <Box className="heroCont" flexDir="column" width="40%" minHeight="fit-content" margin="300px 50px 0px 50px">
             <H3 color="#B23C87" padding="10px 0">FRONT-END DEVELOPER</H3>
             <H1 color='#EA638D' fSize="65px" padding="10px 0">Ana Arango</H1>
@@ -55,7 +55,7 @@ export default function Home() {
           </Box>
         </Hero>
 
-        <Container id="CollaboratorFemale" flexDir="column" width="100%" aliIt="flex-end" padding="50px" margin="30px 0 0 0" className='aboutme'>
+        <Container id="About" flexDir="column" width="100%" aliIt="flex-end" padding="50px" margin="30px 0 0 0" className='aboutme'>
           <H3 color='#B23C87' padding="10px 0">About Me</H3>
           <Box display="inline" width="100%">
               <Image className='aboutmeimage' src="/aboutme.png" width={200} height={200} style={{width:"40%", height:"100%", float:"left", margin:"0px 30px 30px 50px", minWidth:"350px"}}></Image>

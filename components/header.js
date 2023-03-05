@@ -3,9 +3,10 @@ import Image from "next/image"
 import Link from "next/link"
 
 const HeaderImage = [
-    "About Me",
+    "Home",
+    "About",
     "Projects",
-    "Coding Experience"
+    "Experience"
 ]
 
 export default function Header(){
