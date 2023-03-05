@@ -54,7 +54,7 @@ div.scrollmenu a:hover {
 }
 
 .sheesh{
-  animation: scroll 45s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .sheesh:hover{
@@ -66,7 +66,7 @@ div.scrollmenu a:hover {
     transform: translate(0);
   }
   100%{
-    transform: translateX(calc(-145px * 20));
+    transform: translateX(calc(-95px * 20));
   }
   
 }
