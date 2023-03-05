@@ -8,12 +8,12 @@ export default function TechSlideshow(){
             <Box className='sheesh' style={{display:"flex", position:"relative", alignItems:"flex-start", justifyContent:"flex-start", padding:"10px 10px 5px 10px"}}>
               {Tech.map((o,i)=>(
               // <Box flexDir="column" aliIt="center" width="145px">
-                <Image title={o.title} className="techLogo" src={`/HorizontalLogos/${o.src}`} alt={o.title} width={45} height={45} margin="0 20px"></Image>
+                <Image title={o.title} className="techLogo" src={`/HorizontalLogos/${o.src}`} alt={o.title} width={45} height={45} margin="0 25px"></Image>
               // </Box>
               ))}
               {Tech.map((o,i)=>(
                 // <Box flexDir="column" aliIt="center" width="145px">
-                  <Image title={o.title} className="techLogo" src={`/HorizontalLogos/${o.src}`} alt={o.title} width={45} height={45} margin="0 20px"></Image>
+                  <Image title={o.title} className="techLogo" src={`/HorizontalLogos/${o.src}`} alt={o.title} width={45} height={45} margin="0 25px"></Image>
                 // </Box>
               ))}
             </Box>

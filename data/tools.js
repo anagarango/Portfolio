@@ -45,7 +45,7 @@ export const Tech = [
         src:"framer.png",
         title:"Framer Motion"
     },{
-        src:"Playwright.svg",
+        src:"playwright.svg",
         title:"Playwright"
     },{
         src:"lottiefiles.svg",
