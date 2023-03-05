@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Footer(){
 
     const Links = [
-        {image:"Youtube", url:"https://www.youtube.com/channel/UCztvL6zXMKsyyJ1EfNsNpGQ"},
+        {image:"YouTube", url:"https://www.youtube.com/channel/UCztvL6zXMKsyyJ1EfNsNpGQ"},
         {image:"GitHub", url:"https://github.com/anagarango"},
         {image:"LinkedIn", url:"https://www.linkedin.com/in/ana-arango-08592122a/"}
     ]
