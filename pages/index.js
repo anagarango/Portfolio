@@ -24,6 +24,12 @@ export default function Home() {
   //     }
   //   }
   // }
+
+  useEffect(()=>{
+    // if(refresh){
+    //     window.location.replace = "/";
+    // }
+  },[])
   return (
     <>
       <Head>
@@ -49,11 +55,11 @@ export default function Home() {
           </Box>
         </Hero>
 
-        <Container flexDir="column" width="100%" aliIt="flex-end" padding="50px" margin="30px 0 0 0" className='aboutme'>
+        <Container id="CollaboratorFemale" flexDir="column" width="100%" aliIt="flex-end" padding="50px" margin="30px 0 0 0" className='aboutme'>
           <H3 color='#B23C87' padding="10px 0">About Me</H3>
           <Box display="inline" width="100%">
               <Image className='aboutmeimage' src="/aboutme.png" width={200} height={200} style={{width:"40%", height:"100%", float:"left", margin:"0px 30px 30px 50px", minWidth:"350px"}}></Image>
-              <Text width="100%" textAlign="end" padding="0 0 30px 0">I’m Ana Arango, {currentYear-2003} year old front-end developer, from Vancouver, Canada.</Text>
+              <Text width="100%" textAlign="end" padding="0 0 30px 0">I’m Ana Arango, {currentYear-2004} year old front-end developer, from Vancouver, Canada.</Text>
               <Text width="100%" textAlign="end" padding="0 0 30px 0">From straight of high school, I started my post-secondary education in the Digital Design and Development with no prior knowledge of programming, but after 2 years, I’ve learned many new technologies a front-end developer needs to create functional appealing websites and web-applications.</Text>
               <Text width="100%" textAlign="end" padding="0 0 30px 0">Fueled by new ideas, I enjoy designing coding things from scratch as it continues putting new challenges on myself. I’m passionate, expressive, and naturally curious in exploring new techniques and technologies to keep up with the ever-evolving web development landscape.</Text>
               <Text width="100%" textAlign="end" padding="0 0 30px 0">I have a strong foundation in design principles and user experience after working on various projects with group mates and clients. Everything I have done, either small tasks or big projects, has led me to where I am today.</Text>
