@@ -1,4 +1,4 @@
-import { Container, Box, H4 } from "./globals"
+import { Box } from "./globals"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -25,9 +25,9 @@ export default function Header(){
         })
       }
     return(
-            <Box width="70px" position="fixed" left="0" top="0"  height="95vh" bgColor="#28284D" flexDir="column" aliIt="center" zIndex="5">
+            <Box width="65px" position="fixed" left="0" top="0"  height="95vh" bgColor="#28284D" flexDir="column" aliIt="center" zIndex="5">
                 {HeaderImage.map((o,i)=>(
-                    <Link title={o} className="headerLinks" href={`#${o}`} scroll={false} style={{display:"flex", margin:"20px 0px"}}>
+                    <Link key={i} title={o} className="headerLinks" href={`#${o}`} scroll={false} style={{display:"flex", margin:"20px 0px"}}>
                         <Image src={`/Icons/${o}.svg`} width={40} height={40} style={{margin:"10px"}}></Image>
                     </Link>
                 ))}

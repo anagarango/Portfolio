@@ -1,17 +1,17 @@
-import { Container, Box, Hero, Text, H1 } from "./globals"
+import { Box, Hero, Text } from "./globals"
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function BrowserModel({
     array,
     state,
-    onClick=()=>{},
+    onClick=()=>{}
 }){
     return(
         <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
           <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px">
             <Box width="100%" height="100%" margin="0 0 0 100px" aliIt="center" style={{overflowX: "scroll", whiteSpace: "nowrap"}}>
               {array.map((o,i) => (
-                <Text value={i} onClick={onClick} key={i} cursor="pointer" aliIt="center" height="fit-content" minWidth="fit-content" padding="5px 10px" bgColor={array[state].title === o.title ? "#A399E2" : "#28284D"} style={{transition: "background-color 0.5s ease-out"}} borderRadius="6px" margin="0 10px 0 0">{o.title}</Text>
+                <Text key={i} value={i} onClick={onClick} cursor="pointer" aliIt="center" height="fit-content" minWidth="fit-content" padding="5px 10px" bgColor={array[state].title === o.title ? "#A399E2" : "#28284D"} style={{transition: "background-color 0.5s ease-out"}} borderRadius="6px" margin="0 10px 0 0">{o.title}</Text>
               ))}
             </Box>
           </Hero>
