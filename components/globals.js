@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const H1 = styled.h1`
+export const Heading = styled.h1`
     color: ${props=>props.color};
     padding:${props=>props.padding};
     position:${props=>props.position};
@@ -15,32 +15,10 @@ export const H1 = styled.h1`
     z-index:${props=>props.zIndex};
     margin-top:${props=>props.marginTop};
     padding-top:${props=>props.paddingTop};
-`
-export const H2 = styled.h2`
-    color: ${props=>props.color};
     cursor: ${props=>props.cursor};
-    width:${props=>props.width};
-    font-size:${props=>props.fSize};
-    margin:${props=>props.margin || "0px"};
-    text-align:${props=>props.textAlign};
-    padding:${props=>props.padding };
-`
-export const H3 = styled.h3`
-    color: ${props=>props.color};
-    padding:${props=>props.padding};
-    cursor: ${props=>props.cursor};
-    text-align:${props=>props.textAlign};
-    width:${props=>props.width};
-    font-size:${props=>props.fSize || "30px"};
-    font-family: 'Staatliches';
-`
-export const H4 = styled.h4`
-    color: ${props=>props.color};
-    padding:${props=>props.padding};
-    margin:${props=>props.margin};
     text-align:${props=>props.textAlign};
     font-weight:${props=>props.fontWeight};
-    width:${props=>props.width}
+    font-family:${props=>props.fontFamily}
 `
 
 export const Text = styled.p`
@@ -146,7 +124,7 @@ export const Container = styled(Box)`
 export const CTA = styled.button`
   width:fit-content;
   height:fit-content;
-  padding:10px 35px;
+  padding:8px 25px;
   background-color:transparent;
   border: 4px solid #9DFFFF;
   border-radius:10px;
@@ -154,4 +132,26 @@ export const CTA = styled.button`
   font-size:16px;
   font-weight:600;
   cursor:pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #9DFFFF;
+    color: #28284D
+  }
+`
+
+export const Tag = styled.button`
+  width:fit-content;
+  height:fit-content;
+  padding:8px;
+  background-color: #28284D;
+  border-radius:10px;
+  border:0px;
+  color:#9D95DC;
+  font-size:14px;
+  font-weight:500;
+  margin:2.5px 5px 2.5px 0px;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.1)
+  }
 `
