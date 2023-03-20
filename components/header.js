@@ -27,12 +27,12 @@ export default function Header(){
     return(
             <Box width="65px" position="fixed" left="0" top="0"  height="95vh" bgColor="#28284D" flexDir="column" aliIt="center" zIndex="5">
                 {HeaderImage.map((o,i)=>(
-                    <Link key={i} title={o} className="headerLinks" href={`#${o}`} scroll={false} style={{display:"flex", margin:"20px 0px"}}>
-                        <Image src={`/Icons/${o}.svg`} width={40} height={40} style={{margin:"10px"}}></Image>
+                    <Link key={i} title={o} href={`/#${o}`} scroll={false} style={{display:"flex", margin:"20px 0px"}}>
+                        <Image className={o} src={`/Icons/${o}.svg`} width={40} height={40} style={{margin:"10px"}}></Image>
                     </Link>
                 ))}
-                <Link title="Resume" className="headerLinks" href="#resume" onClick={DownloadResume} style={{ position:"absolute", bottom:15, padding:"10px"}}>
-                    <Image src="/Icons/Resume.svg" width={40} height={40}/>
+                <Link title="Resume" href="#resume" onClick={DownloadResume} style={{ position:"absolute", bottom:15, padding:"10px"}}>
+                    <Image className="Resume" src="/Icons/Resume.svg" width={40} height={40}/>
                 </Link>
             </Box>
     )
