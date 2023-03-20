@@ -10,6 +10,7 @@ import BrowserModel from '@/components/browserModel'
 import { Projects } from '@/data/projects'
 import TechSlideshow from '@/components/slideshow'
 import { useRouter } from 'next/router'
+import Card from '@/components/card'
 
 export default function Home() {
   const [skill, setSkill] = useState(0)
@@ -87,21 +88,18 @@ export default function Home() {
           <Container id="Projects" flexDir="column" width="100%" padding="200px 150px">
             <Heading color='#B23C87' fontFamily='Staatliches' padding="10px 0">Projects</Heading>
             <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
-            {Projects.map((o,i)=>(
-              <Box key={i} padding="50px 0px" aliIt="center" width="100%">
-                <Image alt={o.name} src={o.image} width={200} height={200} style={{width:"40%", height:"450px", paddingRight:"5%", objectFit: "cover"}}/>
-                <Box flexDir="column" width="55%" height="100%" justCont="center">
-                  <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="25px" padding="10px 0" width="100%">{o.name}</Heading>
-                  <Text>{o.preview}</Text>
-                  <Box flexWrap="wrap" padding="20px 0px">
-                    {o.tech.map((text, index)=>(
-                      <Tag key={index}>{text}</Tag>
-                    ))}
-                  </Box>
-                  <CTA onClick={()=>{SelectProject(o)}}>Read More</CTA>
-                </Box>
-              </Box>
-            ))}
+            {Projects.map((o,i)=>{
+              if(i % 2 == 0){
+                return(
+                  <Card key={i} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} onClick={()=>{SelectProject(o)}} />
+                )
+              } else {
+                return(
+                  <Card type="right" key={i} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} onClick={()=>{SelectProject(o)}} />
+                )
+              }
+              
+            })}
           
           </Container>
 

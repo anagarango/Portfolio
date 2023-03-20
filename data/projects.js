@@ -16,5 +16,23 @@ export const Projects = [
         carousel:[
             "/Rooty/1.jpg",  "/Rooty/2.jpg",  "/Rooty/3.jpg",  "/Rooty/4.jpg",  "/Rooty/5.jpg",  "/Rooty/6.jpg",  "/Rooty/7.jpg",  "/Rooty/8.jpg",  "/Rooty/9.jpg",  "/Rooty/10.jpg"
         ]
+    },
+    {
+        name: "She's A Keeper",
+        preview:"She’s A Keeper is a cleaning service website for a self-employed housekeeper in the Tri-Cities area. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning.",
+        tech:[
+            "Next.js", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer-Motion", "Emailjs", "Swiper"
+        ],
+        image:"/ShesAKeeper.png",
+        figma:"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSglfnyfQM1mVusvnMsj9fu%2FShe's-A-Keeper%3Fnode-id%3D0%253A1%26t%3DhohDG2uiQljQjT6v-1",
+        p1:"She’s A Keeper is a cleaning service website of a self-employed housekeeper offering her services in the Tri-Cities area. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning",
+        p2Role:"Front-End Developer, Content Writer, and Designer – I came up with the design of the website, along with the content, and developed the whole website.",
+        p3:"Before I started designing, I first researched competitive local businesses, applied what I could find to make my client unique from the rest, and researched for page layout inspirations to create a modern, clean look that makes sense for the type of business. Created a logo which didn’t exist before.",
+        p4:"When I saw some impressive styling to make function seem less static, I looked at different newly-updated UI libraries such as Leaflet, Framer-Motion and Swiper.js that can be used in Next.js and learned how to install and use them. With HTML and CSS – Styled-components to create all components for each page, I had to debug my front-end code so that it stays responsive on different devices and make sure my code was easy to read and maintain with consistent naming conventions and reusing components to remove clutter. Other programs I used to complete this project are Figma and Adobe Package, specifically Illustrator and Photoshop.",
+        github:"https://github.com/anagarango/sandracleaning",
+        vercel:"https://shesakeeper.starbooks.ca",
+        carousel:[
+            "/ShesAKeeper/1.jpg",  "/ShesAKeeper/2.jpg",  "/ShesAKeeper/3.jpg",  "/ShesAKeeper/4.jpg",  "/ShesAKeeper/5.jpg",  "/ShesAKeeper/6.jpg",  "/ShesAKeeper/7.jpg",  "/ShesAKeeper/8.jpg"
+        ]
     }
 ]
