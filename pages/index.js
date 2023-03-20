@@ -13,7 +13,6 @@ import { useRouter } from 'next/router'
 
 export default function Home() {
   const [skill, setSkill] = useState(0)
-  const [skillObject, setSkillObject] = useState(Skills[0])
 
   const r = useRouter()
   const currentYear = new Date().getFullYear();
@@ -27,7 +26,14 @@ export default function Home() {
           preview:data.preview,
           tech:data.tech,
           image:data.image,
-          figma:data.figma
+          figma:data.figma,
+          p1:data.p1,
+          p2Role:data.p2Role,
+          p3: data.p3,
+          p4: data.p4,
+          github: data.github,
+          vercel: data.vercel,
+          carousel:data.carousel
         }
     }, `${data.name}`)
   }
