@@ -2,7 +2,7 @@ import { Box, Image, Heading, Text, Tag, CTA } from "./globals"
 
 export default function Card({
     type="left",
-    key,
+    key="a",
     alt,
     src,
     heading,

@@ -11,6 +11,7 @@ import { Projects } from '@/data/projects'
 import TechSlideshow from '@/components/slideshow'
 import { useRouter } from 'next/router'
 import Card from '@/components/card'
+import Contact from '@/components/contact'
 
 export default function Home() {
   const [skill, setSkill] = useState(0)
@@ -95,13 +96,24 @@ export default function Home() {
                 )
               } else {
                 return(
-                  <Card type="right" key={i} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} onClick={()=>{SelectProject(o)}} />
+                  <Card key={i} type="right" alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} onClick={()=>{SelectProject(o)}} />
                 )
               }
               
             })}
           
           </Container>
+
+          <Container id="Projects" flexDir="column" width="100%" padding="0px 150px 100px 150px">
+            <Heading color='#B23C87' fontFamily='Staatliches' padding="10px 0">Wanna Talk?</Heading>
+            <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. <strong>Ttyl!</strong></Text>
+            <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
+              <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
+              <Contact/>
+            </Box>
+          </Container>
+
+          
 
       </main>
     </>
