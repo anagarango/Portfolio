@@ -29,10 +29,10 @@ export default function Project(){
         <Header/>
         <Footer/>
 
-          {/* <Container minHeight="100vh" id="About" flexDir="column" width="100%" padding="10px 150px 80px 150px" aliIt="flex-start">
+          <Container minHeight="100vh" id="About" flexDir="column" width="100%" padding="10px 150px 80px 150px" aliIt="flex-start">
             <Heading color='#B23C87' fontFamily='Staatliches' padding="10px 0">{project.name}</Heading>
             <Swiper spaceBetween={30} centeredSlides={true} autoplay={{delay: 4000, disableOnInteraction: true}} pagination={{clickable: true}} navigation={true} loop={true} modules={[Autoplay, Pagination, Navigation]} className="mySwiper" effect="fade">
-                {project.carousel.map((o,i)=>(
+                {project.carousel && project.carousel.map((o,i)=>(
                     <SwiperSlide style={{width:"100%", display:"flex", justifyContent:"center"}}>
                         <Image alt={o} src={o} width={600} height={300} priority style={{width:"fit-content", height:"100%"}} />
                     </SwiperSlide>
@@ -55,7 +55,7 @@ export default function Project(){
                     </a>
                 }
             </Box>
-          </Container> */}
+          </Container>
 
       </main>
     </>
