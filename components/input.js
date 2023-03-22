@@ -20,7 +20,7 @@ export default function Inputs({
 
     if(type == "textarea"){
         return(
-            <Textarea id="input" placeholder={placeholder} padding="7px" fontWeight="400"/>
+            <Textarea name={name} id="input" placeholder={placeholder} padding="7px" fontWeight="400"/>
         )
     }
 }

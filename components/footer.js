@@ -14,7 +14,7 @@ export default function Footer(){
             <Box>
                 {Links.map((o,i)=>(
                     <Link key={i} href={o.url} style={{marginRight:"10px"}}>
-                        <Image  src={`/${o.image}.png`} title={o} width={22} height={22}></Image>
+                        <Image alt={o.image} src={`/${o.image}.png`} title={o.image} width={22} height={22}></Image>
                     </Link>
                 ))}
             </Box>

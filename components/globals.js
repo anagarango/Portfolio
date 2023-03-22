@@ -144,7 +144,7 @@ export const Input = styled.input`
   max-width: ${props=>props.maxWidth};
   height:fit-content;
   padding:${props=>props.padding};
-  background-color:transparent;
+  background-color: transparent;
   border: ${props=>props.border || "4px solid #EA638D" };
   border-radius:10px;
   color:${props=>props.color || "white"};
