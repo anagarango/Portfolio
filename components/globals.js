@@ -139,6 +139,25 @@ export const CTA = styled.button`
   }
 `
 
+export const Input = styled.input`
+  width: 100%;
+  max-width: ${props=>props.maxWidth};
+  height:fit-content;
+  padding:${props=>props.padding};
+  background-color:transparent;
+  border: ${props=>props.border || "4px solid #EA638D" };
+  border-radius:10px;
+  color:${props=>props.color || "white"};
+  font-size:16px;
+  font-weight:${props=>props.fontWeight || 600};
+  cursor:${props=>props.cursor};
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: ${props=>props.bgColorHover};
+    color: ${props=>props.colorHover}
+  }
+`
+
 export const Tag = styled.button`
   width:fit-content;
   height:fit-content;
@@ -153,5 +172,33 @@ export const Tag = styled.button`
   transition: all 0.3s ease;
   &:hover {
     transform: scale(1.1)
+  }
+`
+
+export const Form = styled.form`
+  margin-top:${props=>props.marginTop || "0px"};
+  width:${props=>props.width || "100%"};
+  height:${props=>props.height || "100%"};
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px
+`
+
+export const Textarea = styled.textarea`
+  width:${props=>props.width || "100%"};
+  height:fit-content;
+  padding:${props=>props.padding};
+  background-color:transparent;
+  border: ${props=>props.border || "4px solid #EA638D" };
+  border-radius:10px;
+  color:white;
+  font-size:16px;
+  font-weight:${props=>props.fontWeight};
+  cursor:${props=>props.cursor};
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: ${props=>props.bgColorHover};
+    color: ${props=>props.colorHover}
   }
 `
