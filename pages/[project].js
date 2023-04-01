@@ -34,7 +34,7 @@ export default function Project(){
             <Swiper spaceBetween={30} centeredSlides={true} autoplay={{delay: 4000, disableOnInteraction: true}} pagination={{clickable: true}} navigation={true} loop={true} modules={[Autoplay, Pagination, Navigation]} className="mySwiper" effect="fade">
                 {project.carousel && project.carousel.map((o,i)=>(
                     <SwiperSlide style={{width:"100%", display:"flex", justifyContent:"center"}}>
-                        <Image alt={o} src={o} width={600} height={300} priority style={{width:"fit-content", height:"100%"}} />
+                        <Image alt={o} src={o} width={600} height={300} priority style={{width:"auto", height:"100%"}} />
                     </SwiperSlide>
                 ))}
             </Swiper>
