@@ -29,7 +29,7 @@ export default function Project(){
         <Header/>
         <Footer/>
 
-          <Container minHeight="100vh" id="About" flexDir="column" width="100%" padding="10px 150px 80px 150px" aliIt="flex-start">
+          <Container minHeight="100vh" id="About" flexDir="column" width="100%" padding="10px 150px 150px 150px" aliIt="flex-start">
             <Heading color='#B23C87' fontFamily='Staatliches' padding="10px 0">{project.name}</Heading>
             <Swiper spaceBetween={30} centeredSlides={true} autoplay={{delay: 4000, disableOnInteraction: true}} pagination={{clickable: true}} navigation={true} loop={true} modules={[Autoplay, Pagination, Navigation]} className="mySwiper" effect="fade">
                 {project.carousel && project.carousel.map((o,i)=>(
@@ -44,8 +44,8 @@ export default function Project(){
             <Text padding="20px 0 0 0">{project.p3}</Text>
             <Text padding="20px 0 0 0">{project.p4}</Text>
             <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Design</Heading>
-            <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)"}} width="800" height="450" src={project.figma} allowfullscreen></iframe>
-            <Box padding="20px 0 0 0" width="100%" justCont="center">
+            <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)", maxWidth:"800px", width:"100%"}}  height="450" src={project.figma} allowfullscreen></iframe>
+            <Box padding="20px 0 80px 0" width="100%" justCont="center">
                 <a href={project.github}>
                     <Image alt="github image" className='linkGithub' src="/Github/github.png" width={50} height={50} priority />
                 </a>

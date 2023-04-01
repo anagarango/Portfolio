@@ -122,7 +122,7 @@ main{
     min-width: 90%;
   }
 
-  #About, #Home{
+  #About, #Home, #Projects{
     padding: 30px !important;
   }
 
