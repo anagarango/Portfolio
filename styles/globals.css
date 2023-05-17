@@ -24,7 +24,7 @@ main{
   height: fit-content;
 }
 
-.linkGithub:hover, .linkVercel:hover, .About:hover, .Experience:hover, .Home:hover, .Resume:hover, .Projects:hover{
+.linkGithub:hover, .linkVercel:hover, .About:hover, .Contact:hover, .Home:hover, .Resume:hover, .Projects:hover{
   transform: scale(1.1);
   transition: 0.6s ease-out;
 }
@@ -45,8 +45,8 @@ main{
   content: url('/Icons/Resumehover.svg');
 }
 
-.Experience:hover{
-  content: url('/Icons/Experiencehover.svg');
+.Contact:hover{
+  content: url('/Icons/Contacthover.svg');
 }
 
 .Projects:hover{
