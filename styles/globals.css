@@ -122,8 +122,12 @@ main{
     min-width: 90%;
   }
 
-  #About, #Home, #Projects{
+  #About, #Home{
     padding: 30px !important;
+  }
+
+  #Projects{
+    padding: 150px 30px 30px 30px !important;
   }
 
   .mainContainer{
@@ -139,6 +143,18 @@ main{
 
   .mainContainer{
     padding:0px !important
+  }
+
+  .projectcard{
+    flex-direction: column !important
+  }
+
+  .projectcard.right{
+    flex-direction: column-reverse !important
+  }
+
+  .projectcardimage, .projectcardbox{
+    width: 100% !important;
   }
 
 }
