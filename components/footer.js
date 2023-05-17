@@ -10,7 +10,7 @@ export default function Footer(){
         {image:"LinkedIn", url:"https://www.linkedin.com/in/ana-arango-08592122a/"}
     ]
     return(
-        <Box position="fixed" left="0" bottom="0" height="5vh" width="100vw" bgColor="#1E1E41" aliIt="center" padding="0 20px" justCont="space-between" zIndex="5">
+        <Box position="fixed" left="0" bottom="0" height="5vh" width="100vw" bgColor="#1E1E41" aliIt="center" padding="0 20px" justCont="space-between" zIndex="5" borderTop="3px solid #0a002c">
             <Box>
                 {Links.map((o,i)=>(
                     <Link key={i} href={o.url} style={{marginRight:"10px"}}>
