@@ -109,7 +109,7 @@ export const Box = styled.div`
     box-shadow:${props=>props.boxShadow};
     z-index:${props=>props.zIndex};
     border:${props=>props.border};
-
+    border-top:${props=>props.borderTop};
 `
 export const PullQuote = styled.blockquote`
     font-size:22px;
