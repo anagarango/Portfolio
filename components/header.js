@@ -6,24 +6,10 @@ const HeaderImage = [
     "Home",
     "About",
     "Projects",
-    "Experience"
+    "Contact"
 ]
 
 export default function Header(){
-    const DownloadResume = () => {
-        // using Java Script method to get PDF file
-        fetch('AnaArangoResume.pdf').then(response => {
-            response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'AnaArangoResume.pdf';
-                alink.click();
-            })
-        })
-      }
     return(
             <Box width="65px" position="fixed" left="0" top="0"  height="95vh" bgColor="#28284D" flexDir="column" aliIt="center" zIndex="5">
                 {HeaderImage.map((o,i)=>(
@@ -31,9 +17,9 @@ export default function Header(){
                         <Image alt={o} className={o} src={`/Icons/${o}.svg`} width={40} height={40} style={{margin:"10px"}} />
                     </Link>
                 ))}
-                <Link title="Resume" href="#resume" onClick={DownloadResume} style={{ position:"absolute", bottom:15, padding:"10px"}}>
+                <a title="Resume" href="/AnaArangoResume.pdf" download style={{ position:"absolute", bottom:15, padding:"10px"}}>
                     <Image alt="Resume" className="Resume" src="/Icons/Resume.svg" width={40} height={40}/>
-                </Link>
+                </a>
             </Box>
     )
 }

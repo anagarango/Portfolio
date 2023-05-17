@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
-export const Heading = styled.h1`
+export const Heading = styled(motion.h1)`
     color: ${props=>props.color};
     padding:${props=>props.padding};
     position:${props=>props.position};
@@ -54,7 +55,7 @@ export const Span = styled.span`
     min-width: ${props=>props.minWidth};
 `
 
-export const Image = styled.img`
+export const Image = styled(motion.img)`
     width:${props=>props.width};
     height:${props=>props.height};
     border-radius:${props=>props.borderRadius};
