@@ -37,7 +37,7 @@ export const Projects = [
     },
     {
         name: "Check WeatHER",
-        preview:"Check Weat-HER is a weather app that shows the day's conditions, tomorrow's forecast, and 6-day forecast depending on which city the user writes on the input.",
+        preview:"Check Weat-HER is a weather web app that shows the day's conditions, tomorrow's forecast, and 6-day forecast depending on which city the user writes on the input.",
         tech:[
             "Next.js", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Lottie-React"
         ],
@@ -51,6 +51,24 @@ export const Projects = [
         vercel:"https://check-weat-her.vercel.app/",
         carousel:[
             "/CheckWeatHER/1.jpg",  "/CheckWeatHER/2.jpg",  "/CheckWeatHER/3.jpg",  "/CheckWeatHER/4.jpg",  "/CheckWeatHER/5.jpg",  "/CheckWeatHER/6.jpg",  "/CheckWeatHER/7.jpg",  "/CheckWeatHER/8.jpg"
+        ]
+    },
+    {
+        name: "CodeTipsTricks",
+        preview:"CodeTipsTricks is a discussion web app where registered users share their favourite useful links that helped expand their coding knowledge in areas of Front-end, Back-end, and Machine Learning / AI.",
+        tech:[
+            "Next.js", "HTML", "CSS", "JavaScript", "Next-Auth", "Axios", "Prisma", "TailwindCSS", "CockroachDB"
+        ],
+        image:"/CodeTipsTricks.png",
+        figma: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FxpQ2JUNJwmhxE0tkKTkM9u%2FCodeTipsTricks%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3DQi6ZEOzsO6a6VFxU-1",
+        p1:"CodeTipsTricks is a discussion web app that empracesa a collaborative approach to encourage developers to contribute their own tips and trickss found in links to expand each others coding knowledge.",
+        p2Role:"Full-Stack Developer – I came up with the design of the website, along with the content, and developed the whole website.",
+        p3:"The purpose behind this project came from my curiosity of wanting to find out what resources other experienced web developers could share that helped expand their coding knowledge because I'm always looking ways on how I can improve my skills and knowledge and get better in Front-end development and slowly learning more about Back-end development.",
+        p4:"This project was to test out more of the back-end technologies that I haven't played with before, such ass Next-Auth, Prisma, and CockroachDB. Because of that, a lot of Google Searching took place to make this project work. It took a month to make this project, so I made constant efforts throughout that month to add or make something work so the process was nice and easy. This project helped me improve my problem solving skills and how reading documentation of the technologies is absolutely IMPORTANT. Especially when the technology is well-known among many developers, the more effort to make the docs clear makes it better, so that taught me that I should read documentation always when before, I thought it was boring or not necessary to read.",
+        github:"https://github.com/anagarango/CodeTipsTricks",
+        vercel:"https://code-tips-tricks.vercel.app/",
+        carousel:[
+            "/CodeTipsTricks/1.jpg",  "/CodeTipsTricks/2.jpg",  "/CodeTipsTricks/3.jpg",  "/CodeTipsTricks/4.jpg",  "/CodeTipsTricks/5.jpg",  "/CodeTipsTricks/6.jpg",  "/CodeTipsTricks/7.jpg",  "/CodeTipsTricks/8.jpg"
         ]
     }
 ]
