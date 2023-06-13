@@ -37,27 +37,50 @@
             }
           ],
         "designDevelopmentProcess": [
-            "Before designing, we created a site map of what screens we would have in our app and what features would be found in each screen. After we had a clear idea of what our app would sort of look like, our UI/UX designers took over to design the low-fidelity prototype to test it with potential users and receive feedback from them.",
-            "Although the UI/UX designers were responsible of designing the app, as a team, we discussed what colors and experience we would want our users to have. We acknowledged that we would have college students using our app, so we would want to have a clean, vibrant, simple app interface that is easily accessible for people following principles from the WCAG, such as text contrasts and pointer types.",
-            "I worked closely with our UI/UX designers since I was responsible in providing feedback if certain animations or features are feasible for us to make according to our current expertise. I was responsible with ensuring that the web app has a responsive design so different devices that have different aspect ratios are able to use the web app properly. Only a few components were created since we wanted to keep a consistent look by reusing components that makes it visually appealing and more put together.",
-            "The project followed an Agile development methodology. We started with gathering requirements, creating wireframes, and developing a detailed project plan to find how we can accomplish our mission to solve the problem of students not able to balance a job and college. We conducted regular code reviews, utilized continuous integration to ensure we don’t overwrite each others code, and deployed the application in Vercel."
+            {
+                "content":"Before designing, we created a site map of what screens we would have in our app and what features would be found in each screen. After we had a clear idea of what our app would sort of look like, our UI/UX designers took over to design the low-fidelity prototype to test it with potential users and receive feedback from them.",
+                "image": null,
+                "alt": null,
+                "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeqHHWZqhVY4ZZGviUilmrn%2FRooty---Design%3Ftype%3Ddesign%26node-id%3D348%253A7934%26t%3DHzOB6QxndCq9wHXK-1",
+                "figmaAlt": "User Journey Map + Site Map of all the screens we planned Rooty will have."
+            },
+            {
+                "content":"Although the UI/UX designers were responsible of designing the app, as a team, we discussed what colors and experience we would want our users to have. We acknowledged that we would have college students using our app, so we would want to have a clean, vibrant, simple app interface that is easily accessible for people following principles from the WCAG, such as text contrasts and pointer types.",
+                "image": null,
+                "alt": null,
+                "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIdZlWMRPIFsVcx51Ljb4kj%2FRooty-BCIT%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3D4XPyPRt9yBJmHLx6-1",
+                "figmaAlt": "FigJam of Inspirations of UI/UX, Extensive Reasearch, Logo, Colors, etc."
+            },
+            {
+                "content":"I worked closely with our UI/UX designers since I was responsible in providing feedback if certain animations or features are feasible for us to make according to our current expertise. I was responsible with ensuring that the web app has a responsive design so different devices that have different aspect ratios are able to use the web app properly. Only a few components were created since we wanted to keep a consistent look by reusing components that makes it visually appealing and more put together.",
+                "image": null,
+                "alt": null,
+                "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeqHHWZqhVY4ZZGviUilmrn%2FRooty---Design%3Ftype%3Ddesign%26node-id%3D720%253A11585%26t%3DHzOB6QxndCq9wHXK-1",
+                "figmaAlt": "Figma of all the high fidelity screens we included in the final Rooty app."
+            },
+            {
+                "content":"The project followed an Agile development methodology. We started with gathering requirements, creating wireframes, and developing a detailed project plan to find how we can accomplish our mission to solve the problem of students not able to balance a job and college. We conducted regular code reviews, utilized continuous integration to ensure we don’t overwrite each others code, and deployed the application in Vercel.",
+                "image": null,
+                "alt": null,
+                "figma": null
+            }
         ],
         "lessonsLearned": [
             {
               "title": "Communication",
-              "content": "Since this was a group project involving front-end developers, back-end developers, and UI/UX designers, communication was key to our group's success..."
+              "content": "Since this was a group project involving front-end developers, back-end developers, and UI/UX designers, communication was key to our groups success as I was working with people of different work ethics and strengths and weaknesses. We established to have open lines of communication and be honest with each other which was crucial for successful collaboration. To avoid miscommunication, we set up weekly in-person team meetings and set up a Discord chat to update each other of what tasks are done throughout the week. So, I learned the significance of having transparency within the team and regular communication to avoid setbacks."
             },
             {
               "title": "Project Management",
-              "content": "This was the first project I fully followed the Agile methodology that made our team work efficiently, especially me..."
+              "content": "This was the first project I fully followed the Agile methodology that made our team work efficiently, especially me. Every week, we got into the habit of creating deadlines with tasks depending on how heavy they are. We met every week to do weekly standup’s and catch up on each other on what we were able to add to the project since most tasks depended on each other. We also set up a Trello Board to add visual representation of tasks and deadlines which taught me the importance of efficient project management in keeping the team organized and on track."
             },
             {
               "title": "Task Specialization",
-              "content": "To break the ice since most of us hadn't met each other before, we shared what are our strengths and weaknesses when it comes to completing work and tasks..."
+              "content": "To break the ice since most of us hadn't met each other before, we shared what are our strengths and weaknesses when it comes to completing work and tasks. We all had our preferences of roles to take in the group which worked really well since there weren’t any overlapping or conflicting roles so we supported each other from every front. I assisted our project manager working closely with her so we were able to split all tasks evenly and assign them according to what our strengths are while teaching each other to strengthen our weaknesses. "
             },
             {
               "title": "Realistic Timeline",
-              "content": "As someone who likes to take on many tasks, I realized that I need to improve my task delegation since it was unrealistic of me to finish many tasks in a short span of time..."
+              "content": "As someone who likes to take on many tasks, I realized that I need to improve my task delegation since it was unrealistic of me to finish many tasks in a short span of time that would most likely make me stressed over the other tasks I still have to do. Instead of being overly ambitious to take on many tasks, I focused in accomplishing 3-5 tasks every week to feel that I have accomplished contributing to the project while delivering higher-quality results."
             }
           ],
         "github":"https://github.com/BCIT-Rooty/rootyBCIT",

@@ -22,7 +22,7 @@ export const Heading = styled(motion.h1)`
     font-family:${props=>props.fontFamily}
 `
 
-export const Text = styled.p`
+export const Text = styled(motion.p)`
     width:${props=>props.width};
     height:${props=>props.height};
     text-align:${props=>props.textAlign};
@@ -32,6 +32,8 @@ export const Text = styled.p`
     align-items:${props=>props.aliIt};
     color: ${props=>props.color || "white"};
     font-weight:${props=>props.fontWeight};
+    font-size:${props=>props.fontSize};
+    font-style: ${props=>props.fontStyle};
     background-color:${props=>props.bgColor};
     border-radius:${props=>props.borderRadius};
     min-width: ${props=>props.minWidth};
