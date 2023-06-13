@@ -1,0 +1,69 @@
+[
+    {
+        "name": "Rooty",
+        "preview":"Rooty is a freelance marketplace app that helps BCIT students sell or barter their services to other students to improve their experience and build their portfolios.",
+        "image":"/Rooty.png",
+        "figma":"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeqHHWZqhVY4ZZGviUilmrn%2FRooty---Design%3Fnode-id%3D90%253A230%26t%3Di02iF3WlaQupOg3I-1",
+        "projectOverview":"Rooty is a freelance marketplace app that helps college students, specifically British Columbia Institute of Technology (BCIT), sell or barter their services to other students to improve their experience and build their portfolios. Many students have difficulty keeping both a job and attending college according to our college. Rooty provides BCIT students with a safe space to make extra income, barter for each other’s services, gain experience, and network within the BCIT community.",
+        "roleName":"Lead Front-End Developer",
+        "role":"As front-end developer, I worked closely with my other front-end developer/project manager and took leadership in discussing how we can split tasks evenly. I would provide assistance when my partner needed help in completing their tasks when technical challenges arise. I provided my insights on front-end feasibility and developed dynamic features/components when necessary adhering to clean code and making them reusable. I tested the app to make sure all the functionalities are there and reported back to the team whenever I found a bug or if there’s something else we should consider adding to the app. I was responsible in converting our designers prototypes into code, so I regularly showed them the process of our work to ensure its up to par of what they expected.",
+        "tech": [
+            "Next.js", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer-Motion", "Material UI", "Semantic UI", "Lottie-React", "Storybook", "Git", "Figma"
+        ],
+        "keyFeatures": [
+            {
+              "title": "Insights & Tips",
+              "content": "A feature that would be mediated by BCIT, here is where relevant content will be posted for both people looking for a freelancer or the freelancer. Topics such as “How to Write the Perfect Freelancing Bio” are available for every user to read."
+            },
+            {
+              "title": "Contest For The Week",
+              "content": "Another feature BCIT will mediate is a contest that will be held up every week (or actually month) where BCIT would host contests for all users to participate in for cash prizes."
+            },
+            {
+              "title": "Posts",
+              "content": "Freelancers can create posts whatever service fits in the 6 categories provided: Broadcast & Media, Computing, Marketing, Business & Finance, Digital Arts & Design, and Tutoring. A Freelancer creates a post of something they would like to help someone with and work at their own pace, simply someone will send a message through the app to get started."
+            },
+            {
+              "title": "Categories",
+              "content": "Users looking for Freelancers will use this feature to search for services and read the description and details for the Freelancer's post they are looking for."
+            },
+            {
+              "title": "Chat",
+              "content": "Users will initialize the chat with the Freelancer they choose where they can discuss the details of the need of the service and such."
+            },
+            {
+              "title": "Profile",
+              "content": "In order to attract users to contact the Freelancer, the Freelancer will set up their profile by leaving a bio and a mini-portfolio of screenshots of their projects."
+            }
+          ],
+        "designDevelopmentProcess": [
+            "Before designing, we created a site map of what screens we would have in our app and what features would be found in each screen. After we had a clear idea of what our app would sort of look like, our UI/UX designers took over to design the low-fidelity prototype to test it with potential users and receive feedback from them.",
+            "Although the UI/UX designers were responsible of designing the app, as a team, we discussed what colors and experience we would want our users to have. We acknowledged that we would have college students using our app, so we would want to have a clean, vibrant, simple app interface that is easily accessible for people following principles from the WCAG, such as text contrasts and pointer types.",
+            "I worked closely with our UI/UX designers since I was responsible in providing feedback if certain animations or features are feasible for us to make according to our current expertise. I was responsible with ensuring that the web app has a responsive design so different devices that have different aspect ratios are able to use the web app properly. Only a few components were created since we wanted to keep a consistent look by reusing components that makes it visually appealing and more put together.",
+            "The project followed an Agile development methodology. We started with gathering requirements, creating wireframes, and developing a detailed project plan to find how we can accomplish our mission to solve the problem of students not able to balance a job and college. We conducted regular code reviews, utilized continuous integration to ensure we don’t overwrite each others code, and deployed the application in Vercel."
+        ],
+        "lessonsLearned": [
+            {
+              "title": "Communication",
+              "content": "Since this was a group project involving front-end developers, back-end developers, and UI/UX designers, communication was key to our group's success..."
+            },
+            {
+              "title": "Project Management",
+              "content": "This was the first project I fully followed the Agile methodology that made our team work efficiently, especially me..."
+            },
+            {
+              "title": "Task Specialization",
+              "content": "To break the ice since most of us hadn't met each other before, we shared what are our strengths and weaknesses when it comes to completing work and tasks..."
+            },
+            {
+              "title": "Realistic Timeline",
+              "content": "As someone who likes to take on many tasks, I realized that I need to improve my task delegation since it was unrealistic of me to finish many tasks in a short span of time..."
+            }
+          ],
+        "github":"https://github.com/BCIT-Rooty/rootyBCIT",
+        "vercel":"https://rooty-bcit-iota.vercel.app/",
+        "carousel": [
+            "/Rooty/1.jpg",  "/Rooty/2.jpg",  "/Rooty/3.jpg",  "/Rooty/4.jpg",  "/Rooty/5.jpg",  "/Rooty/6.jpg",  "/Rooty/7.jpg",  "/Rooty/8.jpg",  "/Rooty/9.jpg",  "/Rooty/10.jpg"
+        ]
+    }
+]
