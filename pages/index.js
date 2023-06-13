@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Box, Hero, Container, Heading, Text, CTA, Image } from '@/components/globals'
@@ -10,7 +10,7 @@ import TechSlideshow from '@/components/slideshow'
 import Card from '@/components/card'
 import Contact from '@/components/contact'
 import { Projects } from '@/data/projects'
-import { Skills } from '@/data/skills'
+import Skills from '@/data/skills.json'
 import { useInView } from 'react-intersection-observer';
 import Hello from "@/data/project-list.json"
 

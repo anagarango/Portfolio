@@ -110,6 +110,7 @@ export const Box = styled(motion.div)`
     z-index:${props=>props.zIndex};
     border:${props=>props.border};
     border-top:${props=>props.borderTop};
+    transition: ${props=>props.transitionDiv};
 `
 export const PullQuote = styled.blockquote`
     font-size:22px;
