@@ -1,0 +1,37 @@
+[
+    {
+      "title":"Communication",
+      "p1":"Being able to communicate constantly when appropriate for updates and changes when collborating on a project with other members is completely essential. I am able to listen actively to group members, and to express ideas clearly and succinctly. I am comfortable providing constructive feedback, and I am always looking for ways to improve my communication skills to ensure that I am effectively collaborating with my colleagues.",
+      "p2":"My favourite part of communication with group members is explaining technical concepts to group members when they ask help from me and provide solutions to their code, which is an important part of being a front-end developer.",
+      "projectName":"Rooty",
+      "project":", is a prime example of how my communication skills are well developed."
+    },
+    {
+      "title":"Problem Solving",
+      "p1":"As someone who likes to find the solution to any problem I believe I can eventually solve, my problem solving skills continue improving over time. I take a systematic approach to break down the issue and identify potential solutions, first by using debugging tools to trace problems and find the root cause, and researching technical issues and seeking out solutions from online communities or documentations.",
+      "p2":"I take a proactive approach when working on projects to find potential issues and suggest ways to address them and I'm always willing to help out when someone is stuck on a problem. ",
+      "projectName":"TriviaBCIT",
+      "project":", is a prime examples of how I had to use my problem solving skills to figure out how I have to create the functionalities of the web-app in the back end using Express.js, which I had very little knowledge about."
+    },
+    {
+      "title":"Creativity",
+      "p1":"Creating visually appealing and user-friendly interfaces that provide a great user experience is the reason why I'm passionate about being a front-end developer. I am skilled at using Figma to create wireframes, mockups, and prototypes that help me bring my ideas to life. I am able to balancing creativity with usability, finding innovative solutions to complex technical problems.",
+      "p2":"I use some frameworks like Framer Motion, to help create animations and dynamic interactions that engage and delight users. Whether I'm working on a new project or iterating on an existing one, I bring a creative mindset to everything I do.",
+      "projectName":"DrinkUp",
+      "project":", is a prime example of how I brought my creativity to design and develop an appropriate theme for the web-app."
+    },
+    {
+      "title":"Ambitious",
+      "p1":"As an ambitious and driven individual who is always looking to improve my skills and take on new challenges, I'm always looking for ways to go above and beyond what's expected of me. I believe that my ambition is what drives me to create high-quality work that meets or exceeds expectations. I set high goals for myself and work tirelessly to achieve them.",
+      "p2":"If there's an opportunity for me to learn new technologies to apply in my career, I will gladly take it. Ultimately, I see myself as a lifelong learner who is always looking for ways to improve and grow, both personally and professionally.",
+      "projectName":"CheckWeatHER,",
+      "project":", is a prime example of how I brought my ambitiousness to create weather web-app to display any city's current conditions, tomorrow's forecast, and 6-day forecast as I was exploring what other data the OpenWeatherAPI provide."
+    },
+    {
+      "title":"Organization",
+      "p1":"Time is money, maybe even more valuable than money. For that reason, I have worked hard to improve managing my time more effectively and am always looking for ways to optimize my workflow. I am punctual when it comes to manage projects, meet deadlines, and communicate effectively with group mates.",
+      "p2":"I am skilled in creating detailed project plans and timelines, breaking down complex tasks into smaller, more manageable pieces, and prioritizing my work effectively to ensure that everything is completed on schedule. To this day, I do a monthly clean up of files and projects that are important to me.",
+      "projectName":"She's A Keeper,",
+      "project":", is a prime example of how I had to use my organization skills to manage my time to juggle my three roles of designer, content creator, and developer for this client's house cleaning website by myself."
+    }
+  ]
