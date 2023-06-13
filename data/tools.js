@@ -1,63 +1,68 @@
 export const Tech = [
     {
-        src:"html.png",
+        src:"HTML.png",
         title:"HTML"
     },{
-        src:"css.png",
+        src:"CSS.png",
         title:"CSS"
     },{
-        src:"js.png",
+        src:"JavaScript.png",
         title:"JavaScript"
     },{
-        src:"next.png",
+        src:"Next.js.png",
         title:"Next.js"
     },{
-        src:"react.png",
-        title:"React & React Native"
+        src:"React.png",
+        title:"React"
     },{
-        src:"styled.png",
+        src:"Styled-Components.png",
         title:"Styled-Components"
     },{
-        src:"Tailwind.png",
+        src:"TailwindCSS.png",
         title:"TailwindCSS"
     },{
-        src:"dev.png",
+        src:"Dev Tools.png",
         title:"Dev Tools"
     },{
-        src:"sass.png",
+        src:"SASS.png",
         title:"SASS"
     },{
-        src:"prisma.png",
-        title:"Prisma DB"
+        src:"PostgreSQL.png",
+        title:"PostgreSQL"
     },{
-        src:"restapi.png",
-        title:"REST API"
+        src:"RESTful API.png",
+        title:"RESTful API"
     },{
-        src:"semantic-ui.png",
+        src:"Semantic-UI.png",
         title:"Semantic-UI"
     },{
-        src:"mui.png",
+        src:"Material UI.png",
         title:"Material UI"
     },{
-        src:"storybook.png",
+        src:"Storybook.png",
         title:"Storybook"
     },{
-        src:"framer.png",
+        src:"Framer Motion.png",
         title:"Framer Motion"
     },{
-        src:"playwright.svg",
+        src:"Playwright.png",
         title:"Playwright"
     },{
-        src:"lottiefiles.svg",
-        title:"Lottie React"
+        src:"Lottie Animation.png",
+        title:"Lottie Animation"
     },{
-        src:"git.png",
+        src:"Git.png",
         title:"Git"
     },{
         src:"Figma.png",
         title:"Figma"
-    },{
-        src:"Adobe.png",
-        title:"Adobe Suite"
+    },
+    {
+        src:"Photoshop.png",
+        title:"Photoshop"
+    },
+    {
+        src:"Illustrator.png",
+        title:"Illustrator"
     },
 ]

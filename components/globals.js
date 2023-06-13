@@ -86,7 +86,7 @@ export const Hero = styled.div`
     overflow-y:${props=>props.overflow};
 `
 
-export const Box = styled.div`
+export const Box = styled(motion.div)`
     width:${props=>props.width};
     max-width: ${props=>props.maxWidth};
     height:${props=>props.height};

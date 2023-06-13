@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { Box, Hero, Container, Heading, Text, CTA, Tag } from '@/components/globals'
+import TechCard from '@/components/techCard'
 import { useRouter } from "next/router"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -16,11 +17,13 @@ export default function Project(){
     const r = useRouter()
     const [project, setProject] = useState([])
 
+
     useEffect(()=>{
+        const url = window.location.pathname.split('/').pop();
+
         for(var x = 0; x < ProjectList.length; x++){
-            if(r.query.project == ProjectList[x].name){
+            if(r.query.project == ProjectList[x].name || url == ProjectList[x].name){
                 setProject(ProjectList[x])
-                console.log(project)
             }
         }
     },[])
@@ -39,32 +42,39 @@ export default function Project(){
         <Header/>
         <Footer/>
 
-          <Container minHeight="100vh" id="About" flexDir="column" width="100%" padding="10px 150px 150px 150px" aliIt="flex-start">
-            <Heading color='#B23C87' fontFamily='Staatliches' padding="10px 0">{project.name}</Heading>
-            <Swiper spaceBetween={30} centeredSlides={true} autoplay={{delay: 4000, disableOnInteraction: true}} pagination={{clickable: true}} navigation={true} loop={true} modules={[Autoplay, Pagination, Navigation]} className="mySwiper" effect="fade">
-                {project.carousel && project.carousel.map((o,i)=>(
-                    <SwiperSlide style={{width:"100%", display:"flex", justifyContent:"center"}}>
-                        <Image alt={o} src={o} width={600} height={300} priority style={{width:"auto", height:"100%"}} />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-            <Text padding="50px 0 0 0">{project.p1}</Text>
-            <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Role</Heading>
-            <Text padding="20px 0 0 0">{project.p2Role}</Text>
-            <Text padding="20px 0 0 0">{project.p3}</Text>
-            <Text padding="20px 0 0 0">{project.p4}</Text>
-            <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Design</Heading>
-            <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)", maxWidth:"800px", width:"100%"}}  height="450" src={project.figma} allowFullScreen></iframe>
-            <Box padding="20px 0 80px 0" width="100%" justCont="center">
-                <a href={project.github}>
-                    <Image alt="github image" className='linkGithub' src="/Github/github.png" width={50} height={50} priority />
-                </a>
-                {project.vercel &&
-                    <a href={project.vercel} style={{marginLeft:"10%"}}>
-                        <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={50} height={50} priority />
+          <Container id="About" flexDir="column" width="100%" padding="120px" aliIt="flex-start">
+            <Hero src="/blob.svg" minHeight="85vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
+                <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches'>{project.name}</Heading>
+                <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"75%", height:"45%", borderRadius:"20px", boxShadow:"0px 7px 45px 1px #000000"}} />
+            </Hero>
+            <Box padding="0px 30px" flexDir="column">
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Project Overview</Heading>
+                <Text padding="20px 0 0 0">{project.projectOverview}</Text>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Role</Heading>
+                <Text padding="20px 0 0 0" fontWeight="700">{project.roleName}</Text>
+                <Text padding="20px 0 0 0">{project.role}</Text>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Technologies Used</Heading>
+                <Box padding="20px 0 0 0" flexWrap="wrap" justCont="space-between">
+                    {project.tech && project.tech.map((o,i)=>(
+                        <TechCard key={i} src={o} alt={o} heading={o} />
+                    ))}
+                </Box>
+                
+
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Design and Development Process</Heading>
+                <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)", maxWidth:"800px", width:"100%"}}  height="450" src={project.figma} allowFullScreen></iframe>
+                <Box padding="20px 0 80px 0" width="100%" justCont="center">
+                    <a href={project.github}>
+                        <Image alt="github image" className='linkGithub' src="/Github/github.png" width={50} height={50} priority />
                     </a>
-                }
+                    {project.vercel &&
+                        <a href={project.vercel} style={{marginLeft:"10%"}}>
+                            <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={50} height={50} priority />
+                        </a>
+                    }
+                </Box>
             </Box>
+            
           </Container>
 
       </main>
