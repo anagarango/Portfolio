@@ -10,11 +10,21 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper';
+import ProjectList from "@/data/project-list.json"
 
 export default function Project(){
     const r = useRouter()
-    const project = r.query
-    console.log(project)
+    const [project, setProject] = useState([])
+
+    useEffect(()=>{
+        for(var x = 0; x < ProjectList.length; x++){
+            if(r.query.project == ProjectList[x].name){
+                setProject(ProjectList[x])
+                console.log(project)
+            }
+        }
+    },[])
+
 
     return(
         <>
@@ -44,7 +54,7 @@ export default function Project(){
             <Text padding="20px 0 0 0">{project.p3}</Text>
             <Text padding="20px 0 0 0">{project.p4}</Text>
             <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="60px 0 0 0">Design</Heading>
-            <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)", maxWidth:"800px", width:"100%"}}  height="450" src={project.figma} allowfullscreen></iframe>
+            <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)", maxWidth:"800px", width:"100%"}}  height="450" src={project.figma} allowFullScreen></iframe>
             <Box padding="20px 0 80px 0" width="100%" justCont="center">
                 <a href={project.github}>
                     <Image alt="github image" className='linkGithub' src="/Github/github.png" width={50} height={50} priority />

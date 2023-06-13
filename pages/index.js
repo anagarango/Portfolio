@@ -12,6 +12,7 @@ import Contact from '@/components/contact'
 import { Projects } from '@/data/projects'
 import { Skills } from '@/data/skills'
 import { useInView } from 'react-intersection-observer';
+import Hello from "@/data/project-list.json"
 
 export default function Home() {
   const [skill, setSkill] = useState(0)
@@ -27,20 +28,7 @@ export default function Home() {
   function SelectProject(data){
       r.replace({
         pathname: `/${data.name}`,
-        query:{
-          name:data.name,
-          preview:data.preview,
-          tech:data.tech,
-          image:data.image,
-          figma:data.figma,
-          p1:data.p1,
-          p2Role:data.p2Role,
-          p3: data.p3,
-          p4: data.p4,
-          github: data.github,
-          vercel: data.vercel,
-          carousel:data.carousel
-        }
+        query: data
     }, `${data.name}`)
   }
 
@@ -117,7 +105,7 @@ export default function Home() {
           <Container id="Projects" flexDir="column" width="100%" padding="200px 150px 150px 150px">
             <Heading ref={ref4} initial={{opacity:0}} animate={inView4 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Projects</Heading>
             <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
-            {Projects.map((o,i)=>{
+            {Hello.map((o,i)=>{
               if(i % 2 == 0){
                 return(
                   <Card key={`a${i}`} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} onClick={()=>{SelectProject(o)}} />
