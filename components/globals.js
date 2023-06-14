@@ -91,6 +91,7 @@ export const Hero = styled.div`
 export const Box = styled(motion.div)`
     width:${props=>props.width};
     max-width: ${props=>props.maxWidth};
+    min-width: ${props=>props.minWidth};
     height:${props=>props.height};
     min-height:${props=>props.minHeight};
     background-color:${props=>props.bgColor};
