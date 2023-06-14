@@ -1,9 +1,0 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  background-color: #0a002c;
-  margin: 0 0 0 70px;
-  align-items: center;
-  width: 100vw;
-  height: fit-content;
-}

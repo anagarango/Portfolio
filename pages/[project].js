@@ -46,7 +46,7 @@ export default function Project(){
       
       <main id='projectMain'>
         <Header height="100vh" />
-          <Container flexDir="column" width="100%" padding="150px 150px 50px 150px" aliIt="flex-start">
+          <Container id="ProjectPage" flexDir="column" width="100%" padding="150px 150px 50px 150px" aliIt="flex-start">
             <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
                 <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches'>{project.name}</Heading>
                 <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"75%", height:"45%", borderRadius:"20px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2"}} />
@@ -63,7 +63,7 @@ export default function Project(){
                     </a>
                 }
             </Box>
-            <Box flexDir="column">
+            <Box width="100%" flexDir="column">
                 
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Project Overview</Heading>
                 <Text padding="20px 0 0 0">{project.projectOverview}</Text>
