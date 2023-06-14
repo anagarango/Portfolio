@@ -28,7 +28,7 @@ export default function BrowserModel({
             {version == "project" && 
               <Box initial={{ opacity: 0 }} animate={{ opacity: 1}} exit={{ opacity: 0}} transition={{ duration: 1}} padding="25px" transitionDiv="0.5s ease-out">
                 <Box width="50%">
-                  <Image src="/Rooty.png" width="100%" />
+                  <Image src={array && `/Rooty/${array[state].title}.gif`} width="100%" />
                 </Box>
                 <Box flexDir="column" width="50%" padding="0 0 0 25px" >
                   <Text fontWeight="700" padding="0 0 15px 0">{array && array[state].title}</Text>
