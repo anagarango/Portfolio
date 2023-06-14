@@ -113,6 +113,8 @@ export const Box = styled(motion.div)`
     border:${props=>props.border};
     border-top:${props=>props.borderTop};
     transition: ${props=>props.transitionDiv};
+    backdrop-filter:${props=>props.backdropFilter};
+    transform:${props=>props.transform};
 `
 export const PullQuote = styled.blockquote`
     font-size:22px;

@@ -14,6 +14,7 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper';
 import ProjectList from "@/data/project-list.json"
 import BrowserModel from '@/components/browserModel'
+import CollapseCard from '@/components/collapse'
 
 export default function Project(){
     const r = useRouter()
@@ -42,21 +43,33 @@ export default function Project(){
         <link rel="icon" href="/Icons/Home.svg" />
       </Head>
       
-      <main>
-        <Header/>
-        <Footer/>
-
+      <main id='projectMain'>
+        <Header height="100vh" />
           <Container flexDir="column" width="100%" padding="150px" aliIt="flex-start">
-            <Hero src="/blob.svg" bgPosition="center" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
+            <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
                 <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches'>{project.name}</Heading>
-                <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"75%", height:"45%", borderRadius:"20px", boxShadow:"0px 7px 45px 1px #000000"}} />
+                <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"75%", height:"45%", borderRadius:"20px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2"}} />
+                <Heading color='#9DFFFF' fontWeight="100" fSize="30px" fontFamily='Staatliches'>{project.date}</Heading>
             </Hero>
-            <Box padding="100px 0 0 0" flexDir="column">
+            <Box position="sticky" zIndex="5" top="0px" left="50%" transform="translateX(-50%)" margin="100px 0 0 0" width="20vw" minWidth="fit-content" aliIt="center" bgColor="rgba(163,153,226,0.2)" borderRadius="20px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
+                <a href={project.github} style={{padding:"20px 30px"}}>
+                    <Image alt="github image" className='linkGithub' src="/Github/github.png" width={40} height={40} priority />
+                </a>
+                {project.vercel &&
+                    <a href={project.vercel} style={{padding:"20px 30px"}}>
+                        <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={40} height={40} priority />
+                    </a>
+                }
+            </Box>
+            <Box flexDir="column">
+                
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Project Overview</Heading>
                 <Text padding="20px 0 0 0">{project.projectOverview}</Text>
+
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Role</Heading>
                 <Text padding="20px 0 0 0" fontWeight="700">{project.roleName}</Text>
                 <Text padding="20px 0 0 0">{project.role}</Text>
+
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Technologies Used</Heading>
                 <Box padding="20px 0 0 0" flexWrap="wrap" justCont="space-between">
                     {project.tech && project.tech.map((o,i)=>(
@@ -81,34 +94,10 @@ export default function Project(){
                 
 
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Lessons Learned</Heading>
-                {project.lessonsLearned && project.lessonsLearned.map((o,i)=>(
-                    <Box key={i} initial={{ height: 'fit-content' }} animate={{ height: collapse === i ? 'auto' : '85px', transition:{ delay: 0.2 } }} transition={{ duration: 0.3 }} width="100%" bgColor="#27274C" borderRadius="20px" margin="10px 0px" padding="20px" flexDir="column">
-                        <Box aliIt="center">
-                            <Image src={`/Icons/${o.title}.png`} width={45} height={45} priority />
-                            <Text padding="0px 30px">{o.title}</Text>
-                            <Image src={`/Icons/Arrow.png`} width={20} height={20} style={{ transform: `rotate(${collapse === i ? "90deg" : "0"})`, transition: 'transform 0.1s ease-in-out'}}   onClick={()=>setCollapse(i)} priority />
-                        </Box>
-                        <AnimatePresence initial={false}>
-                        {collapse == i && 
-                            <Text initial={{ opacity: 0 }} animate={{ opacity: 1, transition:{ delay: 0.4 } }} exit={{ opacity: 0, transition:{duration: 0.2} }}  padding="30px">{o.content}</Text>
-                        }
-                        </AnimatePresence>
-                    </Box>
-                    
+                {project.lessonsLearned && project.lessonsLearned.map((o,i) => (
+                    <CollapseCard key={i} index={i} content={o} state={collapse} onClick={()=>setCollapse(i)} />
                 ))}
-
-                <Box padding="20px 0 80px 0" width="100%" justCont="center">
-                    <a href={project.github}>
-                        <Image alt="github image" className='linkGithub' src="/Github/github.png" width={50} height={50} priority />
-                    </a>
-                    {project.vercel &&
-                        <a href={project.vercel} style={{marginLeft:"10%"}}>
-                            <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={50} height={50} priority />
-                        </a>
-                    }
-                </Box>
             </Box>
-            
           </Container>
 
       </main>
