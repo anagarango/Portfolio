@@ -21,6 +21,7 @@ export default function Project(){
     const [project, setProject] = useState([])
     const [skill, setSkill] = useState(0)
     const [collapse, setCollapse] = useState(0)
+    const [word, setWord] = useState("")
         
 
 
@@ -45,18 +46,19 @@ export default function Project(){
       
       <main id='projectMain'>
         <Header height="100vh" />
-          <Container flexDir="column" width="100%" padding="150px" aliIt="flex-start">
+          <Container flexDir="column" width="100%" padding="150px 150px 50px 150px" aliIt="flex-start">
             <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
                 <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches'>{project.name}</Heading>
                 <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"75%", height:"45%", borderRadius:"20px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2"}} />
-                <Heading color='#9DFFFF' fontWeight="100" fSize="30px" fontFamily='Staatliches'>{project.date}</Heading>
+                <Heading color='#9DFFFF' fSize="30px" fontFamily='Staatliches'>{project.date}</Heading>
             </Hero>
             <Box position="sticky" zIndex="5" top="0px" left="50%" transform="translateX(-50%)" margin="100px 0 0 0" width="20vw" minWidth="fit-content" aliIt="center" bgColor="rgba(163,153,226,0.2)" borderRadius="20px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
-                <a href={project.github} style={{padding:"20px 30px"}}>
+                <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"20px 30px"}}>
                     <Image alt="github image" className='linkGithub' src="/Github/github.png" width={40} height={40} priority />
                 </a>
+                <Heading padding="0px 10px" color='#EA638D' fontWeight="500" fSize="18px" fontFamily='Staatliches'>{word}</Heading>
                 {project.vercel &&
-                    <a href={project.vercel} style={{padding:"20px 30px"}}>
+                    <a href={project.vercel} onMouseOver={()=>setWord("Website")} onMouseOut={()=>setWord("")} style={{padding:"20px 30px"}}>
                         <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={40} height={40} priority />
                     </a>
                 }
