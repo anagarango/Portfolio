@@ -162,7 +162,70 @@
             "content": "To work as efficiently as possible, I learned to effectively manage the scope of work. Although my client was in no hurry to have the website deployed as soon as possible, she allowed me to work in a pace that makes since for me. I was excited to work on the project right away, I had assumed that I could finish the project in two weeks, which was absolutely wrong. I hadn’t accounted for the amount of research I would have to do to deliver a great project. I hadn’t accounted for testing with potential clients. I hadn’t accounted for the homework I would have during that time since I was still in college. This project took me two months to complete, so this made me realize that a proactive realistic scope is absolutely important when a client is involved since I don’t want to deliver false hope and inaccurate time estimates as this can upset my client and weaken our client-developer relationship."
           }
         ],
+        "carousel":[
+          "/She's A Keeper/0.jpg","/She's A Keeper/1.jpg", "/She's A Keeper/2.jpg", "/She's A Keeper/3.jpg", "/She's A Keeper/4.jpg"
+        ],
       "github":"https://github.com/anagarango/sandracleaning",
       "vercel":"https://shesakeeper.starbooks.ca"
-  }
+  },{
+    "name": "Check WeatHER",
+    "preview":"Check WeatHER is a weather web app that shows the day's conditions, tomorrow's forecast, and 6-day forecast depending on which city the user writes on the input.",
+    "image":"/CheckWeatHER.png",
+    "date":"February 2023",
+    "projectOverview":"Check WeathHER is a weather web app that provides users with real-time weather information for their desired locations. It aims to offer a seamless and intuitive user experience, accurately delivering the day's conditions, tomorrow's forecast, and 6-day forecast. The key focus for this app is to make visually appealing, so custom icon graphics were created to achieve a unique experience.",
+    "roleName":"Front-End Developer",
+    "role":"Since this was a solo project, I came up with the design for the icons as I wanted something colourful and have a consistent look for each icon. I crafted an intuitive and visually engaging interface that has a responsive design, utilizing my expertise in UI/UX design to ensure a seamless user experience. I carefully selected appropriate colour schemes depending on the weather, typography, and iconography to enhance readability and visual hierarchy. I had learned how to manipulate the API data taken from OpenWeatherAPI to select data that is most important for most users.",
+    "tech": [
+      "Next", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Lottie Animation", "Git", "Illustrator"
+    ],
+    "keyFeatures": [
+        {
+          "title": "Current Weather Conditions",
+          "content": "The app displays the current weather conditions for the selected location, including temperature, weather condition, feels like, and wind speed. The data is frequently updated to provide the most accurate information."
+        },
+        {
+          "title": "Tomorrow’s Forecasts",
+          "content": "The app displays the weather of the next 24 hours along with hour, weather condition, and temperature."
+        },
+        {
+          "title": "6-Day Forecast",
+          "content": "A forecast that shows what the main weather will be for the next 6 days, along with the temperature and precipitation."
+        }
+      ],
+    "designDevelopmentProcess": [
+        {
+            "content":"In paper, I designed the icons I would use to represent the weather and started sketching the layout inspired by other UI/UX designs I saw on Pinterest and Dribbble. I created first the icons in Illustrator to see how it adapt it to look on the web app and play around with the colours I would like to use. I created the input to call the API and retrieve the relevant information so it would be displayed with the appropriate weather icon and map over the forecast I would create for Tomorrow’s Forecast and the 6 day forecast. Once I had the static web page with no micro interactions and was satisfied with the layout, I started adding animations like a loading animation and small interactions of error handling when the user first enters the web app or enters an invalid city name. ",
+            "image": null,
+            "alt": null,
+            "figma": null,
+            "figmaAlt": null
+        },
+        {
+            "content":"The way I had described by design and development process suggests I had followed the SDLC process which I had learned from my She’s A Keeper project and I once again proved it worked as I didn’t face any setbacks creating this app.",
+            "image": null,
+            "alt": null,
+            "figma": null,
+            "figmaAlt": null
+        }
+    ],
+    "lessonsLearned": [
+        {
+          "title": "API Integration",
+          "content": "This was the first time I had used an external API and had been intimidated about the name since I first heard it, but I realized how simple it it to retrieve data from it. With just one axios call, I could fetch real-time weather information. Through learning API integration, I also learned why and how environmental variables are used to hide passwords or API keys."
+        },
+        {
+          "title": "Documentation",
+          "content": "I learned how valuable documentation is from the use of the OpenWeatherAPI. Since there wasn’t many videos I could find on how to use it, it wasn’t necessary for follow a tutorial as everything about how to use the data and what information would be available. Just from reading the docs, I was able to understand the endpoints, parameters, and responses, and effectively utilize the API's functionalities, so this taught me that I should ALWAYS read the documentation. "
+        },
+        {
+          "title": "Data Visualization",
+          "content": "Since this was my first exposure of handling data coming from an API, I hadn’t learned how to extract relevant information from the API responses and manipulate the data to suit the needs of a web app. So this was a very valuable lesson in simplifying complex data to communicate it to the user."
+        }
+      ],
+      "carousel":[
+        "/Check WeatHER/0.jpg","/Check WeatHER/1.jpg",  "/Check WeatHER/2.jpg",  "/Check WeatHER/3.jpg"
+    ],
+    "github":"https://github.com/anagarango/CheckWeatHER",
+    "vercel":"https://check-weat-her.vercel.app/"
+}
 ]
