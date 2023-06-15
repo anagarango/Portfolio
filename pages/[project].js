@@ -22,8 +22,8 @@ export default function Project(){
     const [skill, setSkill] = useState(0)
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
+    const [imageCarousel, setImageCarousel] = useState("")
     var url
-        
 
 
     useEffect(()=>{
@@ -32,10 +32,10 @@ export default function Project(){
         for(var x = 0; x < ProjectList.length; x++){
             if(r.query.project == ProjectList[x].name || url == ProjectList[x].name){
                 setProject(ProjectList[x])
+                setImageCarousel(ProjectList[x].carousel[0])
             }
         }
-
-        console.log(url)
+        
     },[])
 
 
@@ -97,6 +97,14 @@ export default function Project(){
                         {o.figmaAlt && <Text fontStyle="italic" padding="5px 0 40px 0" fontSize="14px">{o.figmaAlt}</Text>}
                     </Box>
                 ))}
+                <Box width="100%" flexDir="column">
+                    <Box width="100%">
+                        {project.carousel && project.carousel.map((o,i)=>(
+                            <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "grayscale(0%)" : "grayscale(100%)"}} />
+                        ))}
+                    </Box>
+                    {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto"}} />}
+                </Box>
                 
 
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Lessons Learned</Heading>

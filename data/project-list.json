@@ -83,6 +83,9 @@
               "content": "As someone who likes to take on many tasks, I realized that I need to improve my task delegation since it was unrealistic of me to finish many tasks in a short span of time that would most likely make me stressed over the other tasks I still have to do. Instead of being overly ambitious to take on many tasks, I focused in accomplishing 3-5 tasks every week to feel that I have accomplished contributing to the project while delivering higher-quality results."
             }
           ],
+        "carousel":[
+          "/Rooty/0.jpg","/Rooty/1.jpg", "/Rooty/2.jpg", "/Rooty/3.jpg"
+        ],
         "github":"https://github.com/BCIT-Rooty/rootyBCIT",
         "vercel":"https://rooty-bcit-iota.vercel.app/"
     },{
