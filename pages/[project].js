@@ -69,25 +69,25 @@ export default function Project(){
             </Box>
             <Box width="100%" flexDir="column">
                 
-                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Project Overview</Heading>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Project Overview</Heading>
                 <Text padding="20px 0 0 0">{project.projectOverview}</Text>
 
-                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Role</Heading>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Role</Heading>
                 <Text padding="20px 0 0 0" fontWeight="700">{project.roleName}</Text>
                 <Text padding="20px 0 0 0">{project.role}</Text>
 
-                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Technologies Used</Heading>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Technologies Used</Heading>
                 <Box padding="20px 0 0 0" flexWrap="wrap" justCont="space-between">
                     {project.tech && project.tech.map((o,i)=>(
                         <TechCard key={i} src={o} alt={o} heading={o} />
                     ))}
                 </Box>
 
-                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 20px 0">Key Features</Heading>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 20px 0">Key Features</Heading>
                 <BrowserModel version='project' onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={project.keyFeatures} name={project.name}/>
                 
 
-                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Design and Development Process</Heading>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Design and Development Process</Heading>
                 {project.designDevelopmentProcess && project.designDevelopmentProcess.map((o,i)=>(
                     <Box key={i} flexDir="column" width="100%" aliIt="center">
                         <Text padding="20px 0">{o.content}</Text>
@@ -97,17 +97,19 @@ export default function Project(){
                         {o.figmaAlt && <Text fontStyle="italic" padding="5px 0 40px 0" fontSize="14px">{o.figmaAlt}</Text>}
                     </Box>
                 ))}
+                
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 20px 0">Code Snippets</Heading>
                 <Box width="100%" flexDir="column">
                     <Box width="100%">
                         {project.carousel && project.carousel.map((o,i)=>(
-                            <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "grayscale(0%)" : "grayscale(100%)"}} />
+                            <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "grayscale(0%)" : "grayscale(100%)", transition: "0.8s ease"}} />
                         ))}
                     </Box>
-                    {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto"}} />}
+                    {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto", margin:"20px 0 0 0"}} />}
                 </Box>
                 
 
-                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Lessons Learned</Heading>
+                <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="100px 0 15px 0">Lessons Learned</Heading>
                 {project.lessonsLearned && project.lessonsLearned.map((o,i) => (
                     <CollapseCard key={i} index={i} content={o} state={collapse} onClick={()=>setCollapse(i)} />
                 ))}
