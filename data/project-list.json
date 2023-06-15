@@ -227,5 +227,69 @@
     ],
     "github":"https://github.com/anagarango/CheckWeatHER",
     "vercel":"https://check-weat-her.vercel.app/"
-}
+  },{
+    "name": "CodeTipsTricks",
+    "preview":"CodeTipsTricks is a discussion web app where registered users share their favourite useful links that helped expand their coding knowledge in areas of Front-end, Back-end, and Machine Learning / AI.",
+    "image":"/CodeTipsTricks.png",
+    "date":"March 2023",
+    "projectOverview":"CodeTipsTricks is a discussion web app where registered users share their favourite useful links that helped expand their coding knowledge in areas of Front-end, Back-end, and Machine Learning / AI. The purpose behind this project came from my curiosity of wanting to find out what resources other experienced web developers could share that helped expand their coding knowledge because I'm always looking ways on how I can improve my skills and knowledge and get better in Front-end development and slowly learning more about Back-end development.",
+    "roleName":"Full Stack Developer",
+    "role":"As this was a solo project, I took care of all the development and design of the web app. I had created the UI/UX of the application using front-end tools, developed a responsive design that fits all devices and screens, and ensuring an intuitive design that is simple and easy to use for new users. I built a RESTful API endpoints to perform specific operations for users to manage their posts and comments, facilitate the data exchange between the client and server which I converted into JSON format, and learned how to use server side rendering. I setup a PostgreSQL database to keep track of each user’s stored data, setup an authentication service so users would be allowed to sign in and post and comment. Many of these tasks I took on was time-consuming and a learning curve as this was the first time I had been exposed to back end development, and had to do a lot of Googling.",
+    "tech": [
+      "Next", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "NextAuth", "Git", "PostgreSQL", "CockroachDB", "Postman"
+    ],
+    "keyFeatures": [
+        {
+          "title": "Posts",
+          "content": "Users are able to submit links of their favourite YouTube or website helpful links that fit in either category of front-end, back-end, or machine learning / AI. Users can create, edit, and delete their posts."
+        },
+        {
+          "title": "Comments",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+        },
+        {
+          "title": "Categories",
+          "content": "Users can filter through the posts by selecting the specific category they are interested in."
+        },
+        {
+          "title": "Registration",
+          "content": "Before users can create a post, view posts, or leave a comment, they are required to register first with either email and password or with their GitHub account."
+        }
+      ],
+    "designDevelopmentProcess": [
+        {
+            "content":"The main focus of this project was to test out more of the back-end technologies that I haven't played with before, such as Next-Auth, PostgreSQL, and CockroachDB. Because of that, a lot of Googling took place to make this project work. It took a month to make this project, so I made constant efforts throughout that month to add or make something work so the process was nice and easy. I did however create a rough Figma design along with some relevant inspirations to create a user interface that’s simple enough to interact with while fitting the theme of being a discussion web app for developers.",
+            "image": null,
+            "alt": null,
+            "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FxpQ2JUNJwmhxE0tkKTkM9u%2FCodeTipsTricks%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3D8W5ShsLqxbCcZYyE-1",
+            "figmaAlt": "Figma Design of the UI the website will have plus inspirations."
+        },
+        {
+            "content":"I followed the Agile/SDLC methodology to successfully finish the web app I expected it to work and it really helped getting everything I needed when it came to the development part (which is my favourite part). In solo projects, I kind of struggle creating a mockup/prototype that is super unique and amazing as the design process for me is very time consuming that after a while, it just seems that there’s always something I should do better to make the web app unique and it’s an ongoing forever cycle.",
+            "image": null,
+            "alt": null,
+            "figma": null,
+            "figmaAlt": null
+        }
+    ],
+    "lessonsLearned": [
+        {
+          "title": "Documentation",
+          "content": "This project helped me improve my problem solving skills and how reading documentation of the technologies is absolutely IMPORTANT. Especially when the technology is well-known among many developers, the more effort to make the docs clear makes it better, so that taught me that I should read documentation always when before, I thought it was boring or not necessary to read."
+        },
+        {
+          "title": "Back-End Tech",
+          "content": "Working on the back end was a new experience for me so I learned how front-end and back-end components interact with each other and understanding how to handle data that is both sent back to the server or received from the server. I understood how RESTful API’s work which was very exciting because it was sort of like a puzzle and was using Postman to help me with problem solving and that was the most enjoyable part of the project as my favourite part is problem solving."
+        },
+        {
+          "title": "Security",
+          "content": "I became more knowledgeable about security measures to take when adding user authentication. Although using Next-Auth was a bit confusing to implement it to the app, its completely necessary to have in an user-generated content app where several users will be interacting with the platform and other people."
+        }
+      ],
+      "carousel":[
+        "/CodeTipsTricks/0.jpg","/CodeTipsTricks/1.jpg",  "/CodeTipsTricks/2.jpg",  "/CodeTipsTricks/3.jpg", "/CodeTipsTricks/4.jpg", "/CodeTipsTricks/5.jpg", "/CodeTipsTricks/6.jpg"
+    ],
+    "github":"https://github.com/anagarango/CodeTipsTricks",
+    "vercel":"https://code-tips-tricks.vercel.app/"
+  }
 ]
