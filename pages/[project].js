@@ -22,23 +22,27 @@ export default function Project(){
     const [skill, setSkill] = useState(0)
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
+    var url
         
 
 
     useEffect(()=>{
-        const url = window.location.pathname.split('/').pop();
+        url = window.location.pathname.split('/').pop().replace(/%20/g, " ");
+    
         for(var x = 0; x < ProjectList.length; x++){
             if(r.query.project == ProjectList[x].name || url == ProjectList[x].name){
                 setProject(ProjectList[x])
             }
         }
+
+        console.log(url)
     },[])
 
 
     return(
         <>
       <Head>
-        <title>Ana Arango - Front End Developer</title>
+        <title>{`${r.query.project ? r.query.project: url} - Ana Arango`}</title>
         <meta name="description" content="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/Icons/Home.svg" />
@@ -47,9 +51,9 @@ export default function Project(){
       <main id='projectMain'>
         <Header height="100vh" />
           <Container id="ProjectPage" flexDir="column" width="100%" padding="150px 150px 50px 150px" aliIt="flex-start">
-            <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
+            <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" maxWidth="1000px" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
                 <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches'>{project.name}</Heading>
-                <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"75%", height:"45%", borderRadius:"20px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2"}} />
+                <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"60vw", height:"auto", borderRadius:"20px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
                 <Heading color='#9DFFFF' fSize="30px" fontFamily='Staatliches'>{project.date}</Heading>
             </Hero>
             <Box position="sticky" zIndex="5" top="0px" left="50%" transform="translateX(-50%)" margin="100px 0 0 0" width="20vw" minWidth="fit-content" aliIt="center" bgColor="rgba(163,153,226,0.2)" borderRadius="20px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
@@ -80,7 +84,7 @@ export default function Project(){
                 </Box>
 
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 20px 0">Key Features</Heading>
-                <BrowserModel version='project' onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={project.keyFeatures}/>
+                <BrowserModel version='project' onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={project.keyFeatures} name={project.name}/>
                 
 
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 0 0">Design and Development Process</Heading>

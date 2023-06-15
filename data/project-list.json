@@ -84,9 +84,82 @@
             }
           ],
         "github":"https://github.com/BCIT-Rooty/rootyBCIT",
-        "vercel":"https://rooty-bcit-iota.vercel.app/",
-        "carousel": [
-            "/Rooty/1.jpg",  "/Rooty/2.jpg",  "/Rooty/3.jpg",  "/Rooty/4.jpg",  "/Rooty/5.jpg",  "/Rooty/6.jpg",  "/Rooty/7.jpg",  "/Rooty/8.jpg",  "/Rooty/9.jpg",  "/Rooty/10.jpg"
-        ]
-    }
+        "vercel":"https://rooty-bcit-iota.vercel.app/"
+    },{
+      "name": "She's A Keeper",
+      "preview":"She’s A Keeper is a cleaning service website for a self-employed housekeeper in the Tri-Cities area. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning.",
+      "image":"/ShesAKeeper.png",
+      "date":"December 2022 - February 2023",
+      "projectOverview":"She’s A Keeper is a cleaning service website of a self-employed housekeeper offering her services in the Tri-Cities area of Metro Vancouver. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning. This was a solo freelance project I took on to help a family member refer potential clients about her services. Although my family member didn’t request anything specifically, I made sure to follow the requirements a house-cleaning website would have to provide the information a potential client would want.",
+      "roleName":"Front-End Developer, Content Writer, and UI/UX Designer",
+      "role":"I came up with the design of the website, along with the content, and developed the whole website. I did thorough research to understand the target audience’s needs from visiting a house-cleaning website. I grabbed inspiration and gathered them in a Pinterest Board to create a mockup of the layout, navigation, and interactions. I created the brand identity (logo, colours, fonts, graphics) that was consistent throughout the website. I translated the mockup design into actual code using HTML, CSS, and JavaScript in the Next.js framework and prioritizing the responsive layout for user-friendliness. I worked closely with my client to have clear and accurate descriptions that highlight their business, including sections like the home, about, and contact.",
+      "tech": [
+        "Next", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "SwiperJS", "Git", "Figma", "Illustrator"
+      ],
+      "keyFeatures": [
+          {
+            "title": "Why Choose She’s A Keeper",
+            "content": "This section includes reasons why the potential client should consider hiring my client’s services. I designed the graphics using Adobe’s Illustrator."
+          },
+          {
+            "title": "Experience Statistics",
+            "content": "This section includes statistics about my clients experience such as how many clients she currently has or how many years of experience."
+          },
+          {
+            "title": "Testimonials",
+            "content": "I requested my client to ask their clients for authentic and descriptive testimonials about her services to attract future potential clients that she is trustworthy."
+          },
+          {
+            "title": "About",
+            "content": "A small description about my client that brings a bit of her personality and explains why she is the right person for the job as she enjoys cleaning houses. Even a small description about what products she uses or brings to her houses so her clients are aware that they are family-safe."
+          },
+          {
+            "title": "Services",
+            "content": "A list of the types of services that are included in her line of work are shared with a small graphic along with service’s title."
+          },
+          {
+            "title": "Contact",
+            "content": "A form is included that asks the potential client to leave their name, email, and message that my client will receive in their professional email."
+          }
+        ],
+      "designDevelopmentProcess": [
+          {
+              "content":"Before designing, I gathered research and inspiration of what a house-cleaning website should have. I searched through competitors of my client to see what kind of content they included so I can organize a layout that displays the necessary information. I looked for a colour scheme that made sense for the type of business to represent cleanliness. Since it would be a pretty static website, I prioritized simplicity by implementing a clear navigation so users can access relevant information about her services.",
+              "image": "/ShesAKeeper/Pinterest Board.jpg",
+              "alt": "A Pinterest Board with relevant inspirations for a cleaning services website.",
+              "figma": null,
+              "figmaAlt": null
+          },
+          {
+              "content":"I made sure to adhere the same colour scheme, typography, and graphical style throughout the website to make it professional and visually appealing. I ensured the website design was responsive and optimized for various screen sizes, allowing users to have a better experience.",
+              "image": null,
+              "alt": null,
+              "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSglfnyfQM1mVusvnMsj9fu%2FShe's-A-Keeper%3Fnode-id%3D0%253A1%26t%3DhohDG2uiQljQjT6v-1",
+              "figmaAlt": "Figma Design of the UI the website will have."
+          },
+          {
+              "content":"I followed the Software Development Life Cycle, the six stages of planning, analysis, design, implementation, testing, and maintenance. This process allowed me to efficiently work forward as I had already gathered what requirements are needed and had spent time creating a layout that is appropriate for the project.",
+              "image": null,
+              "alt": null,
+              "figma": null,
+              "figmaAlt": null
+          }
+      ],
+      "lessonsLearned": [
+          {
+            "title": "SDLC",
+            "content": "By adhering to the SDLC (Software Developer Lifecycle), it helped me understand the significance of gathering requirements, planning, development, testing, and deployment phases. This is an efficient process that made sense as soon as I got to the development phase since I had all the material I needed to start creating the website. I was able to deliver a high-quality website within a considerable short span of time where the research part is what took the longest. This well-defined and structured process definitely proved to be the best way to work."
+          },
+          {
+            "title": "Client Feedback",
+            "content": "With the feedback I got from my client, I understood a valuable lesson that a client’s opinion and satisfaction is what matter’s most when it comes to having a successful project. I realized my preferences of web design are completely different from what my client would want, so I would encourage my client to share their thoughts of what the design looks like and if there is anything that can be altered so they are more satisfied with the end product."
+          },
+          {
+            "title": "Scope Management",
+            "content": "To work as efficiently as possible, I learned to effectively manage the scope of work. Although my client was in no hurry to have the website deployed as soon as possible, she allowed me to work in a pace that makes since for me. I was excited to work on the project right away, I had assumed that I could finish the project in two weeks, which was absolutely wrong. I hadn’t accounted for the amount of research I would have to do to deliver a great project. I hadn’t accounted for testing with potential clients. I hadn’t accounted for the homework I would have during that time since I was still in college. This project took me two months to complete, so this made me realize that a proactive realistic scope is absolutely important when a client is involved since I don’t want to deliver false hope and inaccurate time estimates as this can upset my client and weaken our client-developer relationship."
+          }
+        ],
+      "github":"https://github.com/anagarango/sandracleaning",
+      "vercel":"https://shesakeeper.starbooks.ca"
+  }
 ]
