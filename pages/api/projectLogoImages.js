@@ -8,6 +8,7 @@ export default function handler(req, res) {
     res.status(200).json({ fileNames });
   } catch (error) {
     console.error('Error reading folder:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: `Internal Server Error: ${error.message}` });
   }
+  
 }
