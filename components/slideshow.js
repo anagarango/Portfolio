@@ -8,7 +8,7 @@ export default function TechSlideshow(){
 
   async function fetchData() {
     try {
-      const response = await fetch('https://anagarango.starbooks.ca/api/projectLogoImages');
+      const response = await fetch('/api/projectLogoImages');
       const data = await response.json();
       setImagesArray(data.fileNames)
     } catch (error) {
