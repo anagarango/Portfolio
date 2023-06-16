@@ -73,17 +73,17 @@ export default function Home() {
             <Heading ref={ref1} initial={{opacity:0}} animate={inView1 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }} color='#B23C87' fontFamily='Staatliches' padding="10px 0">About Me</Heading>
             <Box display="inline" width="100%">
                 <Image initial={{ opacity: 1, scale: 0.9 }}
-      whileHover={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.1,
-        ease: [0, 0.71, 0.2, 1.01],
-        scale: {
-          type: "spring",
-          damping: 5,
-          stiffness: 100,
-          restDelta: 0.001
-        }
-      }} className='aboutmeimage' src="/aboutme.png" alt="Eagle eye shot of Ana Arango working on her desktop and laptop" width={200} height={200} style={{width:"40%", height:"100%", float:"left", margin:"0px 30px 30px 50px", minWidth:"350px"}} priority/>
+                  whileHover={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.1,
+                    ease: [0, 0.71, 0.2, 1.01],
+                    scale: {
+                      type: "spring",
+                      damping: 5,
+                      stiffness: 100,
+                      restDelta: 0.001
+                    }
+                  }} className='aboutmeimage' src="/aboutme.png" alt="Eagle eye shot of Ana Arango working on her desktop and laptop" width={200} height={200} style={{width:"40%", height:"100%", float:"left", margin:"0px 30px 30px 50px", minWidth:"350px"}} priority/>
                 <Text width="100%" textAlign="end" padding="0 0 30px 0"> I’m Ana Arango, {currentYear-2004} year old front-end developer, from Vancouver, Canada.</Text>
                 <Text width="100%" textAlign="end" padding="0 0 30px 0">From straight of high school, I started my post-secondary education in the Digital Design and Development with no prior knowledge of programming, but after 2 years, I’ve learned many new technologies a front-end developer needs to create functional appealing websites and web-applications.</Text>
                 <Text width="100%" textAlign="end" padding="0 0 30px 0">Fueled by new ideas, I enjoy designing coding things from scratch as it continues putting new challenges on myself. I’m passionate, expressive, and naturally curious in exploring new techniques and technologies to keep up with the ever-evolving web development landscape.</Text>
@@ -98,11 +98,12 @@ export default function Home() {
             
 
             <Heading ref={ref3} initial={{opacity:0}} animate={inView3 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' fontFamily='Staatliches' fSize="22px" padding="10px 0" margin="70px 0 0 0" width="100%">Tools and Technologies I Use</Heading>
+            <TechSlideshow />
+            <Box position="relative" top="-60px" height="60px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
           </Container>
+          
 
-          <TechSlideshow />
-
-          <Container id="Projects" flexDir="column" width="100%" padding="200px 150px 150px 150px">
+          <Container id="Projects" flexDir="column" width="100%" padding="100px 150px 150px 150px">
             <Heading ref={ref4} initial={{opacity:0}} animate={inView4 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Projects</Heading>
             <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
             {Hello.map((o,i)=>{

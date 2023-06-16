@@ -6,12 +6,6 @@ import Footer from '@/components/footer'
 import { Box, Hero, Container, Heading, Text, CTA, Tag } from '@/components/globals'
 import TechCard from '@/components/techCard'
 import { useRouter } from "next/router"
-import { motion, AnimatePresence } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper';
 import ProjectList from "@/data/project-list.json"
 import BrowserModel from '@/components/browserModel'
 import CollapseCard from '@/components/collapse'
@@ -102,7 +96,7 @@ export default function Project(){
                 <Box width="100%" flexDir="column">
                     <Box width="100%">
                         {project.carousel && project.carousel.map((o,i)=>(
-                            <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "grayscale(0%)" : "grayscale(100%)", transition: "0.8s ease"}} />
+                            <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)", transition: "0.8s ease"}} />
                         ))}
                     </Box>
                     {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto", margin:"20px 0 0 0"}} />}
