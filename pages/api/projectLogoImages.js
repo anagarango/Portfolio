@@ -1,7 +1,11 @@
 import fs from 'fs';
+import path from 'path';
 
 export default function handler(req, res) {
-  const folderPath = 'public/HorizontalLogos'; // Replace with the actual path to your folder
+  const folderPath = path.join(process.cwd(), 'public/HorizontalLogos');
+
+  console.log('Current working directory:', process.cwd());
+  console.log('Resolved folder path:', folderPath);
 
   try {
     const fileNames = fs.readdirSync(folderPath);
@@ -10,5 +14,4 @@ export default function handler(req, res) {
     console.error('Error reading folder:', error);
     res.status(500).json({ error: `Internal Server Error: ${error.message}` });
   }
-  
 }
