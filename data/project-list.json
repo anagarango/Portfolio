@@ -304,20 +304,20 @@
     ],
     "keyFeatures": [
         {
-          "title": "Posts",
+          "title": "Quiz",
           "content": "Users are able to submit links of their favourite YouTube or website helpful links that fit in either category of front-end, back-end, or machine learning / AI. Users can create, edit, and delete their posts."
         },
         {
-          "title": "Comments",
+          "title": "Results",
           "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
         },
         {
-          "title": "Categories",
-          "content": "Users can filter through the posts by selecting the specific category they are interested in."
+          "title": "Chosen Drink",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
         },
         {
-          "title": "Registration",
-          "content": "Before users can create a post, view posts, or leave a comment, they are required to register first with either email and password or with their GitHub account."
+          "title": "Nightclubs",
+          "content": "Users can filter through the posts by selecting the specific category they are interested in."
         }
       ],
     "designDevelopmentProcess": [
