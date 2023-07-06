@@ -50,7 +50,7 @@ export default function Project(){
                 <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"60vw", height:"auto", borderRadius:"20px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
                 <Heading color='#9DFFFF' fSize="30px" fontFamily='Staatliches'>{project.date}</Heading>
             </Hero>
-            <Box position="sticky" zIndex="5" top="0px" left="50%" transform="translateX(-50%)" margin="100px 0 0 0" width="20vw" minWidth="fit-content" aliIt="center" bgColor="rgba(163,153,226,0.2)" borderRadius="20px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
+            <Box position="sticky" zIndex="5" top="0px" left="50%" transform="translateX(-50%)" margin="100px 0 0 0" width="20vw" minWidth="fit-content" aliIt="center" maxWidth="280px" bgColor="rgba(163,153,226,0.2)" borderRadius="20px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
                 <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"20px 30px"}}>
                     <Image alt="github image" className='linkGithub' src="/Github/github.png" width={40} height={40} priority />
                 </a>
@@ -93,13 +93,13 @@ export default function Project(){
                 ))}
                 
                 <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 20px 0">Code Snippets</Heading>
-                <Box width="100%" flexDir="column">
+                <Box width="100%" flexDir="column" aliIt="center">
                     <Box width="100%">
                         {project.carousel && project.carousel.map((o,i)=>(
                             <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)", transition: "0.8s ease"}} />
                         ))}
                     </Box>
-                    {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto", margin:"20px 0 0 0"}} />}
+                    {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1300px"}} />}
                 </Box>
                 
 
