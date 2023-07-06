@@ -8,7 +8,7 @@
         "roleName":"Lead Front-End Developer",
         "role":"I worked closely with my other front-end developer/project manager and took leadership in discussing how we can split tasks evenly. I would provide assistance when my partner needed help in completing their tasks when technical challenges arise. I provided my insights on front-end feasibility and developed dynamic features/components when necessary adhering to clean code and making them reusable. I tested the app to make sure all the functionalities are there and reported back to the team whenever I found a bug or if there’s something else we should consider adding to the app. I was responsible in converting our designers prototypes into code, so I regularly showed them the process of our work to ensure its up to par of what they expected.",
         "tech": [
-            "Next", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Semantic UI", "Lottie Animation", "Storybook", "Git", "Figma"
+            "Next", "React", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Semantic UI", "Lottie Animation", "Storybook", "Git", "Figma"
         ],
         "keyFeatures": [
             {
@@ -97,7 +97,7 @@
       "roleName":"Front-End Developer, Content Writer, and UI/UX Designer",
       "role":"I came up with the design of the website, along with the content, and developed the whole website. I did thorough research to understand the target audience’s needs from visiting a house-cleaning website. I grabbed inspiration and gathered them in a Pinterest Board to create a mockup of the layout, navigation, and interactions. I created the brand identity (logo, colours, fonts, graphics) that was consistent throughout the website. I translated the mockup design into actual code using HTML, CSS, and JavaScript in the Next.js framework and prioritizing the responsive layout for user-friendliness. I worked closely with my client to have clear and accurate descriptions that highlight their business, including sections like the home, about, and contact.",
       "tech": [
-        "Next", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "SwiperJS", "Git", "Figma", "Illustrator"
+        "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "SwiperJS", "Git", "Figma", "Illustrator"
       ],
       "keyFeatures": [
           {
@@ -176,7 +176,7 @@
     "roleName":"Front-End Developer",
     "role":"Since this was a solo project, I came up with the design for the icons as I wanted something colourful and have a consistent look for each icon. I crafted an intuitive and visually engaging interface that has a responsive design, utilizing my expertise in UI/UX design to ensure a seamless user experience. I carefully selected appropriate colour schemes depending on the weather, typography, and iconography to enhance readability and visual hierarchy. I had learned how to manipulate the API data taken from OpenWeatherAPI to select data that is most important for most users.",
     "tech": [
-      "Next", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Lottie Animation", "Git", "Illustrator"
+      "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Lottie Animation", "Git", "Illustrator"
     ],
     "keyFeatures": [
         {
@@ -236,7 +236,7 @@
     "roleName":"Full Stack Developer",
     "role":"As this was a solo project, I took care of all the development and design of the web app. I had created the UI/UX of the application using front-end tools, developed a responsive design that fits all devices and screens, and ensuring an intuitive design that is simple and easy to use for new users. I built a RESTful API endpoints to perform specific operations for users to manage their posts and comments, facilitate the data exchange between the client and server which I converted into JSON format, and learned how to use server side rendering. I setup a PostgreSQL database to keep track of each user’s stored data, setup an authentication service so users would be allowed to sign in and post and comment. Many of these tasks I took on was time-consuming and a learning curve as this was the first time I had been exposed to back end development, and had to do a lot of Googling.",
     "tech": [
-      "Next", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "NextAuth", "Git", "PostgreSQL", "CockroachDB", "Postman"
+      "Next", "React", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "NextAuth", "Git", "PostgreSQL", "CockroachDB", "Postman"
     ],
     "keyFeatures": [
         {
@@ -352,6 +352,84 @@
       ],
       "carousel":[
         "/CodeTipsTricks/0.jpg","/CodeTipsTricks/1.jpg",  "/CodeTipsTricks/2.jpg",  "/CodeTipsTricks/3.jpg", "/CodeTipsTricks/4.jpg", "/CodeTipsTricks/5.jpg", "/CodeTipsTricks/6.jpg"
+    ],
+    "github":"https://github.com/anagarango/CodeTipsTricks",
+    "vercel":"https://code-tips-tricks.vercel.app/"
+  },{
+    "name": "DrinkUp",
+    "preview":"DrinkUp is a web app for new-legal aged people to find their favourite cocktails to order in their next pub, bar, and/or nightclub visit.",
+    "image":"/DrinkUp.png",
+    "date":"March 2023",
+    "projectOverview":"DrinkUp is a web app for people who have little cocktail-knowledge experience or don’t know what the hell to order, look no further! A pain-point that became a project, inspired to help new-legal aged people to find their favourite cocktails to order in their next pub, bar, and/or nightclub visit. DrinkUp provides 3 boxes for you to fill out on your drink preferences, and our smart-finding-your-new-favourite-drink system will recommend you the best cocktails that fill your needs.",
+    "roleName":"Lead Front-End Developer",
+    "role":"I was responsible creating the ui for the quiz where users will find results for their cocktail preferences and the nightclub page. I created the functionality of form handling and validation of the users inputs and running them through the API to only return the drinks that matched. This part was the toughest since the API was not organized in an optimal way I would want to use it but I would have to pay a monthly fee to have it organized it would work for me. I had to implement a dynamic way to call the API to retrieve all the results of drinks. I ensured the web app is responsive and adapts to different screen sizes. Along with my partner I was working with for this project, we came up with the theme to make it nightclub-like.",
+    "tech": [
+      "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "Git", "Playwright"
+    ],
+    "keyFeatures": [
+        {
+          "title": "Quiz",
+          "content": "Users are able to submit links of their favourite YouTube or website helpful links that fit in either category of front-end, back-end, or machine learning / AI. Users can create, edit, and delete their posts."
+        },
+        {
+          "title": "Results",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+        },
+        {
+          "title": "Chosen Drink",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+        },
+        {
+          "title": "Nightclubs",
+          "content": "Users can filter through the posts by selecting the specific category they are interested in."
+        }
+      ],
+    "designDevelopmentProcess": [
+        {
+            "content":"This project was evenly split in time dedicated to ensuring that we have designed an interface that makes sense for our main audience. I was focused on creating an intuitive interface that provides a seamless experience, guiding users toward discovering their ideal cocktail drink through our quiz system. We first brainstormed the app's purpose and target audience, which included me. I was a young person that had no knowledge about what cocktail drinks would interest me, so this pain point in discovering what drink would be the best choice for me is what inspired me to ideate this web app, and I was sure I wasn’t the only one who shared that same feeling of not knowing what to order. We started a mood board after that to find inspirations in Dribbble and Pinterest that we like and see how we can incorporate designs into our web app.",
+            "image": null,
+            "alt": null,
+            "figma": null,
+            "figmaAlt": null
+        },
+        {
+            "content":"At first, my partner had been looking in aesthetic designs for drinks that were very pretty, but for me, since alcoholic drinks are for only adults, I suggested that in a liquor store or a nightclub, soft colours like pastels aren't seen in such places. She agreed and I leaned the conversation into considering using neon or dark colours, more like a nightclub web app look that would make sense for an occasion when this app would be useful. She gave the thumbs up and we were good to go! I carefully selected the colour scheme and typography while she created the logo for the app that reflect the app's theme and appealed to the target audience.",
+            "image": null,
+            "alt": null,
+            "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTAeJvOi6l07h4eEeQVtHBD%2FDrinkUp%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3D4JBPk3qjai97KNwx-1",
+            "figmaAlt": "Figjam of theme inspirations and features we considered for the web app."
+        },
+        {
+          "content":"I developed the functionality for our users to input their drink preferences through three simple selection boxes which runs through the JSON data we get from the Cocktail API and only return the drinks that match the drink preferences. Initially, I almost wanted to scrap this idea as I noticed the data was unconventionally organized in a way that wouldn’t work for our app. However, I would have to pay a monthly fee to have access to the data that is organized in a way that would work for me. I kept playing around with the API to see if there was a way I can work around it, funny enough, a dream occurred that gave me an idea and when I woke up, I wrote it down immediately so I could brainstorm on how I could make that work. Basically, I would have the iterate through the alphabet and the letter would go through the URL of the API to return drinks that matched the user's inputs alphabetically. With the help of my partner, we were able to have it working in the way I envisioned.",
+          "image": null,
+          "alt": null,
+          "figma": null,
+          "figmaAlt": null
+        },
+        {
+            "content":"Now, we had access to each drink's ingredients and preparation methods, along with the image that represented the drink and occasionally, a YouTube link was connected to the drink on how to make it. We created unit tests using Playwright to ensure the app's usability is up to par and tested it with classmates for any feedback on improvements to make. After considering the suggestions and implementing them, I handled the deployment and hosted it under my domain so anyone can access it now, no matter what device they were on since we implemented a responsive design as well.",
+            "image": null,
+            "alt": null,
+            "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F80sKiXpTUTc8yJl4gnWlh8%2FDrinkUp-Design%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D4JBPk3qjai97KNwx-1",
+            "figmaAlt": "Figma of the initial design and then of the final design we both were happy with."
+        }
+      ],
+    "lessonsLearned": [
+        {
+          "title": "Communication",
+          "content": "With my partner, I learned how I could share my constructive feedback in a way that we can keep brainstorming to land on a point where we are both happy with whatever the issue is. We placed ourselves in our main audience's shoes and thoroughly discussed what kind of feeling we wanted to get when we visit our web app and once we decided on the theme, we could find elements that could be used on the app that fit the theme. From the beginning, we had already decided on our roles since she was pursuing more of a UI/UX designer role while I would focus more on the development side of it which worked perfectly for us both since we were very proud of the result, I was able to maintain a positive working relationship with her as we evenly split our tasks and kept a task management table to make sure we were both in track and support each other if any issues arise."
+        },
+        {
+          "title": "Adaptability",
+          "content": " Of course, with the difficult API I had to work around, I discovered that I needed to adapt to the way the API data was organized which was an unforeseen challenge and be able to grab the data that would be relevant to the app and return the information that our users would be interested. I had to embrace that difficulty and find an innovative solution that would meet our web app’s purpose and functionality that our users would find relevant to them. With some user testing, I had to also consider what our main users would give feedback on for the functionality and experience they get from the app, which we had to be flexible and accommodate their reasonable feedback to implement into the app."
+        },
+        {
+          "title": "User Experience",
+          "content": "I learned that a simple clean design is what makes this app stand out, to let colours draw the attention of the app to things we want them to focus on as our app was dark and wanted to highlight the important sections. We understood that it had to be a seamless experience that our main audience would be interested in to check out and pique their interest to keep scrolling through the app. We did our best to keep the app consistent to reuse components so it's more visually appealing to create an engaging user experience. Having consistent branding and sharing the same layout, interactions, and features throughout the app is what makes this app a memorable and immersive experience."
+        }
+      ],
+      "carousel":[
+        "/DrinkUp/0.jpg","/DrinkUp/1.jpg",  "/DrinkUp/2.jpg",  "/DrinkUp/3.jpg", "/DrinkUp/4.jpg"
     ],
     "github":"https://github.com/anagarango/CodeTipsTricks",
     "vercel":"https://code-tips-tricks.vercel.app/"
