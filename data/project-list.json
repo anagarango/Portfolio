@@ -306,19 +306,19 @@
     "keyFeatures": [
         {
           "title": "Quiz",
-          "content": "Users are able to submit links of their favourite YouTube or website helpful links that fit in either category of front-end, back-end, or machine learning / AI. Users can create, edit, and delete their posts."
+          "content": "Users go through a three step system where they input their preferences of type of drink, flavours/ingredients, and if its alcoholic or not. Users can only make one selection out of each box."
         },
         {
           "title": "Results",
-          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+          "content": "After the three boxes of the quiz is filled out, results that match the users preferences will appear below. However, there are times when the preferences don't show results as there are no drinks that match with the inputs."
         },
         {
           "title": "Chosen Drink",
-          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+          "content": "The user can scroll through the results based on the choices they made on the quiz, once they find a drink that interests them, they can click on it and the information about the drink will appear below, showing the ingredients, instructions, and sometimes, a YouTube video about the drink. This YouTube videos are most commonly seen in popular drinks."
         },
         {
           "title": "Nightclubs",
-          "content": "Users can filter through the posts by selecting the specific category they are interested in."
+          "content": "For users that live in Vancouver, British Columbia, 6 of the most popular nightclubs are displayed in the Nightclubs page and when clicked on, it leads you to that nightclubs website."
         }
       ],
     "designDevelopmentProcess": [
@@ -368,7 +368,75 @@
       "carousel":[
         "/DrinkUp/0.jpg","/DrinkUp/1.jpg",  "/DrinkUp/2.jpg",  "/DrinkUp/3.jpg", "/DrinkUp/4.jpg"
     ],
-    "github":"https://github.com/anagarango/CodeTipsTricks",
-    "vercel":"https://code-tips-tricks.vercel.app/"
+    "github":"https://github.com/anagarango/DrinkUp",
+    "vercel":"https://drinkup.vercel.app/"
+  },
+  {
+    "name": "Gooogle Dooodles",
+    "preview":"Gooogle Dooodles is a fun web app for curious people to check out all Google Doodles based off a year the user selects along with worldwide events that happened the day it was released.",
+    "image":"/Gooogle Dooodles.png",
+    "date":"February 2023",
+    "projectOverview":"Gooogle Dooodles is a fun web app for curious people to check out all Google Doodles based off a year the user selects. When the user selects a Google Doodle, they can check out events that happened either the exact day that Google Doodle was released or if no worldwide event happened that day, it will share worldwide events that happened that day but different years.",
+    "roleName":"Front-End Developer",
+    "role":"This was a solo project, so I handled the design and development of this web app, although for design, it was all based off of course Google, so it looks like a Google Search Engine for just their Google Doodles, but I altered the name to Gooogle Dooodles, which for some reason, looks better having the extra O for me. For development, I used two API's, created the functionality so they both work together, and I created Playwright tests to test the interface and functionality of both pages I created.",
+    "tech": [
+      "Next", "React", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "Lottie Animation", "Git", "Playwright"
+    ],
+    "keyFeatures": [
+        {
+          "title": "Year Input",
+          "content": "Users are able to submit links of their favourite YouTube or website helpful links that fit in either category of front-end, back-end, or machine learning / AI. Users can create, edit, and delete their posts."
+        },
+        {
+          "title": "Results",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+        },
+        {
+          "title": "Chosen Gooogle Dooodle : Event",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+        }
+      ],
+    "designDevelopmentProcess": [
+        {
+            "content":"This was a class mini project where my instructor wanted us to use 2 API's and implement them into a web app that would make sense, and one of the API's had to be from Kaggle. I spent a lot of time searching through Kaggle and wasn't seeing one that would interest it as much, until I found an obscure one that had always interested me about the history of each Google Doodle. It was a complete dataset that I could download and I continued my search for the second API that would work well with the Google Doodles. I checked out what object keys each Google Doodle had and the date seemed an interesting object key that can be easily found in other API's.",
+            "image": null,
+            "alt": null,
+            "figma": null,
+            "figmaAlt": null
+        },
+        {
+            "content":"I looked for an API that would share important events around the world, I found there was a Wikipedia API, but quickly found a more convenient API that is will display events based on the date written on the URL date parameter. Before implementing the design of just basing it off Google, I worked on the functionality to make sure both API's can work together, and after some trial and error of testing out both API's, lots of console.logging, and writing different conditionals for certain occasions, they both worked perferctly and in sync.",
+            "image": null,
+            "alt": null,
+            "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FdC8pmN7ebEBS5IZNqDc0fI%2FGooogle-Dooodles%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DoQ40J9vTbKooSAvP-1",
+            "figmaAlt": "Figma of Google interface inspirations with the design implemented into the final design I used for the app."
+        },
+        {
+          "content":"Once I confirmed that the technical requirements were tackled, I could now move on to designing the web app which was very simple since the design was already made for me, but the design difficulty I faced was the responsive design for the search results page. I had to make sure the design works on a phone, and so I made it mobile first as I was coding it, and later on, if some adjustments need to be made when its on desktop, I could create media queries that allowed desktop users to view the interface in a more convenient way that would resemble to Googles. ",
+          "image": null,
+          "alt": null,
+          "figma": null,
+          "figmaAlt": null
+        }
+      ],
+    "lessonsLearned": [
+        {
+          "title": "Data Visualization",
+          "content": "Although I had already been exposed to handling data before, this project made me more comfortable in handling arrays and objects which made it more like a puzzle for me to solve to figure out how I can piece both API's data together. So, I learned the importance of organizing data effectively and leveraging JavaScript array methods for manipulation."
+        },
+        {
+          "title": "Optimization",
+          "content": "Since this app was very image heavy, I had to find a way to optimize these images since I got a warning from Vercel that the web app alone overpassed the usage limits for the free version (the bandwidth went over 100GB!) which had my account taken down. I had to contact them and find a solution on how I could avoid that and they sent over tips of implementing lazy loading which was the first time I heard about it. After doing so, I haven't faced that problem since."
+        },
+        {
+          "title": "Unit Testing",
+          "content": "I learned to configure and set up different device sizes using Playwright, ensuring that your web app is responsive and works well on desktop, iPad Air, and iPhone XR. I understood better now how unit tests can be very useful when it comes to testing elements on the page design-wise since in different devices, some elements or interactions may be hidden on their screen and that's when responsive design is what makes it super important to make sure the experience across all devices are the same and not one device is stopped by a small design error."
+        }
+      ],
+      "carousel":[
+        "/Gooogle Dooodles/0.jpg","/Gooogle Dooodles/1.jpg",  "/Gooogle Dooodles/2.jpg",  "/Gooogle Dooodles/3.jpg"
+    ],
+    "github":"https://github.com/anagarango/GooogleDooodle",
+    "vercel":"https://gooogle-dooodle.vercel.app/"
   }
 ]
