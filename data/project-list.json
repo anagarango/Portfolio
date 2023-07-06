@@ -300,6 +300,70 @@
     "roleName":"Lead Front-End Developer",
     "role":"I was responsible creating the ui for the quiz where users will find results for their cocktail preferences and the nightclub page. I created the functionality of form handling and validation of the users inputs and running them through the API to only return the drinks that matched. This part was the toughest since the API was not organized in an optimal way I would want to use it but I would have to pay a monthly fee to have it organized it would work for me. I had to implement a dynamic way to call the API to retrieve all the results of drinks. I ensured the web app is responsive and adapts to different screen sizes. Along with my partner I was working with for this project, we came up with the theme to make it nightclub-like.",
     "tech": [
+      "Next", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "Git", "Playwright"
+    ],
+    "keyFeatures": [
+        {
+          "title": "Quiz",
+          "content": "Users are able to submit links of their favourite YouTube or website helpful links that fit in either category of front-end, back-end, or machine learning / AI. Users can create, edit, and delete their posts."
+        },
+        {
+          "title": "Results",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+        },
+        {
+          "title": "Chosen Drink",
+          "content": "Users can leave comments on a post to start a conversation about the topic being discussed. Users can create, edit, and delete their comments."
+        },
+        {
+          "title": "Nightclubs",
+          "content": "Users can filter through the posts by selecting the specific category they are interested in."
+        }
+      ],
+    "designDevelopmentProcess": [
+        {
+            "content":"The main focus of this project was to test out more of the back-end technologies that I haven't played with before, such as Next-Auth, PostgreSQL, and CockroachDB. Because of that, a lot of Googling took place to make this project work. It took a month to make this project, so I made constant efforts throughout that month to add or make something work so the process was nice and easy. I did however create a rough Figma design along with some relevant inspirations to create a user interface that’s simple enough to interact with while fitting the theme of being a discussion web app for developers.",
+            "image": null,
+            "alt": null,
+            "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FxpQ2JUNJwmhxE0tkKTkM9u%2FCodeTipsTricks%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3D8W5ShsLqxbCcZYyE-1",
+            "figmaAlt": "Figma Design of the UI the website will have plus inspirations."
+        },
+        {
+            "content":"I followed the Agile/SDLC methodology to successfully finish the web app I expected it to work and it really helped getting everything I needed when it came to the development part (which is my favourite part). In solo projects, I kind of struggle creating a mockup/prototype that is super unique and amazing as the design process for me is very time consuming that after a while, it just seems that there’s always something I should do better to make the web app unique and it’s an ongoing forever cycle.",
+            "image": null,
+            "alt": null,
+            "figma": null,
+            "figmaAlt": null
+        }
+    ],
+    "lessonsLearned": [
+        {
+          "title": "Documentation",
+          "content": "This project helped me improve my problem solving skills and how reading documentation of the technologies is absolutely IMPORTANT. Especially when the technology is well-known among many developers, the more effort to make the docs clear makes it better, so that taught me that I should read documentation always when before, I thought it was boring or not necessary to read."
+        },
+        {
+          "title": "Back-End Tech",
+          "content": "Working on the back end was a new experience for me so I learned how front-end and back-end components interact with each other and understanding how to handle data that is both sent back to the server or received from the server. I understood how RESTful API’s work which was very exciting because it was sort of like a puzzle and was using Postman to help me with problem solving and that was the most enjoyable part of the project as my favourite part is problem solving."
+        },
+        {
+          "title": "Security",
+          "content": "I became more knowledgeable about security measures to take when adding user authentication. Although using Next-Auth was a bit confusing to implement it to the app, its completely necessary to have in an user-generated content app where several users will be interacting with the platform and other people."
+        }
+      ],
+      "carousel":[
+        "/CodeTipsTricks/0.jpg","/CodeTipsTricks/1.jpg",  "/CodeTipsTricks/2.jpg",  "/CodeTipsTricks/3.jpg", "/CodeTipsTricks/4.jpg", "/CodeTipsTricks/5.jpg", "/CodeTipsTricks/6.jpg"
+    ],
+    "github":"https://github.com/anagarango/CodeTipsTricks",
+    "vercel":"https://code-tips-tricks.vercel.app/"
+  },{
+    "name": "DrinkUp",
+    "preview":"DrinkUp is a web app for new-legal aged people to find their favourite cocktails to order in their next pub, bar, and/or nightclub visit.",
+    "image":"/DrinkUp.png",
+    "date":"March 2023",
+    "projectOverview":"DrinkUp is a web app for people who have little cocktail-knowledge experience or don’t know what the hell to order, look no further! A pain-point that became a project, inspired to help new-legal aged people to find their favourite cocktails to order in their next pub, bar, and/or nightclub visit. DrinkUp provides 3 boxes for you to fill out on your drink preferences, and our smart-finding-your-new-favourite-drink system will recommend you the best cocktails that fill your needs.",
+    "roleName":"Lead Front-End Developer",
+    "role":"I was responsible creating the ui for the quiz where users will find results for their cocktail preferences and the nightclub page. I created the functionality of form handling and validation of the users inputs and running them through the API to only return the drinks that matched. This part was the toughest since the API was not organized in an optimal way I would want to use it but I would have to pay a monthly fee to have it organized it would work for me. I had to implement a dynamic way to call the API to retrieve all the results of drinks. I ensured the web app is responsive and adapts to different screen sizes. Along with my partner I was working with for this project, we came up with the theme to make it nightclub-like.",
+    "tech": [
       "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "Git", "Playwright"
     ],
     "keyFeatures": [
