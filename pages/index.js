@@ -43,8 +43,9 @@ export default function Home() {
       <main>
         <Header/>
         <Footer/>
-          <Hero id="Home" className="hero" minHeight="100vh" bgPosition="bottom left" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" padding="0px 150px" justCont="center" aliIt="center" priority>
-            <Box className="heroCont" flexDir="column" width="50%" minHeight="fit-content" padding="0 45px 0 0">
+        <Container width="100%" flexDir="column" aliIt="center">
+          <Hero id="Home" className="hero" minHeight="100vh" bgPosition="bottom left" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" padding="0px 150px" justCont="center" aliIt="center" width="100%" priority>
+            <Box className="heroCont" maxWidth="775px" flexDir="column" width="50%" minHeight="fit-content" padding="0 45px 0 0">
               <Heading color="#B23C87" fontFamily='Staatliches' padding="10px 0" fSize="25px">FRONT-END DEVELOPER</Heading>
               <Heading color='#EA638D' fSize="65px" padding="10px 0">Ana Arango</Heading>
               <Text padding="50px 0">A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications.</Text>
@@ -52,23 +53,12 @@ export default function Home() {
                 <CTA>Don't Be A Stranger</CTA>
               </Link>  
             </Box>
-            <Box className="heroCont" width="50%">
-              <Image initial={{ scale: 0.9 }}
-      whileHover={{ scale: 1, rotate: [0, 5, 0, -5, 0] }}
-      transition={{
-        duration: 0.5,
-        ease: [0, 0.71, 0.2, 1.01],
-        scale: {
-          type: "spring",
-          damping: 5,
-          stiffness: 100,
-          restDelta: 0.001
-        }
-      }} alt="gif of Ana Arango making faces" src="/Hero.gif" width={150} height={100} style={{width:"100%", height:"fit-content"}} priority></Image>
+            <Box className="heroCont" maxWidth="775px" width="50%">
+              <Image initial={{ scale: 0.9 }} whileHover={{ scale: 1, rotate: [0, 5, 0, -5, 0] }} transition={{duration: 0.5, ease: [0, 0.71, 0.2, 1.01], scale: { type: "spring", damping: 5, stiffness: 100, restDelta: 0.001 } }} alt="gif of Ana Arango making faces" src="/Hero.gif" width={150} height={100} style={{width:"100%", height:"fit-content"}} priority></Image>
             </Box>
           </Hero>
 
-          <Container id="About" flexDir="column" width="100%" padding="10px 150px" aliIt="flex-end">
+          <Container id="About" flexDir="column" width="100%" maxWidth="1850px" padding="10px 150px" aliIt="flex-end">
             <Heading ref={ref1} initial={{opacity:0}} animate={inView1 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }} color='#B23C87' fontFamily='Staatliches' padding="10px 0">About Me</Heading>
             <Box display="inline" width="100%">
                 <Image initial={{ opacity: 1, scale: 0.9 }}
@@ -82,7 +72,7 @@ export default function Home() {
                       stiffness: 100,
                       restDelta: 0.001
                     }
-                  }} className='aboutmeimage' src="/aboutme.png" alt="Eagle eye shot of Ana Arango working on her desktop and laptop" width={200} height={200} style={{width:"40%", height:"100%", float:"left", margin:"0px 30px 30px 50px", minWidth:"350px"}} priority/>
+                  }} className='aboutmeimage' src="/aboutme.png" alt="Eagle eye shot of Ana Arango working on her desktop and laptop" width={200} height={200} style={{width:"40%", height:"100%", float:"left", margin:"0px 30px 30px 0px", minWidth:"350px"}} priority/>
                 <Text width="100%" textAlign="end" padding="0 0 30px 0"> I’m Ana Arango, {currentYear-2004} year old front-end developer, from Vancouver, Canada.</Text>
                 <Text width="100%" textAlign="end" padding="0 0 30px 0">From straight of high school, I started my post-secondary education in the Digital Design and Development with no prior knowledge of programming, but after 2 years, I’ve learned many new technologies a front-end developer needs to create functional appealing websites and web-applications.</Text>
                 <Text width="100%" textAlign="end" padding="0 0 30px 0">Fueled by new ideas, I enjoy designing coding things from scratch as it continues putting new challenges on myself. I’m passionate, expressive, and naturally curious in exploring new techniques and technologies to keep up with the ever-evolving web development landscape.</Text>
@@ -102,7 +92,7 @@ export default function Home() {
           </Container>
           
 
-          <Container id="Projects" flexDir="column" width="100%" padding="100px 150px 150px 150px">
+          <Container id="Projects" flexDir="column" width="100%" maxWidth="1850px" padding="100px 150px 150px 150px">
             <Heading ref={ref4} initial={{opacity:0}} animate={inView4 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Projects</Heading>
             <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
             {Projects.map((o,i)=>{
@@ -119,7 +109,7 @@ export default function Home() {
             })}
           </Container>
 
-          <Container id="Contact" flexDir="column" width="100%" padding="0px 150px 100px 150px">
+          <Container id="Contact" flexDir="column" width="100%" maxWidth="1850px" padding="0px 150px 100px 150px">
             <Heading ref={ref5} initial={{opacity:0}} animate={inView5 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Wanna Talk?</Heading>
             <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. <strong>Ttyl!</strong></Text>
             <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
@@ -127,8 +117,7 @@ export default function Home() {
               <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
             </Box>
           </Container>
-          
-
+        </Container> 
       </main>
     </>
   )
