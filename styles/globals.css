@@ -92,8 +92,16 @@ main{
 }
 
 #input:focus{
-  border: 4px solid #B23C87;
+  border: 2px solid #9D95DC;
   outline: none;
+}
+
+#homevaluesstrongtext{
+  transition: all 0.3s;
+}
+
+#homevaluesstrongtext:hover{
+  color:#9D95DC !important;
 }
 
 @keyframes scroll {
