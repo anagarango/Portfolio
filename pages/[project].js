@@ -45,13 +45,13 @@ export default function Project(){
         <main id='projectMain'>
             <Header height="100vh" />
             <Container width="100%" justCont="center">
-                <Container id="ProjectPage" flexDir="column" width="100%" maxWidth="1800px" padding="150px 150px 50px 150px" aliIt="flex-start">
+                <Container id="ProjectPage" flexDir="column" width="100%" maxWidth="1800px" padding="150px 150px 50px 150px" aliIt="center">
                     <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" maxWidth="1000px" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
                         <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches'>{project.name}</Heading>
                         <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"60vw", height:"auto", borderRadius:"20px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
                         <Heading color='#9DFFFF' fSize="30px" fontFamily='Staatliches'>{project.date}</Heading>
                     </Hero>
-                    <Box position="sticky" zIndex="5" top="0px" left="50%" transform="translateX(-50%)" margin="100px 0 0 0" width="20vw" minWidth="fit-content" aliIt="center" maxWidth="280px" bgColor="rgba(163,153,226,0.2)" borderRadius="20px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
+                    <Box position="sticky" zIndex="5" top="0px" margin="100px 0 0 0" width="20vw" minWidth="fit-content" aliIt="center" maxWidth="280px" bgColor="rgba(163,153,226,0.2)" borderRadius="20px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
                         <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"20px 30px"}}>
                             <Image alt="github image" className='linkGithub' src="/Github/github.png" width={40} height={40} priority />
                         </a>
