@@ -166,4 +166,20 @@ main{
     width: 100% !important;
   }
 
+  #keyfeature{
+    flex-direction: column;
+  }
+
+  #keyfeature div{
+    width: 100%;
+  }
+
+  #keyfeature div:first-child{
+    margin:0 0 25px 0
+  }
+
+  #keyfeature div:nth-child(2), #keyfeature div:nth-child(2) p:last-child {
+    padding:0
+  }
+
 }
