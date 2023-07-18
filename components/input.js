@@ -14,7 +14,7 @@ export default function Inputs({
 
     if(type == "submit"){
         return(
-            <Input type={type} value={value} border="4px solid #9DFFFF" bgColorHover="#9DFFFF" colorHover="#28284D" padding="8px 25px" color="#9DFFFF" cursor="pointer" maxWidth="fit-content" />
+            <Input type={type} value={value} border="2px solid #9DFFFF" bgColorHover="#9DFFFF" colorHover="#28284D" padding="8px 25px" color="#9DFFFF" cursor="pointer" maxWidth="fit-content" />
         )
     }
 

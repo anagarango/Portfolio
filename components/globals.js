@@ -135,7 +135,7 @@ export const CTA = styled.button`
   height:fit-content;
   padding:8px 25px;
   background-color:transparent;
-  border: 4px solid #9DFFFF;
+  border: 2px solid #9DFFFF;
   border-radius:10px;
   color:#9DFFFF;
   font-size:16px;
@@ -154,7 +154,7 @@ export const Input = styled.input`
   height:fit-content;
   padding:${props=>props.padding};
   background-color: transparent;
-  border: ${props=>props.border || "4px solid #EA638D" };
+  border: ${props=>props.border || "2px solid #EA638D" };
   border-radius:10px;
   color:${props=>props.color || "white"};
   font-size:16px;
@@ -199,7 +199,7 @@ export const Textarea = styled.textarea`
   height:fit-content;
   padding:${props=>props.padding};
   background-color:transparent;
-  border: ${props=>props.border || "4px solid #EA638D" };
+  border: ${props=>props.border || "2px solid #EA638D" };
   border-radius:10px;
   color:white;
   font-size:16px;
