@@ -199,8 +199,23 @@ main{
     flex-direction: column-reverse !important
   }
 
-  .projectcardimage, .projectcardbox{
+  .projectcardbox{
     width: 100% !important;
+  }
+
+  .projectcardimage{
+    width: 110% !important;
+    margin: 0 !important;
+  }
+
+  .heroCont{
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding: 0px 0px 20px 0px !important
+  }
+
+  #Home, #Projects, #About{
+    padding: 30px 30px 130px 30px !important;
   }
 
   #keyfeature{
