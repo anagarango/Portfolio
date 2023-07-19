@@ -15,11 +15,8 @@ body {
 }
 
 main{
-  /* display: flex; */
-  /* flex-direction: column; */
   background-color: #0a002c;
   padding: 0 0 0 60px;
-  /* align-items: center; */
   width: 100vw;
   height: fit-content;
 }
@@ -104,6 +101,15 @@ main{
   color:#9D95DC !important;
 }
 
+#splashscreen{
+  animation: splashscreendissapear 1s ease-in-out;
+  animation-delay: 4s;
+}
+
+#openingmain{
+  animation: mainnoscroll 10s ease-in-out;
+}
+
 @keyframes scroll {
   0%{
     transform: translate(0);
@@ -113,6 +119,29 @@ main{
   }
   
 }
+
+@keyframes splashscreendissapear {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+  
+}
+
+@keyframes mainnoscroll {
+  0%{
+    height: 100vh;
+  }
+  100%{
+    height: fit-content !important;
+  }
+  
+}
+
+
 
 @media (max-width:1000px){
   .hero{
