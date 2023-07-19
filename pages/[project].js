@@ -47,17 +47,17 @@ export default function Project(){
             <Container width="100%" justCont="center">
                 <Container id="ProjectPage" flexDir="column" width="100%" maxWidth="1800px" padding="150px 150px 50px 150px" aliIt="center">
                     <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" maxWidth="1000px" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
-                        <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches'>{project.name}</Heading>
+                        <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches' textAlign="center">{project.name}</Heading>
                         <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"60vw", height:"auto", borderRadius:"15px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
                         <Heading color='#9DFFFF' fSize="30px" fontFamily='Staatliches' textAlign="center">{project.date}</Heading>
                     </Hero>
                     <Box position="sticky" zIndex="5" top="0px" margin="100px 0 0 0" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(163,153,226,0.2)" borderRadius="15px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
-                        <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"18px 25px"}}>
+                        <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"15px 25px"}}>
                             <Image alt="github image" className='linkGithub' src="/Github/github.png" width={38} height={38} priority />
                         </a>
                         <Heading color='#EA638D' fontWeight="500" fSize="18px" fontFamily='Staatliches'>{word}</Heading>
                         {project.vercel &&
-                            <a href={project.vercel} onMouseOver={()=>setWord("Website")} onMouseOut={()=>setWord("")} style={{padding:"18px 25px"}}>
+                            <a href={project.vercel} onMouseOver={()=>setWord("Website")} onMouseOut={()=>setWord("")} style={{padding:"15px 25px"}}>
                                 <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={38} height={38} priority />
                             </a>
                         }
