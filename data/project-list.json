@@ -8,7 +8,7 @@
         "roleName":"Lead Front-End Developer",
         "role":"I worked closely with my other front-end developer/project manager and took leadership in discussing how we can split tasks evenly. I would provide assistance when my partner needed help in completing their tasks when technical challenges arise. I provided my insights on front-end feasibility and developed dynamic features/components when necessary adhering to clean code and making them reusable. I tested the app to make sure all the functionalities are there and reported back to the team whenever I found a bug or if there’s something else we should consider adding to the app. I was responsible in converting our designers prototypes into code, so I regularly showed them the process of our work to ensure its up to par of what they expected.",
         "tech": [
-            "Next", "React", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Semantic UI", "Lottie Animation", "Storybook", "Git", "Figma"
+            "Next", "React", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Lottie Animation", "Storybook", "Git", "Figma"
         ],
         "keyFeatures": [
             {
@@ -97,7 +97,7 @@
       "roleName":"Front-End Developer, Content Writer, and UI/UX Designer",
       "role":"I came up with the design of the website, along with the content, and developed the whole website. I did thorough research to understand the target audience’s needs from visiting a house-cleaning website. I grabbed inspiration and gathered them in a Pinterest Board to create a mockup of the layout, navigation, and interactions. I created the brand identity (logo, colours, fonts, graphics) that was consistent throughout the website. I translated the mockup design into actual code using HTML, CSS, and JavaScript in the Next.js framework and prioritizing the responsive layout for user-friendliness. I worked closely with my client to have clear and accurate descriptions that highlight their business, including sections like the home, about, and contact.",
       "tech": [
-        "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "SwiperJS", "Git", "Figma", "Illustrator"
+        "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "Git", "Figma", "Illustrator"
       ],
       "keyFeatures": [
           {
