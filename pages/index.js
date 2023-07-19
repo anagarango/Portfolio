@@ -17,6 +17,7 @@ import SplashScreen from '@/components/splashscreen'
 export default function Home() {
   const [skill, setSkill] = useState(0)
   const [loading, setLoading] = useState(true)
+  const [afterLoad, setAfterLoad] = useState(false)
 
   const r = useRouter()
   const currentYear = new Date().getFullYear();
@@ -34,10 +35,12 @@ export default function Home() {
   }
 
   useEffect(()=>{
-    setLoading(true)
+    setTimeout(() => {
+      setAfterLoad(true)
+    }, 10);
     setTimeout(() => {
       setLoading(false)
-    }, 6500);
+    }, 4800);
   },[])
 
   return (
@@ -49,7 +52,8 @@ export default function Home() {
         <link rel="icon" href="/Icons/Home.svg" />
       </Head>
       { loading && <SplashScreen /> }
-        <main>
+      { afterLoad &&
+        <main id="openingmain">
           <Header/>
           <Footer/>
           <Container width="100%" flexDir="column" aliIt="center">
@@ -128,6 +132,7 @@ export default function Home() {
             </Container>
           </Container> 
         </main>
+      }
     </>
   )
 }
