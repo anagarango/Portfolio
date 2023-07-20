@@ -1,14 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '@/components/header'
-import Footer from '@/components/footer'
-import { Box, Hero, Container, Heading, Text, CTA, Tag } from '@/components/globals'
+import Link from "next/link"
+import { Box, Hero, Container, Heading, Text } from '@/components/globals'
 import TechCard from '@/components/techCard'
 import { useRouter } from "next/router"
 import ProjectList from "@/data/project-list.json"
 import BrowserModel from '@/components/browserModel'
 import CollapseCard from '@/components/collapse'
+import Contact from '@/components/contact'
 
 export default function Project(){
     const r = useRouter()
@@ -18,6 +19,12 @@ export default function Project(){
     const [word, setWord] = useState("")
     const [imageCarousel, setImageCarousel] = useState("")
     var url
+
+    const Links = [
+        {image:"YouTube", url:"https://www.youtube.com/channel/UCztvL6zXMKsyyJ1EfNsNpGQ"},
+        {image:"GitHub", url:"https://github.com/anagarango"},
+        {image:"LinkedIn", url:"https://www.linkedin.com/in/ana-arango-08592122a/"}
+    ]
 
 
     useEffect(()=>{
@@ -109,6 +116,21 @@ export default function Project(){
                             <CollapseCard key={i} index={i} content={o} state={collapse} onClick={()=>setCollapse(i)} />
                         ))}
                     </Box>
+                    <Container id="Contact" flexDir="column" width="100%" padding="90px 0 0 0">
+                        <Heading  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Wanna Talk?</Heading>
+                        <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. OR check out my socials below. <strong>Ttyl!</strong></Text>
+                        <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
+                            <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
+                            <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
+                        </Box>
+                        <Box justCont="center" height="40px" margin="30px 0 0 0">
+                            {Links.map((o,i)=>(
+                                <Link key={i} href={o.url} style={i == 0 ? {marginRight:'15px'} : {marginRight:"0px"}}>
+                                    <Image alt={o.image} src={`/${o.image}.png`} title={o.image} width={50} height={50} style={{height:"100%", width:"auto"}}></Image>
+                                </Link>
+                            ))}
+                        </Box>
+                    </Container>
                 </Container>
             </Container>
         </main>
