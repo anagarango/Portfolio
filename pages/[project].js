@@ -104,7 +104,7 @@ export default function Project(){
                         <Box width="100%" flexDir="column" aliIt="center">
                             <Box width="100%">
                                 {project.carousel && project.carousel.map((o,i)=>(
-                                    <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)", transition: "0.8s ease", borderRadius:"15px"}} />
+                                    <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)", transition: "0.8s ease", borderRadius:"15px", cursor:"pointer"}} />
                                 ))}
                             </Box>
                             {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"15px"}} />}
@@ -116,14 +116,15 @@ export default function Project(){
                             <CollapseCard key={i} index={i} content={o} state={collapse} onClick={()=>setCollapse(i)} />
                         ))}
                     </Box>
-                    <Container id="Contact" flexDir="column" width="100%" padding="90px 0 0 0">
+                    <Container flexDir="column" width="100%" padding="90px 0">
                         <Heading  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Wanna Talk?</Heading>
                         <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. OR check out my socials below. <strong>Ttyl!</strong></Text>
                         <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
                             <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
                             <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
                         </Box>
-                        <Box justCont="center" height="40px" margin="30px 0 0 0">
+                        <Heading  color='#B23C87' fontFamily='Staatliches' padding="50px 0" textAlign="center">OR</Heading>
+                        <Box justCont="center" height="40px">
                             {Links.map((o,i)=>(
                                 <Link key={i} href={o.url} style={i == 0 ? {marginRight:'15px'} : {marginRight:"0px"}}>
                                     <Image alt={o.image} src={`/${o.image}.png`} title={o.image} width={50} height={50} style={{height:"100%", width:"auto"}}></Image>

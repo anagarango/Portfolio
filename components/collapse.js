@@ -15,7 +15,7 @@ export default function CollapseCard({
                     <Image src={`/Icons/${content.title}.png`} width={45} height={45} priority />
                     <Text padding="0px 30px" fontWeight="700">{content.title}</Text>
                 </Box>
-                <Image src={`/Icons/Arrow.png`} width={20} height={20} style={{ transform: `rotate(${state === index ? "90deg" : "0"})`, transition: 'transform 0.1s ease-in-out'}} onClick={onClick} priority />
+                <Image src={`/Icons/Arrow.png`} width={20} height={20} style={{ transform: `rotate(${state === index ? "90deg" : "0"})`, transition: 'transform 0.1s ease-in-out', cursor:"pointer"}} onClick={onClick} priority />
             </Box>
             <AnimatePresence initial={false}>
                 {state == index && 
