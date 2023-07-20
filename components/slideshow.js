@@ -10,7 +10,16 @@ export default function TechSlideshow(){
     try {
       const response = await fetch('/api/projectLogoImages');
       const data = await response.json();
-      setImagesArray(data.fileNames)
+
+      const horizontalLogosImages = []
+      for(var x = 0; x < data.fileNames.length; x++){
+        if(data.fileNames[x] !== ".DS_Store"){
+          horizontalLogosImages.push(data.fileNames[x])
+        }
+      }
+
+      setImagesArray(horizontalLogosImages)
+      
     } catch (error) {
       console.error('Error fetching file names:', error);
     }  
@@ -20,13 +29,13 @@ export default function TechSlideshow(){
     fetchData()
   },[])
     return(
-        <Box className="slideshow" style={{position:"relative", overflow:"hidden", background:"linear-gradient(to right, rgba(163,153,226,0) 20%, rgba(163,153,226,1) 50%,rgba(163,153,226,0) 80%)", width:"100%"}}>
+        <Box style={{position:"relative", overflow:"hidden", background:"linear-gradient(to right, rgba(163,153,226,0) 20%, rgba(163,153,226,0.5) 50%,rgba(163,153,226,0) 80%)", width:"100%"}}>
             <Box className='sheesh' style={{display:"flex", position:"relative", alignItems:"flex-start", justifyContent:"flex-start", padding:"10px"}}>
               {imagesArray && imagesArray.map((o,i)=>(
-                <Image key={i} title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width={45} height={45} margin="0 25px"></Image>
+                  <Image key={i} title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width="auto" height="50px" margin="0 25px"></Image>
               ))}
               {imagesArray && imagesArray.map((o,i)=>(
-                  <Image key={i} title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width={45} height={45} margin="0 25px"></Image>
+                  <Image key={i} title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width="auto" height="50px" margin="0 25px"></Image>
               ))}
             </Box>
         </Box>

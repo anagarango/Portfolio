@@ -65,7 +65,7 @@ main{
 }
 
 .sheesh{
-  animation: scroll 40s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
 .sheesh:hover{
@@ -115,7 +115,7 @@ main{
     transform: translate(0);
   }
   100%{
-    transform: translateX(calc(-95px * 20));
+    transform: translateX(calc(-95px * 31));
   }
   
 }
