@@ -58,7 +58,7 @@ export default function Project(){
                         <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"60vw", height:"auto", borderRadius:"15px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
                         <Heading color='#9DFFFF' fSize="30px" fontFamily='Staatliches' textAlign="center">{project.date}</Heading>
                     </Hero>
-                    <Box position="sticky" zIndex="5" top="0px" margin="100px 0 0 0" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(43,31,95,0.7)" borderRadius="15px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
+                    <Box position="sticky" zIndex="5" top="0px" margin="100px 0 0 0" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(43,31,95,0.6)" borderRadius="15px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
                         <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"15px 25px"}}>
                             <Image alt="github image" className='linkGithub' src="/Github/github.png" width={38} height={38} priority />
                         </a>
@@ -126,7 +126,7 @@ export default function Project(){
                         <Heading  color='#B23C87' fontFamily='Staatliches' padding="50px 0" textAlign="center">OR</Heading>
                         <Box justCont="center" height="40px">
                             {Links.map((o,i)=>(
-                                <Link key={i} href={o.url} style={i == 0 ? {marginRight:'15px'} : {marginRight:"0px"}}>
+                                <Link key={i} href={o.url} style={i == 0 ? {width:"fit-content", marginRight:'20px'} : {width:"fit-content", marginRight:"20px"}}>
                                     <Image alt={o.image} src={`/${o.image}.png`} title={o.image} width={50} height={50} style={{height:"100%", width:"auto"}}></Image>
                                 </Link>
                             ))}
