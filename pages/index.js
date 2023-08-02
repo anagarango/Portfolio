@@ -101,7 +101,7 @@ export default function Home() {
 
               <Heading ref={ref3} initial={{opacity:0}} animate={inView3 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' fontFamily='Staatliches' fSize="22px" padding="10px 0" margin="70px 0 0 0" width="100%">Tools and Technologies I Use</Heading>
               <TechSlideshow />
-              <Box position="relative" top="-60px" height="60px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
+              <Box position="relative" top="-121px" height="121px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
             </Container>
             
 

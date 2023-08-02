@@ -115,7 +115,7 @@ main{
     transform: translate(0);
   }
   100%{
-    transform: translateX(calc(-95px * 31));
+    transform: translateX(calc(-95px * 38));
   }
   
 }
