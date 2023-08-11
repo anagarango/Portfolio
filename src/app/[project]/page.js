@@ -1,18 +1,18 @@
+'use client'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import Header from '@/components/header'
+import Header from '@/src/app/components/header'
 import Link from "next/link"
-import { Box, Hero, Container, Heading, Text } from '@/components/globals'
-import TechCard from '@/components/techCard'
-import { useRouter } from "next/router"
-import ProjectList from "@/data/project-list.json"
-import BrowserModel from '@/components/browserModel'
-import CollapseCard from '@/components/collapse'
-import Contact from '@/components/contact'
+import { Box, Hero, Container, Heading, Text } from '@/src/app/components/globals'
+import TechCard from '@/src/app/components/techCard'
+import ProjectList from "@/src/app/data/project-list.json"
+import BrowserModel from '@/src/app/components/browserModel'
+import CollapseCard from '@/src/app/components/collapse'
+import Contact from '@/src/app/components/contact'
 
 export default function Project(){
-    const r = useRouter()
     const [project, setProject] = useState([])
     const [skill, setSkill] = useState(0)
     const [collapse, setCollapse] = useState(0)
@@ -31,7 +31,7 @@ export default function Project(){
         url = window.location.pathname.split('/').pop().replace(/%20/g, " ");
     
         for(var x = 0; x < ProjectList.length; x++){
-            if(r.query.project == ProjectList[x].name || url == ProjectList[x].name){
+            if(url == ProjectList[x].name){
                 setProject(ProjectList[x])
                 setImageCarousel(ProjectList[x].carousel[0])
             }
@@ -43,10 +43,10 @@ export default function Project(){
     return(
         <>
         <Head>
-            <title>{`Ana Arango - ${r.query.project ? r.query.project: url}`}</title>
+            <title>{`Ana Arango - ${url}`}</title>
             <meta name="description" content="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/Icons/Home.svg" />
+            <link rel="icon" href="../favicon.ico" />
         </Head>
         
         <main id='projectMain'>
@@ -54,76 +54,76 @@ export default function Project(){
             <Container width="100%" justCont="center">
                 <Container id="ProjectPage" flexDir="column" width="100%" maxWidth="1800px" padding="150px 150px 50px 150px" aliIt="center">
                     <Hero src="/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
-                        <Heading color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0" fontFamily='Staatliches' textAlign="center">{project.name}</Heading>
-                        <Image alt={project.preview} src={project.image} width={600} height={300} priority style={{width:"60vw", height:"auto", borderRadius:"15px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
-                        <Heading color='#9DFFFF' fSize="30px" fontFamily='Staatliches' textAlign="center">{project.date}</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0"  textAlign="center">{project.name}</Heading>
+                        <Image alt={project.preview || "no image available at the moment"} src={project.image || "/noImage.jpg"} width={600} height={300}  style={{width:"60vw", height:"auto", borderRadius:"15px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
+                        <Heading id="secondHeading" color='#9DFFFF' fSize="30px"  textAlign="center">{project.date}</Heading>
                     </Hero>
                     <Box position="sticky" zIndex="5" top="0px" margin="100px 0 0 0" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(43,31,95,0.6)" borderRadius="15px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
                         <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"15px 25px"}}>
-                            <Image alt="github image" className='linkGithub' src="/Github/github.png" width={38} height={38} priority />
+                            <Image alt="github image" className='linkGithub' src="/Github/github.png" width={38} height={38}  />
                         </a>
-                        <Heading color='#EA638D' fontWeight="500" fSize="18px" fontFamily='Staatliches'>{word}</Heading>
+                        <Heading id="secondHeading" color='#EA638D' fontWeight="500" fSize="18px" >{word}</Heading>
                         {project.vercel &&
                             <a href={project.vercel} onMouseOver={()=>setWord("Website")} onMouseOut={()=>setWord("")} style={{padding:"15px 25px"}}>
-                                <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={38} height={38} priority />
+                                <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={38} height={38}  />
                             </a>
                         }
                     </Box>
                     <Box width="100%" flexDir="column">
                         
-                        <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Project Overview</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Project Overview</Heading>
                         <Text padding="20px 0 0 0">{project.projectOverview}</Text>
 
-                        <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Role</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Role</Heading>
                         <Text padding="20px 0 0 0" fontWeight="700">{project.roleName}</Text>
                         <Text padding="20px 0 0 0">{project.role}</Text>
 
-                        <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Technologies Used</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Technologies Used</Heading>
                         <Box padding="20px 0 0 0" flexWrap="wrap" justCont="space-between">
                             {project.tech && project.tech.map((o,i)=>(
                                 <TechCard key={i} src={o} alt={o} heading={o} />
                             ))}
                         </Box>
 
-                        <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 20px 0">Key Features</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 20px 0">Key Features</Heading>
                         <BrowserModel version='project' onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={project.keyFeatures} name={project.name}/>
                         
 
-                        <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="90px 0 0 0">Design and Development Process</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Design and Development Process</Heading>
                         {project.designDevelopmentProcess && project.designDevelopmentProcess.map((o,i)=>(
                             <Box key={i} flexDir="column" width="100%" aliIt="center">
                                 <Text padding="20px 0">{o.content}</Text>
-                                {o.image && <Image alt={o.image} src={o.image} width={600} height={300} priority style={{width:"75%", height:"45%", borderRadius:"15px"}} />}
+                                {o.image && <Image alt={o.image} src={o.image} width={600} height={300}  style={{width:"75%", height:"45%", borderRadius:"15px"}} />}
                                 {o.alt && <Text padding="5px 0 20px 0" fontSize="14px">{o.alt}</Text>}
                                 {o.figma && <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)", width:"100%", borderRadius:"15px", margin:"40px 0 0 0"}}  height="450" src={o.figma} allowFullScreen></iframe>}
                                 {o.figmaAlt && <Text fontStyle="italic" padding="5px 0 40px 0" fontSize="14px">{o.figmaAlt}</Text>}
                             </Box>
                         ))}
                         
-                        <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="80px 0 20px 0">Code Snippets</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="80px 0 20px 0">Code Snippets</Heading>
                         <Box width="100%" flexDir="column" aliIt="center">
                             <Box width="100%">
                                 {project.carousel && project.carousel.map((o,i)=>(
-                                    <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} priority style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)", transition: "0.8s ease", borderRadius:"15px", cursor:"pointer"}} />
+                                    <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)}  style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)", transition: "0.8s ease", borderRadius:"15px", cursor:"pointer"}} />
                                 ))}
                             </Box>
-                            {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} priority style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"15px"}} />}
+                            {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300}  style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"15px"}} />}
                         </Box>
                         
 
-                        <Heading color='#9DFFFF' fontFamily='Staatliches' fSize="22px" width="100%" padding="100px 0 15px 0">Lessons Learned</Heading>
+                        <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="100px 0 15px 0">Lessons Learned</Heading>
                         {project.lessonsLearned && project.lessonsLearned.map((o,i) => (
                             <CollapseCard key={i} index={i} content={o} state={collapse} onClick={()=>setCollapse(i)} />
                         ))}
                     </Box>
                     <Container flexDir="column" width="100%" padding="90px 0">
-                        <Heading  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Wanna Talk?</Heading>
+                        <Heading id="secondHeading"  color='#B23C87'  padding="10px 0">Wanna Talk?</Heading>
                         <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. OR check out my socials below. <strong>Ttyl!</strong></Text>
                         <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
                             <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
                             <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
                         </Box>
-                        <Heading  color='#B23C87' fontFamily='Staatliches' padding="50px 0" textAlign="center">OR</Heading>
+                        <Heading id="secondHeading" color='#B23C87'  padding="50px 0" textAlign="center">OR</Heading>
                         <Box justCont="center" height="40px">
                             {Links.map((o,i)=>(
                                 <Link key={i} href={o.url} style={i == 0 ? {width:"fit-content", marginRight:'20px'} : {width:"fit-content", marginRight:"20px"}}>
