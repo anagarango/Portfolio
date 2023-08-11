@@ -2,32 +2,26 @@
 
 import Head from 'next/head'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '@/src/app/components/header'
 import Footer from '@/src/app/components/footer'
-import { Box, Hero, Container, Heading, Text, CTA, Image } from '@/src/app/components/globals'
+import { Box, Hero, Container, Text, CTA, Image } from '@/src/app/components/globals'
 import BrowserModel from '@/src/app/components/browserModel'
 import TechSlideshow from '@/src/app/components/slideshow'
 import Card from '@/src/app/components/card'
 import Contact from '@/src/app/components/contact'
-import Skills from '@/src/app/data/skills.json'
-import { useInView } from 'react-intersection-observer';
-import Projects from "@/src/app/data/project-list.json"
+import Skills from '@/public/data/skills.json'
+import Projects from "@/public/data/project-list.json"
 import SplashScreen from '@/src/app/components/splashscreen'
+import Reveal from '@/src/app/components/animationReveal'
+import Animate from '@/src/app/components/heading'
 
 export default function Home() {
   const [skill, setSkill] = useState(0)
   const [loading, setLoading] = useState(true)
   const [afterLoad, setAfterLoad] = useState(false)
 
-  const r = useRouter()
   const currentYear = new Date().getFullYear();
-  const [ref1, inView1] = useInView({threshold: 1.0});
-  const [ref2, inView2] = useInView({threshold: 1.0});
-  const [ref3, inView3] = useInView({threshold: 1.0});
-  const [ref4, inView4] = useInView({threshold: 1.0});
-  const [ref5, inView5] = useInView({threshold: 1.0});
 
   useEffect(()=>{
     setTimeout(() => {
@@ -55,20 +49,25 @@ export default function Home() {
           <Container width="100%" flexDir="column" aliIt="center">
             <Hero id="Home" className="hero" minHeight="100vh" bgPosition="bottom left" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" padding="0px 150px" justCont="center" aliIt="center" width="100%" priority>
               <Box className="heroCont" maxWidth="775px" flexDir="column" width="50%" minHeight="fit-content" padding="0 45px 0 0">
-                <Heading color="#B23C87" id="secondHeading" padding="10px 0" fSize="25px">FRONT-END DEVELOPER</Heading>
-                <Heading color='#EA638D' fSize="65px" padding="10px 0">Ana Arango</Heading>
-                <Text padding="50px 0">A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications.</Text>
-                <Link href="/#Contact" scroll={false}>
-                  <CTA>Don't Be A Stranger</CTA>
-                </Link>  
+                <Animate type="heading" delay={4.3} color="#B23C87" id="secondHeading" padding="10px 0" fSize="25px" text="FRONT-END DEVELOPER"/>
+                <Animate type="heading" delay={4.4} color='#EA638D' fSize="65px" padding="10px 0" text="Ana Arango"/>
+                <Animate type="text" delay={4.5} starting="hiddenFromBottom" padding="50px 0" text="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications."/>
+                <Reveal starting="hiddenFromBottom" delay={4.6}>
+                  <Link href="/#Contact" scroll={false}>
+                    <CTA>Don't Be A Stranger</CTA>
+                  </Link>  
+                </Reveal>
+                
               </Box>
               <Box className="heroCont" maxWidth="775px" width="50%">
-                <Image initial={{ scale: 0.9 }} whileHover={{ scale: 1, rotate: [0, 5, 0, -5, 0] }} transition={{duration: 0.5, ease: [0, 0.71, 0.2, 1.01], scale: { type: "spring", damping: 5, stiffness: 100, restDelta: 0.001 } }} alt="gif of Ana Arango making faces" src="/Hero.gif" width={150} height={100} style={{width:"100%", height:"fit-content"}} priority></Image>
+                <Reveal starting="hiddenFromRight" delay={4.5}>
+                  <Image initial={{ scale: 0.9 }} whileHover={{ scale: 1, rotate: [0, 5, 0, -5, 0] }} transition={{duration: 0.5, ease: [0, 0.71, 0.2, 1.01], scale: { type: "spring", damping: 5, stiffness: 100, restDelta: 0.001 } }} alt="gif of Ana Arango making faces" src="/Hero.gif" width={150} height={100} style={{width:"100%", height:"fit-content"}}></Image>
+                </Reveal>
               </Box>
             </Hero>
 
             <Container id="About" flexDir="column" width="100%" maxWidth="1850px" padding="10px 150px" aliIt="flex-end">
-              <Heading ref={ref1} initial={{opacity:0}} animate={inView1 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }} color='#B23C87' id="secondHeading" padding="10px 0">About Me</Heading>
+              <Animate id="secondHeading" type="heading" starting="hiddenFromRight" color='#B23C87' padding="10px 0" text="About Me"/>
               <Box display="inline" width="100%">
                   <Image initial={{ opacity: 1, scale: 0.9 }}
                     whileHover={{ opacity: 1, scale: 1 }}
@@ -90,41 +89,33 @@ export default function Home() {
                   <Text width="100%" textAlign="end" padding="0 0 30px 0" fontWeight="700">Take a look at my portfolio to see some of my recent work and get in touch if you're interested in working together.</Text>
               </Box>
 
-              <Heading ref={ref2} initial={{opacity:0}} animate={inView2 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' id="secondHeading" fSize="22px" padding="10px 0" margin="70px 0 10px 0" width="100%">What I Value</Heading>
+              <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#9DFFFF' fSize="22px" padding="10px 0" margin="70px 0 10px 0" width="100%" text="What I Value" />
               <BrowserModel onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={Skills}/>
 
               
 
-              <Heading ref={ref3} initial={{opacity:0}} animate={inView3 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' id="secondHeading" fSize="22px" padding="10px 0" margin="70px 0 0 0" width="100%">Tools and Technologies I Use</Heading>
+              <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#9DFFFF'  fSize="22px" padding="10px 0" margin="70px 0 0 0" width="100%" text="Tools and Technologies I Use" />
               <TechSlideshow />
               <Box position="relative" top="-100px" height="121px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
             </Container>
             
 
             <Container id="Projects" flexDir="column" width="100%" maxWidth="1850px" padding="100px 150px 150px 150px">
-              <Heading ref={ref4} initial={{opacity:0}} animate={inView4 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' id="secondHeading" padding="10px 0">Projects</Heading>
+              <Animate id="secondHeading" p type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Projects"/>
               <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
               {Projects.map((o,i)=>{
-                if(i % 2 == 0){
-                  return(
-                    <Link key={`a${i}`} href={o.name} imageSrcSet="none" style={{textDecoration:"none"}}>
-                      <Card alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
+                return(
+                  <Reveal starting={i % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} >
+                    <Link key={i} href={o.name} imageSrcSet="none" style={{textDecoration:"none"}}>
+                      <Card type={i % 2 == 0 ? "left" : "right"} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
                     </Link>
-                    
-                  )
-                } else {
-                  return(
-                    <Link key={`b${i}`} href={o.name} imageSrcSet="none" style={{textDecoration:"none"}}>
-                      <Card type="right" alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
-                    </Link>
-                  )
-                }
-                
+                  </Reveal>
+                )
               })}
             </Container>
 
             <Container id="Contact" flexDir="column" width="100%" maxWidth="1850px" padding="0px 150px 100px 150px">
-              <Heading ref={ref5} initial={{opacity:0}} animate={inView5 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' id="secondHeading" padding="10px 0">Wanna Talk?</Heading>
+              <Animate id="secondHeading" p type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Wanna Talk?" />
               <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. <strong>Ttyl!</strong></Text>
               <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
                 <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
