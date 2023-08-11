@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from 'framer-motion';
 
-export const Heading = styled(motion.h1)`
+export const Heading = styled.h1`
     color: ${props=>props.color};
     padding:${props=>props.padding};
     position:${props=>props.position};

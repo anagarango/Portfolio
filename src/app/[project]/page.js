@@ -7,10 +7,13 @@ import Header from '@/src/app/components/header'
 import Link from "next/link"
 import { Box, Hero, Container, Heading, Text } from '@/src/app/components/globals'
 import TechCard from '@/src/app/components/techCard'
-import ProjectList from "@/src/app/data/project-list.json"
+import ProjectList from "@/public/data/project-list.json"
 import BrowserModel from '@/src/app/components/browserModel'
 import CollapseCard from '@/src/app/components/collapse'
 import Contact from '@/src/app/components/contact'
+import Reveal from '../components/animationReveal'
+
+
 
 export default function Project(){
     const [project, setProject] = useState([])
@@ -81,7 +84,9 @@ export default function Project(){
                         <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Technologies Used</Heading>
                         <Box padding="20px 0 0 0" flexWrap="wrap" justCont="space-between">
                             {project.tech && project.tech.map((o,i)=>(
-                                <TechCard key={i} src={o} alt={o} heading={o} />
+                                <Reveal key={i} starting="hiddenFromLeft" delay={0.1*i + 0.2}>
+                                    <TechCard src={o} alt={o} heading={o} />
+                                </Reveal>
                             ))}
                         </Box>
 
