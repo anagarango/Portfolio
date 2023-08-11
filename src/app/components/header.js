@@ -15,7 +15,7 @@ export default function Header({
     return(
             <Box width="60px" position="fixed" left="0" top="0"  height={height} bgColor="#1E1E41" flexDir="column" aliIt="center" zIndex="5">
                 {HeaderImage.map((o,i)=>(
-                    <Link key={i} title={o} href={`/#${o}`} scroll={false} style={{display:"flex", margin:"20px 0px"}}>
+                    <Link key={i} title={o} href={`/#${o}`} scroll={true} style={{display:"flex", margin:"20px 0px", scrollBehavior:"smooth"}}>
                         <Image alt={o} className={o} src={`/Icons/${o}.svg`} width={35} height={35} style={{margin:"10px"}} />
                     </Link>
                 ))}

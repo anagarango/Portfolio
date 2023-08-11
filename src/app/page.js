@@ -1,18 +1,20 @@
+'use client'
+
 import Head from 'next/head'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useState, useRef, useEffect } from 'react'
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import { Box, Hero, Container, Heading, Text, CTA, Image } from '@/components/globals'
-import BrowserModel from '@/components/browserModel'
-import TechSlideshow from '@/components/slideshow'
-import Card from '@/components/card'
-import Contact from '@/components/contact'
-import Skills from '@/data/skills.json'
+import Header from '@/src/app/components/header'
+import Footer from '@/src/app/components/footer'
+import { Box, Hero, Container, Heading, Text, CTA, Image } from '@/src/app/components/globals'
+import BrowserModel from '@/src/app/components/browserModel'
+import TechSlideshow from '@/src/app/components/slideshow'
+import Card from '@/src/app/components/card'
+import Contact from '@/src/app/components/contact'
+import Skills from '@/src/app/data/skills.json'
 import { useInView } from 'react-intersection-observer';
-import Projects from "@/data/project-list.json"
-import SplashScreen from '@/components/splashscreen'
+import Projects from "@/src/app/data/project-list.json"
+import SplashScreen from '@/src/app/components/splashscreen'
 
 export default function Home() {
   const [skill, setSkill] = useState(0)
@@ -26,13 +28,6 @@ export default function Home() {
   const [ref3, inView3] = useInView({threshold: 1.0});
   const [ref4, inView4] = useInView({threshold: 1.0});
   const [ref5, inView5] = useInView({threshold: 1.0});
-
-  function SelectProject(data){
-      r.replace({
-        pathname: `/${data.name}`,
-        query: data
-    }, `${data.name}`)
-  }
 
   useEffect(()=>{
     setTimeout(() => {
@@ -48,8 +43,9 @@ export default function Home() {
       <Head>
         <title>Ana Arango - Front End Developer</title>
         <meta name="description" content="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications." />
+        <meta name="keywords" content="front-end developer, web development, portfolio, react, JavaScript, ana arango"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/Icons/Home.svg" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       { loading && <SplashScreen /> }
       { afterLoad &&
@@ -59,7 +55,7 @@ export default function Home() {
           <Container width="100%" flexDir="column" aliIt="center">
             <Hero id="Home" className="hero" minHeight="100vh" bgPosition="bottom left" src='/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" padding="0px 150px" justCont="center" aliIt="center" width="100%" priority>
               <Box className="heroCont" maxWidth="775px" flexDir="column" width="50%" minHeight="fit-content" padding="0 45px 0 0">
-                <Heading color="#B23C87" fontFamily='Staatliches' padding="10px 0" fSize="25px">FRONT-END DEVELOPER</Heading>
+                <Heading color="#B23C87" id="secondHeading" padding="10px 0" fSize="25px">FRONT-END DEVELOPER</Heading>
                 <Heading color='#EA638D' fSize="65px" padding="10px 0">Ana Arango</Heading>
                 <Text padding="50px 0">A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications.</Text>
                 <Link href="/#Contact" scroll={false}>
@@ -72,7 +68,7 @@ export default function Home() {
             </Hero>
 
             <Container id="About" flexDir="column" width="100%" maxWidth="1850px" padding="10px 150px" aliIt="flex-end">
-              <Heading ref={ref1} initial={{opacity:0}} animate={inView1 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }} color='#B23C87' fontFamily='Staatliches' padding="10px 0">About Me</Heading>
+              <Heading ref={ref1} initial={{opacity:0}} animate={inView1 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }} color='#B23C87' id="secondHeading" padding="10px 0">About Me</Heading>
               <Box display="inline" width="100%">
                   <Image initial={{ opacity: 1, scale: 0.9 }}
                     whileHover={{ opacity: 1, scale: 1 }}
@@ -94,28 +90,33 @@ export default function Home() {
                   <Text width="100%" textAlign="end" padding="0 0 30px 0" fontWeight="700">Take a look at my portfolio to see some of my recent work and get in touch if you're interested in working together.</Text>
               </Box>
 
-              <Heading ref={ref2} initial={{opacity:0}} animate={inView2 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' fontFamily='Staatliches' fSize="22px" padding="10px 0" margin="70px 0 10px 0" width="100%">What I Value</Heading>
+              <Heading ref={ref2} initial={{opacity:0}} animate={inView2 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' id="secondHeading" fSize="22px" padding="10px 0" margin="70px 0 10px 0" width="100%">What I Value</Heading>
               <BrowserModel onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={Skills}/>
 
               
 
-              <Heading ref={ref3} initial={{opacity:0}} animate={inView3 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' fontFamily='Staatliches' fSize="22px" padding="10px 0" margin="70px 0 0 0" width="100%">Tools and Technologies I Use</Heading>
+              <Heading ref={ref3} initial={{opacity:0}} animate={inView3 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#9DFFFF' id="secondHeading" fSize="22px" padding="10px 0" margin="70px 0 0 0" width="100%">Tools and Technologies I Use</Heading>
               <TechSlideshow />
-              <Box position="relative" top="-121px" height="121px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
+              <Box position="relative" top="-100px" height="121px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
             </Container>
             
 
             <Container id="Projects" flexDir="column" width="100%" maxWidth="1850px" padding="100px 150px 150px 150px">
-              <Heading ref={ref4} initial={{opacity:0}} animate={inView4 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Projects</Heading>
+              <Heading ref={ref4} initial={{opacity:0}} animate={inView4 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' id="secondHeading" padding="10px 0">Projects</Heading>
               <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
               {Projects.map((o,i)=>{
                 if(i % 2 == 0){
                   return(
-                    <Card key={`a${i}`} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} onClick={()=>{SelectProject(o)}} />
+                    <Link key={`a${i}`} href={o.name} imageSrcSet="none" style={{textDecoration:"none"}}>
+                      <Card alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
+                    </Link>
+                    
                   )
                 } else {
                   return(
-                    <Card key={`b${i}`} type="right" alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} onClick={()=>{SelectProject(o)}} />
+                    <Link key={`b${i}`} href={o.name} imageSrcSet="none" style={{textDecoration:"none"}}>
+                      <Card type="right" alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
+                    </Link>
                   )
                 }
                 
@@ -123,7 +124,7 @@ export default function Home() {
             </Container>
 
             <Container id="Contact" flexDir="column" width="100%" maxWidth="1850px" padding="0px 150px 100px 150px">
-              <Heading ref={ref5} initial={{opacity:0}} animate={inView5 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' fontFamily='Staatliches' padding="10px 0">Wanna Talk?</Heading>
+              <Heading ref={ref5} initial={{opacity:0}} animate={inView5 ? {opacity:1} : {opacity:0}} transition={{ duration: 1.5, delay: 1 }}  color='#B23C87' id="secondHeading" padding="10px 0">Wanna Talk?</Heading>
               <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. <strong>Ttyl!</strong></Text>
               <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
                 <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />

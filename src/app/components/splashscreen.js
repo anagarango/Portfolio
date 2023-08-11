@@ -1,4 +1,4 @@
-import { Box } from "@/components/globals.js";
+import { Box } from "@/src/app/components/globals.js";
 import Lottie from "lottie-react";
 import LoadingLogo from '@/public/LoadingSplash.json'
 import { useEffect } from "react";
