@@ -14,9 +14,23 @@ import Contact from '@/src/app/components/contact'
 import Reveal from '../components/animationReveal'
 
 
+async function fetchData() {
+  try {
+    const currentPagePathname = window.location.pathname.split('/').pop().replace(/%20/g, " ");
+    const response = await fetch(`../api/projects?url=${encodeURIComponent(currentPagePathname)}`);
+    const data = await response.json();
+    console.log(data)
+    return data
+    
+  } catch (error) {
+    console.log('Error fetching file names:', error);
+  }  
+}
+
+
 
 export default function Project(){
-    const [project, setProject] = useState([])
+    const [project, setProject] = useState({})
     const [skill, setSkill] = useState(0)
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
@@ -31,22 +45,19 @@ export default function Project(){
 
 
     useEffect(()=>{
-        url = window.location.pathname.split('/').pop().replace(/%20/g, " ");
-    
-        for(var x = 0; x < ProjectList.length; x++){
-            if(url == ProjectList[x].name){
-                setProject(ProjectList[x])
-                setImageCarousel(ProjectList[x].carousel[0])
-            }
-        }
-        
+      async function loadData() {
+        const data = await fetchData();
+        setProject(data);
+        setImageCarousel(data.carousel[0])
+      }
+      loadData();
     },[])
 
 
     return(
         <>
         <Head>
-            <title>{`Ana Arango - ${url}`}</title>
+            <title>{`Ana Arango - ${project.name}`}</title>
             <meta name="description" content="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="../favicon.ico" />
