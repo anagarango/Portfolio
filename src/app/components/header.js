@@ -10,17 +10,17 @@ const HeaderImage = [
 ]
 
 export default function Header({
-    height="95vh"
+    height="100vh"
 }){
     return(
-            <Box width="60px" position="fixed" left="0" top="0"  height={height} bgColor="#1E1E41" flexDir="column" aliIt="center" zIndex="5">
+            <Box width="60px" position="fixed" left="0" top="0"  height={height} bgColor="#2B255B" flexDir="column" aliIt="center" zIndex="5">
                 {HeaderImage.map((o,i)=>(
-                    <Link key={i} title={o} href={`/#${o}`} scroll={true} style={{display:"flex", margin:"20px 0px", scrollBehavior:"smooth"}}>
-                        <Image alt={o} className={o} src={`/Icons/${o}.svg`} width={35} height={35} style={{margin:"10px"}} />
+                    <Link key={i} title={o} href={`/#${o}`} style={{display:"flex", margin:"20px 0px", scrollBehavior:"smooth"}}>
+                        <Image alt={o} className={o} src={`/SVG/${o}.svg`} width={35} height={35} style={{margin:"10px"}} />
                     </Link>
                 ))}
-                <a title="Resume" href="/AnaArango-Resume.pdf" download style={{ position:"absolute", bottom:15, padding:"10px"}}>
-                    <Image alt="Resume" className="Resume" src="/Icons/Resume.svg" width={35} height={35}/>
+                <a title="Resume" href="/AnaArango-Resume.pdf" download style={{ position:"absolute", bottom:55, padding:"10px"}}>
+                    <Image alt="Resume" className="Resume" src="/SVG/Resume.svg" width={35} height={35}/>
                 </a>
             </Box>
     )

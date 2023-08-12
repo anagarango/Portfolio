@@ -11,7 +11,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 #secondHeading{
@@ -43,24 +43,24 @@ main{
   content: url('/Vercel/livehover.png');
 }
 
-.About:hover{
-  content: url('/Icons/Abouthover.svg');
+svg:hover {
+  fill: #5C5C9E !important
 }
 
 .Resume:hover{
-  content: url('/Icons/Resumehover.svg');
+  content: url('/SVG/Resumehover.svg');
 }
 
 .Contact:hover{
-  content: url('/Icons/Contacthover.svg');
+  content: url('/SVG/Contacthover.svg');
 }
 
 .Projects:hover{
-  content: url('/Icons/Projectshover.svg');
+  content: url('/SVG/Projectshover.svg');
 }
 
 .Home:hover{
-  content: url('/Icons/Homehover.svg');
+  content: url('/SVG/Homehover.svg');
 }
 
 .techLogo:hover{
@@ -114,6 +114,14 @@ main{
   animation: mainnoscroll 10s ease-in-out;
 }
 
+.projectcard{
+  flex-direction: row !important
+}
+
+.projectcard.right{
+  flex-direction: row-reverse !important
+}
+
 @keyframes scroll {
   0%{
     transform: translate(0);
@@ -143,6 +151,19 @@ main{
     height: fit-content !important;
   }
   
+}
+
+.projectcard.right .projectcardbox{
+  align-items: flex-end !important;
+  text-align: end !important;
+}
+
+.projectcard .projectcardtech{
+  justify-content: flex-start !important;
+}
+
+.projectcard.right .projectcardtech{
+  justify-content: flex-end !important;
 }
 
 
@@ -195,22 +216,39 @@ main{
     padding:0px !important
   }
 
-  .projectcard{
-    flex-direction: column !important
-  }
-
-  .projectcard.right{
-    flex-direction: column-reverse !important
+  .projectcard, .projectcard.right{
+    flex-direction: column !important;
   }
 
   .projectcardbox{
     width: 100% !important;
+    margin:0 !important
   }
 
-  .projectcardimage{
-    width: 110% !important;
-    margin: 0 !important;
+  .heroCont{
+    justify-content: center !important;
   }
+
+  #homenameheading{
+    font-size: 40px !important;
+    padding: 0px !important
+  }
+
+  .hometitleheading, hometextheading{
+    font-size: 20px !important;
+    padding: 0px !important
+  }
+
+  .hometextheading{
+    padding: 35px 0px !important
+  }
+
+  #Home img{
+    max-width: 400px !important;
+  }
+
+
+
 
   .heroCont{
     min-width: 100% !important;
