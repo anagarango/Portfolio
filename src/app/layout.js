@@ -1,5 +1,6 @@
 import '../../styles/globals.css'
 import { Staatliches, Raleway } from 'next/font/google'
+
 const staatliches = Staatliches({
   weight: '400',
   subsets: ['latin'],
