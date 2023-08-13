@@ -25,12 +25,6 @@ export default function Project(){
     const [imageCarousel, setImageCarousel] = useState("")
     var url
 
-    const Links = [
-        {image:"YouTube", url:"https://www.youtube.com/channel/UCztvL6zXMKsyyJ1EfNsNpGQ"},
-        {image:"GitHub", url:"https://github.com/anagarango"},
-        {image:"LinkedIn", url:"https://www.linkedin.com/in/ana-arango-08592122a/"}
-    ]
-
 
     useEffect(()=>{
         url = window.location.pathname.split('/').pop().replace(/%20/g, " ");
@@ -66,12 +60,12 @@ export default function Project(){
                             <Heading id="secondHeading" color='#9DFFFF' fSize="30px"  textAlign="center">{project.date}</Heading>
                         </Hero>
                         <Box position="sticky" zIndex="5" top="0px" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(43,31,95,0.6)" borderRadius="15px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
-                            <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{padding:"15px 25px"}}>
+                            <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{margin:"15px 25px"}}>
                                 <Image alt="github image" className='linkGithub' src="/Github/github.png" width={38} height={38}  />
                             </a>
                             <Heading id="secondHeading" color='#EA638D' fontWeight="500" fSize="18px" >{word}</Heading>
                             {project.vercel &&
-                                <a href={project.vercel} onMouseOver={()=>setWord("Website")} onMouseOut={()=>setWord("")} style={{padding:"15px 25px"}}>
+                                <a href={project.vercel} onMouseOver={()=>setWord("Website")} onMouseOut={()=>setWord("")} style={{margin:"15px 25px"}}>
                                     <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={38} height={38}  />
                                 </a>
                             }
