@@ -104,7 +104,7 @@ export default function Project(){
                                     <Text padding="20px 0">{o.content}</Text>
                                     {o.image && <Image alt={o.image} src={o.image} width={600} height={300}  style={{width:"75%", height:"45%", borderRadius:"15px"}} />}
                                     {o.alt && <Text padding="5px 0 20px 0" fontSize="14px">{o.alt}</Text>}
-                                    {o.figma && <iframe style={{border:"1px solid rgba(0, 0, 0, 0.1)", width:"100%", borderRadius:"15px", margin:"40px 0 0 0"}}  height="450" src={o.figma} allowFullScreen></iframe>}
+                                    {o.figma && <iframe loading='lazy' src={o.figma} style={{border:"1px solid rgba(0, 0, 0, 0.1)", width:"100%", borderRadius:"15px", margin:"40px 0 0 0"}}  height="450" allowFullScreen></iframe>}
                                     {o.figmaAlt && <Text fontStyle="italic" padding="5px 0 40px 0" fontSize="14px">{o.figmaAlt}</Text>}
                                 </Box>
                             ))}

@@ -9,14 +9,7 @@ export default function TechSlideshow(){
       const response = await fetch('../api/projectLogoImages');
       const data = await response.json();
 
-      const horizontalLogosImages = []
-      for(var x = 0; x < data.length; x++){
-        if(data[x] !== ".DS_Store"){
-          horizontalLogosImages.push(data[x])
-        }
-      }
-
-      setImagesArray(horizontalLogosImages)
+      setImagesArray(data)
       
     } catch (error) {
       console.log('Error fetching file names:', error);
@@ -31,14 +24,14 @@ export default function TechSlideshow(){
             <Box className='sheesh' style={{display:"flex", position:"relative", alignItems:"flex-start", justifyContent:"flex-start", padding:"10px"}}>
               {imagesArray && imagesArray.map((o,i)=>(
                 <Box key={i} flexDir="column" aliIt="center" justCont="space-between" width="fit-content" margin="0px 10px">
-                  <Image title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width="auto" height="50px" margin="0 25px"></Image>
+                  <Image title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width="auto" height="40px" margin="0 25px"></Image>
                   <Heading style={{whiteSpace:"nowrap"}} fSize="15px" color='white' textAlign="center" padding="15px 0 0 0">{o.slice(0, -4)}</Heading>
                 </Box>
                   
               ))}
               {imagesArray && imagesArray.map((o,i)=>(
                   <Box key={i} flexDir="column" aliIt="center" justCont="space-between" width="fit-content" margin="0px 10px">
-                  <Image title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width="auto" height="50px" margin="0 25px"></Image>
+                  <Image title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width="auto" height="40px" margin="0 25px"></Image>
                   <Heading style={{whiteSpace:"nowrap"}} fSize="15px" color='white' textAlign="center" padding="15px 0 0 0">{o.slice(0, -4)}</Heading>
                 </Box>
               ))}
