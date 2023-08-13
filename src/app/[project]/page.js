@@ -2,11 +2,11 @@
 
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from "next/link"
 import { useState, useEffect } from 'react'
+import { Box, Hero, Container, Heading, Text } from '@/src/app/components/globals'
 import Header from '@/src/app/components/header'
 import Footer from '../components/footer'
-import Link from "next/link"
-import { Box, Hero, Container, Heading, Text } from '@/src/app/components/globals'
 import TechCard from '@/src/app/components/techCard'
 import ProjectList from "@/public/data/project-list.json"
 import BrowserModel from '@/src/app/components/browserModel'
@@ -56,10 +56,10 @@ export default function Project(){
                     <Container id="ProjectPage" flexDir="column" width="100%" maxWidth="1800px" padding="150px 150px 50px 150px" aliIt="center">
                         <Hero src="/SVG/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
                             <Heading id="secondHeading" color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0"  textAlign="center">{project.name}</Heading>
-                            <Image alt={project.preview || "no image available at the moment"} src={project.image || "/noImage.jpg"} width={600} height={300}  style={{width:"60vw", height:"auto", borderRadius:"15px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
+                            <Image alt={project.preview || "no image available at the moment"} src={project.image || "/noImage.jpg"} width={600} height={300}  style={{width:"60vw", height:"auto", borderRadius:"10px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
                             <Heading id="secondHeading" color='#9DFFFF' fSize="30px"  textAlign="center">{project.date}</Heading>
                         </Hero>
-                        <Box position="sticky" zIndex="5" top="0px" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(43,31,95,0.6)" borderRadius="15px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
+                        <Box position="sticky" zIndex="5" top="0px" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(43,31,95,0.6)" borderRadius="10px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
                             <a href={project.github} onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{margin:"15px 25px"}}>
                                 <Image alt="github image" className='linkGithub' src="/Github/github.png" width={38} height={38}  />
                             </a>
@@ -96,9 +96,9 @@ export default function Project(){
                             {project.designDevelopmentProcess && project.designDevelopmentProcess.map((o,i)=>(
                                 <Box key={i} flexDir="column" width="100%" aliIt="center">
                                     <Text padding="20px 0">{o.content}</Text>
-                                    {o.image && <Image alt={o.image} src={o.image} width={600} height={300}  style={{width:"75%", height:"45%", borderRadius:"15px"}} />}
+                                    {o.image && <Image alt={o.image} src={o.image} width={600} height={300}  style={{width:"75%", height:"45%", borderRadius:"10px"}} />}
                                     {o.alt && <Text padding="5px 0 20px 0" fontSize="14px">{o.alt}</Text>}
-                                    {o.figma && <iframe loading='lazy' src={o.figma} style={{border:"1px solid rgba(0, 0, 0, 0.1)", width:"100%", borderRadius:"15px", margin:"40px 0 0 0"}}  height="450" allowFullScreen></iframe>}
+                                    {o.figma && <iframe loading='lazy' src={o.figma} style={{border:"1px solid rgba(0, 0, 0, 0.1)", width:"100%", borderRadius:"10px", margin:"40px 0 0 0"}}  height="450" allowFullScreen></iframe>}
                                     {o.figmaAlt && <Text fontStyle="italic" padding="5px 0 40px 0" fontSize="14px">{o.figmaAlt}</Text>}
                                 </Box>
                             ))}
@@ -107,10 +107,10 @@ export default function Project(){
                             <Box width="100%" flexDir="column" aliIt="center">
                                 <Box width="100%">
                                     {project.carousel && project.carousel.map((o,i)=>(
-                                        <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)}  style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", padding:"0px 2px", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)", transition: "0.8s ease", borderRadius:"15px", cursor:"pointer"}} />
+                                        <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)}  style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", margin:"0px 5px", boxShadow: o == imageCarousel ? "0px 0px 15px 0px #9DFFFF" : "", transition: "0.8s ease", borderRadius:"10px", cursor:"pointer", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)"}} />
                                     ))}
                                 </Box>
-                                {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300}  style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"15px"}} />}
+                                {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300}  style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"10px"}} />}
                             </Box>
                             
 

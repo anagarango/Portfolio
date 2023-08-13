@@ -13,13 +13,13 @@ export default function BrowserModel({
           <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px">
             <Box width="100%" height="100%" margin="0 0 0 100px" aliIt="center" style={{overflowX: "scroll", whiteSpace: "nowrap"}}>
               {array && array.map((o,i) => (
-                <Text key={i} value={i} onClick={onClick} cursor="pointer" aliIt="center" height="fit-content" minWidth="fit-content" padding="5px 10px" bgColor={array[state].title === o.title ? "#9D95DC" : "#28284D"} style={{transition: "background-color 0.5s ease-out"}} borderRadius="6px" margin="0 10px 0 0">{o.title}</Text>
+                <Text key={i} value={i} onClick={onClick} cursor="pointer" aliIt="center" height="fit-content" minWidth="fit-content" padding="5px 10px" bgColor={array[state].title === o.title ? "#9D95DC" : "#28284D"} style={{transition: "background-color 0.5s ease-out"}} margin="0 10px 0 0" borderRadius="10px">{o.title}</Text>
               ))}
             </Box>
           </Hero>
           <AnimatePresence mode='wait'>
             {version == "home" && 
-              <Box initial={{ opacity: 0, display:"flex" }} animate={{ opacity: 1, display:"flex"}} exit={{ opacity: 0, display:"none"}} transition={{ duration: 1}} style={{display:"flex", flexDirection:"column", padding:"25px", transition: "0.5s ease-out"}}>
+              <Box initial={{ opacity: 0, display:"flex" }} animate={{ opacity: 1, display:"flex"}} exit={{ opacity: 0, display:"none"}} transition={{ duration: 1}} flexDir="column" padding="25px" transitionDiv="0.5s ease-out">
                 <Text fontWeight="700" padding="0 0 15px 0">{array[state].title}</Text>
                 <Text padding="0 0 10px 0">{array[state].p1}</Text>
                 <Text padding="0 0 10px 0">{array[state].p2}</Text>
@@ -34,7 +34,7 @@ export default function BrowserModel({
             {version == "project" && 
               <Box id="keyfeature" initial={{ opacity: 0 }} animate={{ opacity: 1}} exit={{ opacity: 0}} transition={{ duration: 1}} padding="25px" transitionDiv="0.5s ease-out">
                 <Box width="50%">
-                  <Image src={array && `/${name}/${array[state].title}.gif`} width="100%" borderRadius="15px"/>
+                  <Image src={array && `/${name}/${array[state].title}.gif`} width="100%" borderRadius="10px"/>
                 </Box>
                 <Box id="keyfeaturetext" flexDir="column" width="50%" padding="0 0 0 25px" >
                   <Text fontWeight="700" padding="0 0 15px 0">{array && array[state].title}</Text>

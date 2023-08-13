@@ -8,7 +8,7 @@ export default function CollapseCard({
     onClick = ()=>{}
 }){
     return(
-        <Box initial={{ height: 'fit-content' }} animate={{ height: state === index ? 'fit-content' : '85px', transition:{ delay: 0.2 } }} transition={{ duration: 0.3 }} width="100%" bgColor="#27274C" borderRadius="15px" margin="10px 0px" padding="20px" flexDir="column">
+        <Box initial={{ height: 'fit-content' }} animate={{ height: state === index ? 'fit-content' : '85px', transition:{ delay: 0.2 } }} transition={{ duration: 0.3 }} width="100%" bgColor="#27274C" borderRadius="10px" margin="10px 0px" padding="20px" flexDir="column">
             <Box aliIt="center" width="100%" justCont="space-between">
                 <Box aliIt="center">
                     <Image src={`/Icons/${content.title}.png`} width={45} height={45} priority />

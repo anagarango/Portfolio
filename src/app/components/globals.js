@@ -180,7 +180,8 @@ export const Tag = styled.button`
   margin:2.5px 5px 2.5px 0px;
   transition: all 0.3s ease;
   &:hover {
-    transform: scale(1.1)
+    background-color: #9D95DC;
+    color:#28284D;
   }
 `
 
