@@ -171,7 +171,7 @@ export const Tag = styled(motion.button)`
   width:fit-content;
   height:fit-content;
   padding:8px;
-  background-color: #28284D;
+  background-color: #0a002c;
   border-radius:10px;
   border:0px;
   color:#9D95DC;
@@ -179,10 +179,6 @@ export const Tag = styled(motion.button)`
   font-weight:500;
   margin:2.5px 5px 2.5px 0px;
   transition: all 0.3s ease;
-  &:hover {
-    background-color: #9D95DC;
-    color:#28284D;
-  }
 `
 
 export const Form = styled.form`
