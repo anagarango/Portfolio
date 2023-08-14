@@ -1,9 +1,9 @@
 import React, {useEffect, useRef} from 'react'
+import Link from 'next/link'
 import { Box, Image, Heading, Text, Tag, CTA } from "./globals"
 import Animate from "./heading"
 import Reveal from "./animationReveal"
 import { motion, useInView, useAnimation } from 'framer-motion'
-// starting={i % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"}
 
 export default function Card({
     type="0",
@@ -11,8 +11,7 @@ export default function Card({
     src,
     heading,
     preview,
-    tech,
-    onClick = ()=>{}
+    tech
 }){
     const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
@@ -41,7 +40,9 @@ export default function Card({
                     ))}
                 </Box>
                 <Reveal width="fit-content" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"}>
-                    <CTA onClick={onClick}>Read More</CTA>
+                  <Link href={heading} style={{textDecoration:"none"}}>
+                    <CTA>Read More</CTA>
+                    </Link>
                 </Reveal>
             </Box>
         </Reveal>
