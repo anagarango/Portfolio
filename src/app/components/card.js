@@ -1,6 +1,9 @@
-import { Box, Image, Tag, CTA } from "./globals"
+import React, {useEffect, useRef} from 'react'
+import { Box, Image, Heading, Text, Tag, CTA } from "./globals"
 import Animate from "./heading"
 import Reveal from "./animationReveal"
+import { motion, useInView, useAnimation } from 'framer-motion'
+// starting={i % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"}
 
 export default function Card({
     type="0",
@@ -11,25 +14,36 @@ export default function Card({
     tech,
     onClick = ()=>{}
 }){
+    const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  useEffect(() => {
+    if (isInView) {
+      // Start the animation for each tag individually
+      techControls.forEach((control, index) => {
+        control.start({opacity:1, x:0, y:0});
+      });
+    }
+  }, [isInView]);
+
+  const techControls = tech.map(() => useAnimation());
     return(
-        <Box className={type % 2 == 0 ? "projectcard" : "projectcard right"} padding="40px 0px" aliIt="center" width="100%">
-            <Reveal starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"}>
-                <Image className="projectcardimage" initial={{scale:0.9}} whileHover={{scale: 1.0, border: '2px solid rgba(157, 149, 220, 0.9)', borderRadius: '20px', padding: '10px'}} transition={{ duration: 0.3 }} alt={alt} src={src} width={200} height={200} style={{width:"100%", height:"450px", objectFit: "cover", borderRadius:"10px"}}/>
-            </Reveal>
+        <Reveal starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} className={type % 2 == 0 ? "projectcard" : "projectcard right"} padding="40px 0px" aliIt="center" width="100%">
+            <Image className="projectcardimage" initial={{scale:0.9}} whileHover={{scale: 1.0, border: '2px solid rgba(157, 149, 220, 0.9)', borderRadius: '25px', padding: '10px'}} transition={{ duration: 0.3 }} alt={alt} src={src} width={200} height={200} style={{width:"45%", height:"450px", objectFit: "cover", borderRadius:"15px", zIndex:"100"}}/>
             <Box className="projectcardbox" flexDir="column" width="55%" height="100%" justCont="center" margin={type % 2 == 0 ? "0 0 0 20px" : "0 20px 0 0"}>
-                <Animate width="fit-content" type="heading" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} delay={0.9} color='#9DFFFF' fSize="25px" padding="10px 0" text={heading} />
-                <Animate width="fit-content" type="text" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} delay={0.9} text={preview} />
-                <Box className="projectcardtech" flexWrap="wrap" padding="20px 0px">
-                {tech.map((text, index)=>(
-                    <Reveal key={index} width="fit-content" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} delay={0.1*index}>
-                        <Tag>{text}</Tag>
-                    </Reveal>
-                ))}
+                <Animate width="fit-content" type="heading" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} color='#9DFFFF' fSize="25px" padding="10px 0" text={heading} />
+                <Animate width="fit-content" type="text" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} text={preview} />
+                <Box ref={ref} className="projectcardtech" flexWrap="wrap" padding="20px 0px" overflow="hidden">
+                    {tech.map((text, index) => (
+                        <Tag key={index} initial={type % 2 == 0 ? {opacity:0, x:-275} : {opacity:0, x:275}} animate={techControls[index]} transition={{ duration: 0.5, delay: index * 0.1}} >
+                        {text}
+                        </Tag>
+                    ))}
                 </Box>
-                <Reveal width="fit-content" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} delay={0.7}>
+                <Reveal width="fit-content" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"}>
                     <CTA onClick={onClick}>Read More</CTA>
                 </Reveal>
             </Box>
-        </Box>
+        </Reveal>
     )
 }
