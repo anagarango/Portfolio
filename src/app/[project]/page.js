@@ -25,6 +25,12 @@ async function fetchData() {
     
   } catch (error) {
     console.log('Error fetching file names:', error);
+    for(var x = 0; x < ProjectList.length; x++){
+        if(url == ProjectList[x].name){
+            setProject(ProjectList[x])
+            setImageCarousel(ProjectList[x].carousel[0])
+        }
+    }
   }  
 }
 
@@ -45,6 +51,13 @@ export default function Project(){
         setImageCarousel(data.carousel[0])
       }
       loadData();
+
+      for(var x = 0; x < ProjectList.length; x++){
+        if(url == ProjectList[x].name){
+            setProject(ProjectList[x])
+            setImageCarousel(ProjectList[x].carousel[0])
+        }
+    }
     },[])
 
 
