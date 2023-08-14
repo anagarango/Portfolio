@@ -35,13 +35,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Ana Arango - Front End Developer</title>
-        <meta name="description" content="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications." />
-        <meta name="keywords" content="front-end developer, web development, portfolio, react, JavaScript, ana arango"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       { loading && <SplashScreen /> }
       { afterLoad &&
         <main id="openingmain">

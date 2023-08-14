@@ -23,11 +23,10 @@ export default function Project(){
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
     const [imageCarousel, setImageCarousel] = useState("")
-    var url
 
 
     useEffect(()=>{
-        url = window.location.pathname.split('/').pop().replace(/%20/g, " ");
+        var url = window.location.pathname.split('/').pop().replace(/%20/g, " ");
     
         for(var x = 0; x < ProjectList.length; x++){
             if(url == ProjectList[x].name){
@@ -41,13 +40,6 @@ export default function Project(){
 
     return(
         <>
-        <Head>
-            <title>{`Ana Arango - ${url}`}</title>
-            <meta name="description" content="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications." />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="../favicon.ico" />
-        </Head>
-        
         <main id='projectMain'>
             <Header/>
             <Footer/>
