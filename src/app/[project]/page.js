@@ -16,9 +16,23 @@ import PageTransition from '@/src/app/components/pageTransition'
 import Reveal from '@/src/app/components/animationReveal'
 
 
+async function fetchData() {
+  try {
+    const currentPagePathname = window.location.pathname.split('/').pop().replace(/%20/g, " ");
+    const response = await fetch(`../api/projects?url=${encodeURIComponent(currentPagePathname)}`);
+    const data = await response.json();
+    console.log(data)
+    return data
+    
+  } catch (error) {
+    console.log('Error fetching file names:', error);
+  }  
+}
+
+
 
 export default function Project(){
-    const [project, setProject] = useState([])
+    const [project, setProject] = useState({})
     const [skill, setSkill] = useState(0)
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
@@ -26,15 +40,12 @@ export default function Project(){
 
 
     useEffect(()=>{
-        var url = window.location.pathname.split('/').pop().replace(/%20/g, " ");
-    
-        for(var x = 0; x < ProjectList.length; x++){
-            if(url == ProjectList[x].name){
-                setProject(ProjectList[x])
-                setImageCarousel(ProjectList[x].carousel[0])
-            }
-        }
-        
+      async function loadData() {
+        const data = await fetchData();
+        setProject(data);
+        setImageCarousel(data.carousel[0])
+      }
+      loadData();
     },[])
 
 

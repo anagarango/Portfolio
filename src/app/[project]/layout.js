@@ -17,9 +17,11 @@ const raleway = Raleway({
 });
 
 export async function generateMetadata({ params, searchParams, props }, parent) {
-  const okay = JSON.parse(JSON.stringify(params.project.split('/').pop().replace(/%20/g, " ")))
+  // const response = await fetch(`../api/projects?url=${encodeURIComponent(params.project.split('/').pop().replace(/%20/g, " "))}`);
+  // const data = await response.json();
+  // const okay = JSON.parse(JSON.stringify(params.project.split('/').pop().replace(/%20/g, " ")))
   return {
-    title: okay,
+    title: data.name,
     description: 'A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications.',
     keywords:"front-end developer, web development, portfolio, React, JavaScript, Ana Arango"
   }
