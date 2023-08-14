@@ -21,7 +21,6 @@ async function fetchData() {
     const currentPagePathname = window.location.pathname.split('/').pop().replace(/%20/g, " ");
     const response = await fetch(`../api/projects?url=${encodeURIComponent(currentPagePathname)}`);
     const data = await response.json();
-    console.log(data)
     return data
     
   } catch (error) {

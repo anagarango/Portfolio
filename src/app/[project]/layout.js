@@ -17,12 +17,19 @@ const raleway = Raleway({
 });
 
 export async function generateMetadata({ params, searchParams, props }, parent) {
-  // const response = await fetch(`../api/projects?url=${encodeURIComponent(params.project.split('/').pop().replace(/%20/g, " "))}`);
-  // const data = await response.json();
+  var data
+  try {
+    const response = await fetch(`https://starbooks.ca/api/projects?url=${params.project}`)
+    data = await response.json();
+    // Use the parsed data
+  } catch (error) {
+    console.error('Error parsing JSON:', error);
+  }
+
   // const okay = JSON.parse(JSON.stringify(params.project.split('/').pop().replace(/%20/g, " ")))
   return {
-    title: data.name,
-    description: 'A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications.',
+    title:data.name,
+    description: data.preview,
     keywords:"front-end developer, web development, portfolio, React, JavaScript, Ana Arango"
   }
 }
