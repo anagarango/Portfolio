@@ -100,11 +100,9 @@ export default function Home() {
                 <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
                 {Projects.map((o,i)=>{
                   return(
-                    <Reveal starting={i % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"}>
-                      <Link key={i} href={o.name} imageSrcSet="none" style={{textDecoration:"none"}}>
-                        <Card type={i} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
-                      </Link>
-                    </Reveal>
+                    <Link key={i} href={o.name} style={{textDecoration:"none"}}>
+                      <Card type={i} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
+                    </Link>
                   )
                 })}
               </Container>

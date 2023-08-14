@@ -167,7 +167,7 @@ export const Input = styled.input`
   }
 `
 
-export const Tag = styled.button`
+export const Tag = styled(motion.button)`
   width:fit-content;
   height:fit-content;
   padding:8px;

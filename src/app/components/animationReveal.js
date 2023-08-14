@@ -1,11 +1,14 @@
 import React, {useEffect, useRef} from 'react'
-import { motion, useInView, useAnimation } from 'framer-motion'
+import { useInView, useAnimation } from 'framer-motion'
+import { Box } from './globals'
 
 export default function Reveal({
   children, 
   widthReveal="fit-content", 
   starting, 
   delay=0.8,
+  staggerChildren,
+  ...props
 }){
   const ref = useRef(null)
   const isInView = useInView(ref, {once:false})
@@ -20,7 +23,7 @@ export default function Reveal({
 
   return (
     <div ref={ref} style={{position:"relative", width:widthReveal, overflow:"hidden"}}> 
-      <motion.div 
+      <Box 
         variants={{
           hiddenFromLeft:{opacity:0, x:-275},
           hiddenFromRight:{opacity:0, x:275},
@@ -30,8 +33,9 @@ export default function Reveal({
         }}
         initial={starting}
         animate={mainControls}
-        transition={{duration:0.7, delay:delay}}
-      >{children}</motion.div>
+        transition={{duration:0.7, delay:delay, staggerChildren:staggerChildren}}
+        {...props}
+      >{children}</Box>
     </div>
   )
 }
