@@ -1,172 +1,172 @@
-[
-    {
-        "name": "Rooty",
-        "preview":"Rooty is a freelance marketplace app that helps BCIT students sell or barter their services to other students to improve their experience and build their portfolios.",
-        "image":"/Rooty.png",
-        "date":"September 2022 - December 2022",
-        "projectOverview":"Rooty is a freelance marketplace app that helps college students, specifically British Columbia Institute of Technology (BCIT), sell or barter their services to other students to improve their experience and build their portfolios. Many students have difficulty keeping both a job and attending college according to our college. Rooty provides BCIT students with a safe space to make extra income, barter for each other’s services, gain experience, and network within the BCIT community.",
-        "roleName":"Lead Front-End Developer",
-        "role":"I worked closely with my other front-end developer/project manager and took leadership in discussing how we can split tasks evenly. I would provide assistance when my partner needed help in completing their tasks when technical challenges arise. I provided my insights on front-end feasibility and developed dynamic features/components when necessary adhering to clean code and making them reusable. I tested the app to make sure all the functionalities are there and reported back to the team whenever I found a bug or if there’s something else we should consider adding to the app. I was responsible in converting our designers prototypes into code, so I regularly showed them the process of our work to ensure its up to par of what they expected.",
-        "tech": [
-            "Next", "React", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Lottie Animation", "Storybook", "Git", "Figma"
-        ],
-        "keyFeatures": [
-            {
-              "title": "Insights & Tips",
-              "content": "A feature that would be mediated by BCIT, here is where relevant content will be posted for both people looking for a freelancer or the freelancer. Topics such as “How to Write the Perfect Freelancing Bio” are available for every user to read."
-            },
-            {
-              "title": "Contest For The Week",
-              "content": "Another feature BCIT will mediate is a contest that will be held up every week (or actually month) where BCIT would host contests for all users to participate in for cash prizes."
-            },
-            {
-              "title": "Posts",
-              "content": "Freelancers can create posts whatever service fits in the 6 categories provided: Broadcast & Media, Computing, Marketing, Business & Finance, Digital Arts & Design, and Tutoring. A Freelancer creates a post of something they would like to help someone with and work at their own pace, simply someone will send a message through the app to get started."
-            },
-            {
-              "title": "Categories",
-              "content": "Users looking for Freelancers will use this feature to search for services and read the description and details for the Freelancer's post they are looking for."
-            },
-            {
-              "title": "Chat",
-              "content": "Users will initialize the chat with the Freelancer they choose where they can discuss the details of the need of the service and such."
-            },
-            {
-              "title": "Profile",
-              "content": "In order to attract users to contact the Freelancer, the Freelancer will set up their profile by leaving a bio and a mini-portfolio of screenshots of their projects."
-            }
-          ],
-        "designDevelopmentProcess": [
-            {
-                "content":"Before designing, we created a site map of what screens we would have in our app and what features would be found in each screen. After we had a clear idea of what our app would sort of look like, our UI/UX designers took over to design the low-fidelity prototype to test it with potential users and receive feedback from them.",
-                "image": null,
-                "alt": null,
-                "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeqHHWZqhVY4ZZGviUilmrn%2FRooty---Design%3Ftype%3Ddesign%26node-id%3D348%253A7934%26t%3DHzOB6QxndCq9wHXK-1",
-                "figmaAlt": "User Journey Map + Site Map of all the screens we planned Rooty will have."
-            },
-            {
-                "content":"Although the UI/UX designers were responsible of designing the app, as a team, we discussed what colors and experience we would want our users to have. We acknowledged that we would have college students using our app, so we would want to have a clean, vibrant, simple app interface that is easily accessible for people following principles from the WCAG, such as text contrasts and pointer types.",
-                "image": null,
-                "alt": null,
-                "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIdZlWMRPIFsVcx51Ljb4kj%2FRooty-BCIT%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3D4XPyPRt9yBJmHLx6-1",
-                "figmaAlt": "FigJam of Inspirations of UI/UX, Extensive Reasearch, Logo, Colors, etc."
-            },
-            {
-                "content":"I worked closely with our UI/UX designers since I was responsible in providing feedback if certain animations or features are feasible for us to make according to our current expertise. I was responsible with ensuring that the web app has a responsive design so different devices that have different aspect ratios are able to use the web app properly. Only a few components were created since we wanted to keep a consistent look by reusing components that makes it visually appealing and more put together.",
-                "image": null,
-                "alt": null,
-                "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeqHHWZqhVY4ZZGviUilmrn%2FRooty---Design%3Ftype%3Ddesign%26node-id%3D720%253A11585%26t%3DHzOB6QxndCq9wHXK-1",
-                "figmaAlt": "Figma of all the high fidelity screens we included in the final Rooty app."
-            },
-            {
-                "content":"The project followed an Agile development methodology. We started with gathering requirements, creating wireframes, and developing a detailed project plan to find how we can accomplish our mission to solve the problem of students not able to balance a job and college. We conducted regular code reviews, utilized continuous integration to ensure we don’t overwrite each others code, and deployed the application in Vercel.",
-                "image": null,
-                "alt": null,
-                "figma": null
-            }
-        ],
-        "lessonsLearned": [
-            {
-              "title": "Communication",
-              "content": "Since this was a group project involving front-end developers, back-end developers, and UI/UX designers, communication was key to our groups success as I was working with people of different work ethics and strengths and weaknesses. We established to have open lines of communication and be honest with each other which was crucial for successful collaboration. To avoid miscommunication, we set up weekly in-person team meetings and set up a Discord chat to update each other of what tasks are done throughout the week. So, I learned the significance of having transparency within the team and regular communication to avoid setbacks."
-            },
-            {
-              "title": "Project Management",
-              "content": "This was the first project I fully followed the Agile methodology that made our team work efficiently, especially me. Every week, we got into the habit of creating deadlines with tasks depending on how heavy they are. We met every week to do weekly standup’s and catch up on each other on what we were able to add to the project since most tasks depended on each other. We also set up a Trello Board to add visual representation of tasks and deadlines which taught me the importance of efficient project management in keeping the team organized and on track."
-            },
-            {
-              "title": "Task Specialization",
-              "content": "To break the ice since most of us hadn't met each other before, we shared what are our strengths and weaknesses when it comes to completing work and tasks. We all had our preferences of roles to take in the group which worked really well since there weren’t any overlapping or conflicting roles so we supported each other from every front. I assisted our project manager working closely with her so we were able to split all tasks evenly and assign them according to what our strengths are while teaching each other to strengthen our weaknesses. "
-            },
-            {
-              "title": "Realistic Timeline",
-              "content": "As someone who likes to take on many tasks, I realized that I need to improve my task delegation since it was unrealistic of me to finish many tasks in a short span of time that would most likely make me stressed over the other tasks I still have to do. Instead of being overly ambitious to take on many tasks, I focused in accomplishing 3-5 tasks every week to feel that I have accomplished contributing to the project while delivering higher-quality results."
-            }
-          ],
-        "carousel":[
-          "/Rooty/0.jpg","/Rooty/1.jpg", "/Rooty/2.jpg", "/Rooty/3.jpg"
-        ],
-        "github":"https://github.com/BCIT-Rooty/rootyBCIT",
-        "vercel":"https://rooty-bcit-iota.vercel.app/"
-    },{
-      "name": "She's A Keeper",
-      "preview":"She’s A Keeper is a cleaning service website for a self-employed housekeeper in the Tri-Cities area. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning.",
-      "image":"/ShesAKeeper.png",
-      "date":"December 2022 - February 2023",
-      "projectOverview":"She’s A Keeper is a cleaning service website of a self-employed housekeeper offering her services in the Tri-Cities area of Metro Vancouver. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning. This was a solo freelance project I took on to help a family member refer potential clients about her services. Although my family member didn’t request anything specifically, I made sure to follow the requirements a house-cleaning website would have to provide the information a potential client would want.",
-      "roleName":"Front-End Developer, Content Writer, and UI/UX Designer",
-      "role":"I came up with the design of the website, along with the content, and developed the whole website. I did thorough research to understand the target audience’s needs from visiting a house-cleaning website. I grabbed inspiration and gathered them in a Pinterest Board to create a mockup of the layout, navigation, and interactions. I created the brand identity (logo, colours, fonts, graphics) that was consistent throughout the website. I translated the mockup design into actual code using HTML, CSS, and JavaScript in the Next.js framework and prioritizing the responsive layout for user-friendliness. I worked closely with my client to have clear and accurate descriptions that highlight their business, including sections like the home, about, and contact.",
-      "tech": [
-        "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "Git", "Figma", "Illustrator"
+[ 
+  {
+    "name": "Rooty",
+    "preview":"Rooty is a freelance marketplace app that helps BCIT students sell or barter their services to other students to improve their experience and build their portfolios.",
+    "image":"/Rooty.png",
+    "date":"September 2022 - December 2022",
+    "projectOverview":"Rooty is a freelance marketplace app that helps college students, specifically British Columbia Institute of Technology (BCIT), sell or barter their services to other students to improve their experience and build their portfolios. Many students have difficulty keeping both a job and attending college according to our college. Rooty provides BCIT students with a safe space to make extra income, barter for each other’s services, gain experience, and network within the BCIT community.",
+    "roleName":"Lead Front-End Developer",
+    "role":"I worked closely with my other front-end developer/project manager and took leadership in discussing how we can split tasks evenly. I would provide assistance when my partner needed help in completing their tasks when technical challenges arise. I provided my insights on front-end feasibility and developed dynamic features/components when necessary adhering to clean code and making them reusable. I tested the app to make sure all the functionalities are there and reported back to the team whenever I found a bug or if there’s something else we should consider adding to the app. I was responsible in converting our designers prototypes into code, so I regularly showed them the process of our work to ensure its up to par of what they expected.",
+    "tech": [
+      "Next", "React", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Lottie Animation", "Storybook", "Git", "Figma"
+    ],
+    "keyFeatures": [
+      {
+        "title": "Insights & Tips",
+        "content": "A feature that would be mediated by BCIT, here is where relevant content will be posted for both people looking for a freelancer or the freelancer. Topics such as “How to Write the Perfect Freelancing Bio” are available for every user to read."
+      },
+      {
+        "title": "Contest For The Week",
+        "content": "Another feature BCIT will mediate is a contest that will be held up every week (or actually month) where BCIT would host contests for all users to participate in for cash prizes."
+      },
+      {
+        "title": "Posts",
+        "content": "Freelancers can create posts whatever service fits in the 6 categories provided: Broadcast & Media, Computing, Marketing, Business & Finance, Digital Arts & Design, and Tutoring. A Freelancer creates a post of something they would like to help someone with and work at their own pace, simply someone will send a message through the app to get started."
+      },
+      {
+        "title": "Categories",
+        "content": "Users looking for Freelancers will use this feature to search for services and read the description and details for the Freelancer's post they are looking for."
+      },
+      {
+        "title": "Chat",
+        "content": "Users will initialize the chat with the Freelancer they choose where they can discuss the details of the need of the service and such."
+      },
+      {
+        "title": "Profile",
+        "content": "In order to attract users to contact the Freelancer, the Freelancer will set up their profile by leaving a bio and a mini-portfolio of screenshots of their projects."
+      }
+    ],
+    "designDevelopmentProcess": [
+      {
+          "content":"Before designing, we created a site map of what screens we would have in our app and what features would be found in each screen. After we had a clear idea of what our app would sort of look like, our UI/UX designers took over to design the low-fidelity prototype to test it with potential users and receive feedback from them.",
+          "image": "/Rooty/Site and User Journey Map.png",
+          "alt": "Snippet of the User Journey Map + Site Map of all the screens we planned Rooty will have.",
+          "figma": null,
+          "figmaAlt": null
+      },
+      {
+          "content":"Although the UI/UX designers were responsible of designing the app, as a team, we discussed what colors and experience we would want our users to have. We acknowledged that we would have college students using our app, so we would want to have a clean, vibrant, simple app interface that is easily accessible for people following principles from the WCAG, such as text contrasts and pointer types.",
+          "image": "/Rooty/Rooty Figjam.png",
+          "alt": "FigJam of Inspirations of UI/UX, Extensive Reasearch, Logo, Colors, etc.",
+          "figma": null,
+          "figmaAlt": null
+      },
+      {
+          "content":"I worked closely with our UI/UX designers since I was responsible in providing feedback if certain animations or features are feasible for us to make according to our current expertise. I was responsible with ensuring that the web app has a responsive design so different devices that have different aspect ratios are able to use the web app properly. Only a few components were created since we wanted to keep a consistent look by reusing components that makes it visually appealing and more put together.",
+          "image": null,
+          "alt": null,
+          "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FeqHHWZqhVY4ZZGviUilmrn%2FRooty---Design%3Ftype%3Ddesign%26node-id%3D720%253A11585%26t%3DHzOB6QxndCq9wHXK-1",
+          "figmaAlt": "Figma of all the high fidelity screens we included in the final Rooty app."
+      },
+      {
+          "content":"The project followed an Agile development methodology. We started with gathering requirements, creating wireframes, and developing a detailed project plan to find how we can accomplish our mission to solve the problem of students not able to balance a job and college. We conducted regular code reviews, utilized continuous integration to ensure we don’t overwrite each others code, and deployed the application in Vercel.",
+          "image": null,
+          "alt": null,
+          "figma": null
+      }
+    ],
+    "lessonsLearned": [
+      {
+        "title": "Communication",
+        "content": "Since this was a group project involving front-end developers, back-end developers, and UI/UX designers, communication was key to our groups success as I was working with people of different work ethics and strengths and weaknesses. We established to have open lines of communication and be honest with each other which was crucial for successful collaboration. To avoid miscommunication, we set up weekly in-person team meetings and set up a Discord chat to update each other of what tasks are done throughout the week. So, I learned the significance of having transparency within the team and regular communication to avoid setbacks."
+      },
+      {
+        "title": "Project Management",
+        "content": "This was the first project I fully followed the Agile methodology that made our team work efficiently, especially me. Every week, we got into the habit of creating deadlines with tasks depending on how heavy they are. We met every week to do weekly standup’s and catch up on each other on what we were able to add to the project since most tasks depended on each other. We also set up a Trello Board to add visual representation of tasks and deadlines which taught me the importance of efficient project management in keeping the team organized and on track."
+      },
+      {
+        "title": "Task Specialization",
+        "content": "To break the ice since most of us hadn't met each other before, we shared what are our strengths and weaknesses when it comes to completing work and tasks. We all had our preferences of roles to take in the group which worked really well since there weren’t any overlapping or conflicting roles so we supported each other from every front. I assisted our project manager working closely with her so we were able to split all tasks evenly and assign them according to what our strengths are while teaching each other to strengthen our weaknesses. "
+      },
+      {
+        "title": "Realistic Timeline",
+        "content": "As someone who likes to take on many tasks, I realized that I need to improve my task delegation since it was unrealistic of me to finish many tasks in a short span of time that would most likely make me stressed over the other tasks I still have to do. Instead of being overly ambitious to take on many tasks, I focused in accomplishing 3-5 tasks every week to feel that I have accomplished contributing to the project while delivering higher-quality results."
+      }
+    ],
+    "carousel":[
+      "/Rooty/0.jpg","/Rooty/1.jpg", "/Rooty/2.jpg", "/Rooty/3.jpg"
+    ],
+    "github":"https://github.com/BCIT-Rooty/rootyBCIT",
+    "vercel":"https://rooty-bcit-iota.vercel.app/"
+  },{
+    "name": "She's A Keeper",
+    "preview":"She’s A Keeper is a cleaning service website for a self-employed housekeeper in the Tri-Cities area. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning.",
+    "image":"/ShesAKeeper.png",
+    "date":"December 2022 - February 2023",
+    "projectOverview":"She’s A Keeper is a cleaning service website of a self-employed housekeeper offering her services in the Tri-Cities area of Metro Vancouver. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning. This was a solo freelance project I took on to help a family member refer potential clients about her services. Although my family member didn’t request anything specifically, I made sure to follow the requirements a house-cleaning website would have to provide the information a potential client would want.",
+    "roleName":"Front-End Developer, Content Writer, and UI/UX Designer",
+    "role":"I came up with the design of the website, along with the content, and developed the whole website. I did thorough research to understand the target audience’s needs from visiting a house-cleaning website. I grabbed inspiration and gathered them in a Pinterest Board to create a mockup of the layout, navigation, and interactions. I created the brand identity (logo, colours, fonts, graphics) that was consistent throughout the website. I translated the mockup design into actual code using HTML, CSS, and JavaScript in the Next.js framework and prioritizing the responsive layout for user-friendliness. I worked closely with my client to have clear and accurate descriptions that highlight their business, including sections like the home, about, and contact.",
+    "tech": [
+      "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "Git", "Figma", "Illustrator"
+    ],
+    "keyFeatures": [
+        {
+          "title": "Why Choose She’s A Keeper",
+          "content": "This section includes reasons why the potential client should consider hiring my client’s services. I designed the graphics using Adobe’s Illustrator."
+        },
+        {
+          "title": "Experience Statistics",
+          "content": "This section includes statistics about my clients experience such as how many clients she currently has or how many years of experience."
+        },
+        {
+          "title": "Testimonials",
+          "content": "I requested my client to ask their clients for authentic and descriptive testimonials about her services to attract future potential clients that she is trustworthy."
+        },
+        {
+          "title": "About",
+          "content": "A small description about my client that brings a bit of her personality and explains why she is the right person for the job as she enjoys cleaning houses. Even a small description about what products she uses or brings to her houses so her clients are aware that they are family-safe."
+        },
+        {
+          "title": "Services",
+          "content": "A list of the types of services that are included in her line of work are shared with a small graphic along with service’s title."
+        },
+        {
+          "title": "Contact",
+          "content": "A form is included that asks the potential client to leave their name, email, and message that my client will receive in their professional email."
+        }
       ],
-      "keyFeatures": [
-          {
-            "title": "Why Choose She’s A Keeper",
-            "content": "This section includes reasons why the potential client should consider hiring my client’s services. I designed the graphics using Adobe’s Illustrator."
-          },
-          {
-            "title": "Experience Statistics",
-            "content": "This section includes statistics about my clients experience such as how many clients she currently has or how many years of experience."
-          },
-          {
-            "title": "Testimonials",
-            "content": "I requested my client to ask their clients for authentic and descriptive testimonials about her services to attract future potential clients that she is trustworthy."
-          },
-          {
-            "title": "About",
-            "content": "A small description about my client that brings a bit of her personality and explains why she is the right person for the job as she enjoys cleaning houses. Even a small description about what products she uses or brings to her houses so her clients are aware that they are family-safe."
-          },
-          {
-            "title": "Services",
-            "content": "A list of the types of services that are included in her line of work are shared with a small graphic along with service’s title."
-          },
-          {
-            "title": "Contact",
-            "content": "A form is included that asks the potential client to leave their name, email, and message that my client will receive in their professional email."
-          }
-        ],
-      "designDevelopmentProcess": [
-          {
-              "content":"Before designing, I gathered research and inspiration of what a house-cleaning website should have. I searched through competitors of my client to see what kind of content they included so I can organize a layout that displays the necessary information. I looked for a colour scheme that made sense for the type of business to represent cleanliness. Since it would be a pretty static website, I prioritized simplicity by implementing a clear navigation so users can access relevant information about her services.",
-              "image": "/She's A Keeper/Pinterest Board.jpg",
-              "alt": "A Pinterest Board with relevant inspirations for a cleaning services website.",
-              "figma": null,
-              "figmaAlt": null
-          },
-          {
-              "content":"I made sure to adhere the same colour scheme, typography, and graphical style throughout the website to make it professional and visually appealing. I ensured the website design was responsive and optimized for various screen sizes, allowing users to have a better experience.",
-              "image": null,
-              "alt": null,
-              "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSglfnyfQM1mVusvnMsj9fu%2FShe's-A-Keeper%3Fnode-id%3D0%253A1%26t%3DhohDG2uiQljQjT6v-1",
-              "figmaAlt": "Figma Design of the UI the website will have."
-          },
-          {
-              "content":"I followed the Software Development Life Cycle, the six stages of planning, analysis, design, implementation, testing, and maintenance. This process allowed me to efficiently work forward as I had already gathered what requirements are needed and had spent time creating a layout that is appropriate for the project.",
-              "image": null,
-              "alt": null,
-              "figma": null,
-              "figmaAlt": null
-          }
+    "designDevelopmentProcess": [
+        {
+            "content":"Before designing, I gathered research and inspiration of what a house-cleaning website should have. I searched through competitors of my client to see what kind of content they included so I can organize a layout that displays the necessary information. I looked for a colour scheme that made sense for the type of business to represent cleanliness. Since it would be a pretty static website, I prioritized simplicity by implementing a clear navigation so users can access relevant information about her services.",
+            "image": "/She's A Keeper/Pinterest Board.jpg",
+            "alt": "A Pinterest Board with relevant inspirations for a cleaning services website.",
+            "figma": null,
+            "figmaAlt": null
+        },
+        {
+            "content":"I made sure to adhere the same colour scheme, typography, and graphical style throughout the website to make it professional and visually appealing. I ensured the website design was responsive and optimized for various screen sizes, allowing users to have a better experience.",
+            "image": null,
+            "alt": null,
+            "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FSglfnyfQM1mVusvnMsj9fu%2FShe's-A-Keeper%3Fnode-id%3D0%253A1%26t%3DhohDG2uiQljQjT6v-1",
+            "figmaAlt": "Figma Design of the UI the website will have."
+        },
+        {
+            "content":"I followed the Software Development Life Cycle, the six stages of planning, analysis, design, implementation, testing, and maintenance. This process allowed me to efficiently work forward as I had already gathered what requirements are needed and had spent time creating a layout that is appropriate for the project.",
+            "image": null,
+            "alt": null,
+            "figma": null,
+            "figmaAlt": null
+        }
+    ],
+    "lessonsLearned": [
+        {
+          "title": "SDLC",
+          "content": "By adhering to the SDLC (Software Developer Lifecycle), it helped me understand the significance of gathering requirements, planning, development, testing, and deployment phases. This is an efficient process that made sense as soon as I got to the development phase since I had all the material I needed to start creating the website. I was able to deliver a high-quality website within a considerable short span of time where the research part is what took the longest. This well-defined and structured process definitely proved to be the best way to work."
+        },
+        {
+          "title": "Client Feedback",
+          "content": "With the feedback I got from my client, I understood a valuable lesson that a client’s opinion and satisfaction is what matter’s most when it comes to having a successful project. I realized my preferences of web design are completely different from what my client would want, so I would encourage my client to share their thoughts of what the design looks like and if there is anything that can be altered so they are more satisfied with the end product."
+        },
+        {
+          "title": "Scope Management",
+          "content": "To work as efficiently as possible, I learned to effectively manage the scope of work. Although my client was in no hurry to have the website deployed as soon as possible, she allowed me to work in a pace that makes since for me. I was excited to work on the project right away, I had assumed that I could finish the project in two weeks, which was absolutely wrong. I hadn’t accounted for the amount of research I would have to do to deliver a great project. I hadn’t accounted for testing with potential clients. I hadn’t accounted for the homework I would have during that time since I was still in college. This project took me two months to complete, so this made me realize that a proactive realistic scope is absolutely important when a client is involved since I don’t want to deliver false hope and inaccurate time estimates as this can upset my client and weaken our client-developer relationship."
+        }
       ],
-      "lessonsLearned": [
-          {
-            "title": "SDLC",
-            "content": "By adhering to the SDLC (Software Developer Lifecycle), it helped me understand the significance of gathering requirements, planning, development, testing, and deployment phases. This is an efficient process that made sense as soon as I got to the development phase since I had all the material I needed to start creating the website. I was able to deliver a high-quality website within a considerable short span of time where the research part is what took the longest. This well-defined and structured process definitely proved to be the best way to work."
-          },
-          {
-            "title": "Client Feedback",
-            "content": "With the feedback I got from my client, I understood a valuable lesson that a client’s opinion and satisfaction is what matter’s most when it comes to having a successful project. I realized my preferences of web design are completely different from what my client would want, so I would encourage my client to share their thoughts of what the design looks like and if there is anything that can be altered so they are more satisfied with the end product."
-          },
-          {
-            "title": "Scope Management",
-            "content": "To work as efficiently as possible, I learned to effectively manage the scope of work. Although my client was in no hurry to have the website deployed as soon as possible, she allowed me to work in a pace that makes since for me. I was excited to work on the project right away, I had assumed that I could finish the project in two weeks, which was absolutely wrong. I hadn’t accounted for the amount of research I would have to do to deliver a great project. I hadn’t accounted for testing with potential clients. I hadn’t accounted for the homework I would have during that time since I was still in college. This project took me two months to complete, so this made me realize that a proactive realistic scope is absolutely important when a client is involved since I don’t want to deliver false hope and inaccurate time estimates as this can upset my client and weaken our client-developer relationship."
-          }
-        ],
-        "carousel":[
-          "/She's A Keeper/0.jpg","/She's A Keeper/1.jpg", "/She's A Keeper/2.jpg", "/She's A Keeper/3.jpg", "/She's A Keeper/4.jpg"
-        ],
-      "github":"https://github.com/anagarango/sandracleaning",
-      "vercel":"https://shesakeeper.starbooks.ca"
+      "carousel":[
+        "/She's A Keeper/0.jpg","/She's A Keeper/1.jpg", "/She's A Keeper/2.jpg", "/She's A Keeper/3.jpg", "/She's A Keeper/4.jpg"
+      ],
+    "github":"https://github.com/anagarango/sandracleaning",
+    "vercel":"https://shesakeeper.starbooks.ca"
   },{
     "name": "Check WeatHER",
     "preview":"Check WeatHER is a weather web app that shows the day's conditions, tomorrow's forecast, and 6-day forecast depending on which city the user writes on the input.",

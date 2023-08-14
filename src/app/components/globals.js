@@ -171,7 +171,7 @@ export const Tag = styled(motion.button)`
   width:fit-content;
   height:fit-content;
   padding:8px;
-  background-color: #28284D;
+  background-color: #0a002c;
   border-radius:10px;
   border:0px;
   color:#9D95DC;
@@ -181,7 +181,7 @@ export const Tag = styled(motion.button)`
   transition: all 0.3s ease;
   &:hover {
     background-color: #9D95DC;
-    color:#28284D;
+    color:#0a002c;
   }
 `
 

@@ -8,6 +8,7 @@ import { Box, Hero, Container, Heading, Text } from '@/src/app/components/global
 import Header from '@/src/app/components/header'
 import Footer from '../components/footer'
 import TechCard from '@/src/app/components/techCard'
+import RelatedCard from '@/src/app/components/relatedCard'
 import ProjectList from "@/public/data/project-list.json"
 import BrowserModel from '@/src/app/components/browserModel'
 import CollapseCard from '@/src/app/components/collapse'
@@ -36,7 +37,7 @@ export default function Project(){
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
     const [imageCarousel, setImageCarousel] = useState("")
-    var url = window.location.pathname.split('/').pop().replace(/%20/g, " ")
+    var url
 
 
     useEffect(()=>{
@@ -47,12 +48,14 @@ export default function Project(){
     //   }
     //   loadData();
 
+			url = window.location.pathname.split('/').pop().replace(/%20/g, " ")
+
       for(var x = 0; x < ProjectList.length; x++){
         if(url == ProjectList[x].name){
             setProject(ProjectList[x])
             setImageCarousel(ProjectList[x].carousel[0])
         }
-    }
+      }
     },[])
 
 
@@ -111,11 +114,11 @@ export default function Project(){
                             <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Design and Development Process</Heading>
                             {project.designDevelopmentProcess && project.designDevelopmentProcess.map((o,i)=>(
                                 <Box key={i} flexDir="column" width="100%" aliIt="center">
-                                    <Text padding="20px 0">{o.content}</Text>
-                                    {o.image && <Image alt={o.image} src={o.image} width={600} height={300}  style={{width:"75%", height:"45%", borderRadius:"10px"}} />}
-                                    {o.alt && <Text padding="5px 0 20px 0" fontSize="14px">{o.alt}</Text>}
-                                    {o.figma && <iframe loading='lazy' src={o.figma} style={{border:"1px solid rgba(0, 0, 0, 0.1)", width:"100%", borderRadius:"10px", margin:"40px 0 0 0"}}  height="450" allowFullScreen></iframe>}
-                                    {o.figmaAlt && <Text fontStyle="italic" padding="5px 0 40px 0" fontSize="14px">{o.figmaAlt}</Text>}
+                                    <Text padding="30px 0">{o.content}</Text>
+                                    {o.image && <Image alt={o.image} src={o.image} width={600} height={300}  style={{width:"100%", height:"auto", borderRadius:"10px"}} />}
+                                    {o.alt && <Text padding="5px 0 20px 0" fontSize="14px" textAlign="center">{o.alt}</Text>}
+                                    {o.figma && <iframe loading='lazy' src={o.figma} style={{border:"1px solid rgba(0, 0, 0, 0.1)", width:"100%", borderRadius:"10px"}}  height="450" allowFullScreen></iframe>}
+                                    {o.figmaAlt && <Text fontStyle="italic" padding="5px 0 20px 0" fontSize="14px" textAlign="center">{o.figmaAlt}</Text>}
                                 </Box>
                             ))}
                             
@@ -123,7 +126,7 @@ export default function Project(){
                             <Box width="100%" flexDir="column" aliIt="center">
                                 <Box width="100%">
                                     {project.carousel && project.carousel.map((o,i)=>(
-                                        <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)}  style={{width:`calc(100% / ${project.carousel.length})`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", margin:"0px 5px", boxShadow: o == imageCarousel ? "0px 0px 15px 0px #9DFFFF" : "", transition: "0.8s ease", borderRadius:"10px", cursor:"pointer", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)"}} />
+                                        <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)}  style={{width:`calc(100% / ${project.carousel.length} - 10px)`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", margin:"0px 5px", border: o == imageCarousel ? "1px solid rgb(157, 149, 220)" : "1px solid transparent", transition: "0.8s ease", borderRadius:"10px", cursor:"pointer", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)"}} />
                                     ))}
                                 </Box>
                                 {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300}  style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"10px"}} />}
@@ -135,6 +138,17 @@ export default function Project(){
                                 <CollapseCard key={i} index={i} content={o} state={collapse} onClick={()=>setCollapse(i)} />
                             ))}
                         </Box>
+												<hr style={{width:"100%", margin:"100px 0", borderWidth:"5px", borderColor:"#B23C87", borderStyle: "dotted none none none"}} />
+                        <Container flexDir="column" width="100%">
+                            <Heading id="secondHeading"  color='#B23C87' padding="10px 0">Other Projects</Heading>
+                            <Box width="100%" borderRadius="10px" flexDir="column">
+															{ProjectList.filter((o) => o.name != project.name).map((filteredObj, i) => (
+																	<Link key={i} href={filteredObj.name} style={{ textDecoration: "none" }}>
+																			<RelatedCard alt={filteredObj.name} src={filteredObj.image} heading={filteredObj.name} preview={filteredObj.preview} />
+																	</Link>
+															))}
+                            </Box>
+                        </Container>
                         <Container flexDir="column" width="100%" padding="90px 0">
                             <Heading id="secondHeading"  color='#B23C87'  padding="10px 0">Wanna Talk?</Heading>
                             <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. OR check out my socials below. <strong>Ttyl!</strong></Text>

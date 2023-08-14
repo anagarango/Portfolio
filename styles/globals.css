@@ -248,4 +248,8 @@ main{
     padding:0
   }
 
+  .projectcardimage{
+    width: 100% !important;
+  }
+
 }
