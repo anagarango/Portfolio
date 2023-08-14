@@ -36,6 +36,7 @@ export default function Project(){
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
     const [imageCarousel, setImageCarousel] = useState("")
+    var url = window.location.pathname.split('/').pop().replace(/%20/g, " ")
 
 
     useEffect(()=>{
