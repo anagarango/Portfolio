@@ -7,7 +7,6 @@ export default function Reveal({
   widthReveal="fit-content", 
   starting, 
   delay=0.8,
-  staggerChildren,
   ...props
 }){
   const ref = useRef(null)
@@ -33,7 +32,7 @@ export default function Reveal({
         }}
         initial={starting}
         animate={mainControls}
-        transition={{duration:0.7, delay:delay, staggerChildren:staggerChildren}}
+        transition={{duration:0.7, delay:delay}}
         {...props}
       >{children}</Box>
     </div>

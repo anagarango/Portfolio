@@ -40,6 +40,12 @@ export default function Project(){
 
     return(
         <>
+        <Head>
+            <title>{`Ana Arango - ${project.name}`}</title>
+            <meta name="description" content={project.projectOverview} />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <main id='projectMain'>
             <Header/>
             <Footer/>
