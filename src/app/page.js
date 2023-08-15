@@ -48,7 +48,7 @@ export default function Home() {
                   <Animate id="homenameheading" type="heading" delay={4.4} color='#EA638D' fSize="65px" padding="10px 0" text="Ana Arango"/>
                   <Animate className="hometextheading" type="text" delay={4.5} starting="hiddenFromBottom" padding="50px 0" text="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications."/>
                   <Reveal starting="hiddenFromBottom" delay={4.6}>
-                    <Link href="/#Contact" scroll={false}>
+                    <Link href="/#Contact">
                       <CTA>Don't Be A Stranger</CTA>
                     </Link>  
                   </Reveal>
