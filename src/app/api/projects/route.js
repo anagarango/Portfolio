@@ -1,17 +1,20 @@
+import fs from 'fs';
+import path from 'path';
+
 import { NextResponse } from 'next/server';
-import { readFile } from 'fs/promises'; // Use Node.js's built-in fs/promises module
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url)
   const pathname = searchParams.get('url')
   // console.log(pathname)
+  const filePath = path.join(process.cwd(), 'public/data', 'project-list.json'); // Replace 'data.json' with your JSON file name
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
   
 
-  const filePath = 'public/data/project-list.json';
+  // const filePath = 'public/data/project-list.json';
   // http://localhost:3000/api/projects?url=Rooty
 
   try {
-    const fileContent = await readFile(filePath, 'utf-8');
     const data = JSON.parse(fileContent);
     var chosenProject = ""
     for(var x = 0; x < data.length; x++){
