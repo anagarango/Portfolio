@@ -7,7 +7,8 @@ export async function GET(request) {
   // console.log(pathname)
   
 
-  const filePath = './public/data/project-list.json';
+  const filePath = 'public/data/project-list.json';
+  // http://localhost:3000/api/projects?url=Rooty
 
   try {
     const fileContent = await readFile(filePath, 'utf-8');
