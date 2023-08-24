@@ -17,17 +17,17 @@ import PageTransition from '@/src/app/components/pageTransition'
 import Reveal from '@/src/app/components/animationReveal'
 
 
-// async function fetchData() {
-//   try {
-//     const currentPagePathname = window.location.pathname.split('/').pop().replace(/%20/g, " ");
-//     const response = await fetch(`../api/projects?url=${encodeURIComponent(currentPagePathname)}`);
-//     const data = await response.json();
-//     return data
+async function fetchData() {
+  try {
+    const currentPagePathname = window.location.pathname.split('/').pop().replace(/%20/g, " ");
+    const response = await fetch(`../api/projects?url=${encodeURIComponent(currentPagePathname)}`);
+    const data = await response.json();
+    return data
     
-//   } catch (error) {
-//     console.log('Error fetching file names:', error);
-//   }  
-// }
+  } catch (error) {
+    console.log('Error fetching file names:', error);
+  }  
+}
 
 
 
@@ -37,36 +37,29 @@ export default function Project(){
     const [collapse, setCollapse] = useState(0)
     const [word, setWord] = useState("")
     const [imageCarousel, setImageCarousel] = useState("")
-    var url
+    // var url
 
 
     useEffect(()=>{
-    //   async function loadData() {
-    //     const data = await fetchData();
-    //     setProject(data);
-    //     setImageCarousel(data.carousel[0])
-    //   }
-    //   loadData();
-
-			url = window.location.pathname.split('/').pop().replace(/%20/g, " ")
-
-      for(var x = 0; x < ProjectList.length; x++){
-        if(url == ProjectList[x].name){
-            setProject(ProjectList[x])
-            setImageCarousel(ProjectList[x].carousel[0])
-        }
+      async function loadData() {
+        const data = await fetchData();
+        setProject(data);
+        setImageCarousel(data.carousel[0])
       }
+      loadData();
+
+	// url = window.location.pathname.split('/').pop().replace(/%20/g, " ")
+
+    //   for(var x = 0; x < ProjectList.length; x++){
+    //     if(url == ProjectList[x].name){
+    //         setProject(ProjectList[x])
+    //         setImageCarousel(ProjectList[x].carousel[0])
+    //     }
+    //   }
     },[])
 
 
     return(
-        <>
-        <Head>
-            <title>{`Ana Arango - ${project.name}`}</title>
-            <meta name="description" content={project.projectOverview} />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
         <main id='projectMain'>
             <Header/>
             <Footer/>
@@ -161,6 +154,5 @@ export default function Project(){
                 </Container>
             </PageTransition>
         </main>
-        </>
     )
 }
