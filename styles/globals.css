@@ -141,6 +141,10 @@ main{
   justify-content: flex-end !important;
 }
 
+.footertext-phone{
+  display:none
+}
+
 
 
 @media (max-width:1000px){
@@ -250,6 +254,14 @@ main{
 
   .projectcardimage{
     width: 100% !important;
+  }
+
+  .footertext{
+    display:none
+  }
+
+  .footertext-phone{
+    display:flex
   }
 
 }

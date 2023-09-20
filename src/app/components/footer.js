@@ -1,6 +1,5 @@
 import { Box, Heading } from "./globals"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Footer(){
 
@@ -18,7 +17,8 @@ export default function Footer(){
                     </a>
                 ))}
             </Box>
-            <Heading fSize="16px" color="#9D95DC">Since 2021 • Ana Arango</Heading>
+            <Heading className="footertext" fSize="14px" color="#9D95DC">Since 2021 • Designed and coded with ❤️ by Ana Arango</Heading>
+            <Heading className="footertext-phone" fSize="14px" color="#9D95DC">Since 2021 • Ana Arango</Heading>
         </Box>
     )
 }
