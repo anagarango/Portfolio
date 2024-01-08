@@ -54,6 +54,10 @@ main{
   content: url('/SVG/Projectshover.svg');
 }
 
+.WorkExperience:hover{
+  content: url('/SVG/WorkExperiencehover.svg');
+}
+
 .Home:hover{
   content: url('/SVG/Homehover.svg');
 }

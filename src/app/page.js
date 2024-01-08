@@ -86,17 +86,17 @@ export default function Home() {
                     <Text width="100%" textAlign="end" padding="0 0 30px 0" fontWeight="700">Take a look at my portfolio to see some of my recent work and get in touch if you're interested in working together.</Text>
                 </Box>
 
-                <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" widthReveal="100%" color='#9DFFFF' fSize="22px" padding="10px 0" margin="70px 0 10px 0" text="What I Value" />
+                <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" widthReveal="100%" color='#9DFFFF' fSize="22px" padding="10px 0" margin="50px 0 10px 0" text="What I Value" />
                 <BrowserModel onClick={(event)=>{setSkill(event.target.getAttribute("value"))}} state={skill} array={Skills}/>
 
                 
 
-                <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" widthReveal="100%"  color='#9DFFFF'  fSize="22px" padding="10px 0" margin="70px 0 0 0" text="Tools and Technologies I Use" />
+                <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" widthReveal="100%"  color='#9DFFFF'  fSize="22px" padding="10px 0" margin="50px 0 0 0" text="Tools and Technologies I Use" />
                 <TechSlideshow />
                 <Box position="relative" top="-100px" height="121px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
               </Container>
 
-              <Container id="WorkExperience" flexDir="column" width="100%" maxWidth="1850px" padding="100px 150px 150px 150px">
+              <Container id="WorkExperience" flexDir="column" width="100%" maxWidth="1850px" padding="20px 150px 150px 150px">
                 <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Work Experience"/>
                 {WorkExperience.map((o,i)=>{
                   return(
@@ -106,7 +106,7 @@ export default function Home() {
               </Container>
               
 
-              <Container id="Projects" flexDir="column" width="100%" maxWidth="1850px" padding="100px 150px 150px 150px">
+              <Container id="Projects" flexDir="column" width="100%" maxWidth="1850px" padding="20px 150px 150px 150px">
                 <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Projects"/>
                 <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
                 {Projects.map((o,i)=>{
