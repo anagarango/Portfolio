@@ -27,10 +27,10 @@ export default function Card({
 
   const techControls = tech.map(() => useAnimation());
     return(
-        <Reveal starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} className={type % 2 == 0 ? "projectcard" : "projectcard right"} margin="40px 0px" aliIt="stretch" width="100%" bgColor='rgb(39, 39, 76)' borderRadius="10px" overflow="hidden">
+        <Reveal starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} className={type % 2 == 0 ? "projectcard" : "projectcard right"} margin="20px 0px" aliIt="stretch" width="100%" bgColor='rgb(39, 39, 76)' borderRadius="10px" overflow="hidden">
             <Image className="projectcardimage" initial={{border: '1px solid rgba(157, 149, 220, 0)'}} whileHover={{ border: '1px solid rgba(157, 149, 220, 1)', borderRadius:type % 2 == 0 ? "15px 0 0 15px" : "0 15px 15px 0", padding: '10px'}} transition={{ duration: 0.3 }} alt={alt} src={src} style={{width:"45%", objectFit: "cover"}}/>
             <Box className="projectcardbox" flexDir="column" width="55%" justCont="center" padding="30px">
-                <Animate width="fit-content" type="heading" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} color='#9DFFFF' fSize="25px" padding="0 0 10px 0" text={heading} />
+                <Animate width="fit-content" type="heading" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} color='#9DFFFF' fSize="22px" padding="0 0 10px 0" text={heading} />
                 <Animate width="fit-content" type="text" starting={type % 2 == 0 ? "hiddenFromLeft" : "hiddenFromRight"} text={preview} />
                 <Box ref={ref} className="projectcardtech" flexWrap="wrap" padding="20px 0px" overflow="hidden">
                     {tech.map((text, index) => (

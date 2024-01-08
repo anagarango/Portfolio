@@ -1,0 +1,32 @@
+[ 
+  {
+    "role": "Technical Staff II",
+    "workplace":"British Columbia Institute of Technology",
+    "preview":"Led the successful early stage development of a scheduling NextJS web app to facilitate the process of creating schedules for students according to classes and instructors. Engaged in regular check-ins with project manager, addressing software bugs and implementing new features. Presented features to project stakeholder and identify feedback and requirements.",
+    "date":"Aug 2023",
+    "tech": [
+      "Next", "React", "HTML", "CSS", "JavaScript", "LocalStorage", "FullCalendar", "Storybook", "Git", "Figma"
+    ],
+    "link":"https://bcit-timetable.vercel.app"
+  },
+  {
+    "role": "Web Developer",
+    "workplace":"Vancouver Chinatown Foundation",
+    "preview":"Adapted Wordpress webpage’s functionality while incorporating provided content to promote a major event, leading to a significant 45% increase in website traffic within two months. Communicated regularly with marketing team to ensure project deliveries are to their satisfaction and goals.",
+    "date":"July 2023 - Aug 2023",
+    "tech": [
+      "WordPress", "PHP", "cPanel"
+    ],
+    "link":"https://www.chinatownfoundation.org/light-up-chinatown/"
+  },
+  {
+    "role": "Frontend Developer Intern",
+    "workplace":"Techies of Tomorrow",
+    "preview":"Collaborated closely with senior developers to convert Figma design into UI components for Electrum’s interface, an electric mobility solutions company, enhancing overall team productivity and project outcomes. Participated in code reviews and resolved front-end issues for a seamless user experience, resulting in a 15% enhancement in code efficiency. Implemented 10+ unit tests to ensure a better user experience and resulting in a 20% improvement in overall application stability for a web application using NextJS, JavaScript and JSON.",
+    "date":"April 2023 - May 2023",
+    "tech": [
+      "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Storybook", "Git", "Figma"
+    ],
+    "link":"https://www.electrumcharging.com"
+  }
+]

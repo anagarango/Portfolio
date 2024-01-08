@@ -63,7 +63,7 @@ main{
   transition: all 0.5s;
 }
 
-.sheesh{
+.slideshow{
   animation: scroll 40s linear infinite;
 }
 
@@ -86,7 +86,7 @@ main{
 }
 
 #openingmain{
-  animation: mainnoscroll 10s ease-in-out;
+  animation: mainnoscroll 1s ease-in-out;
 }
 
 .projectcard{

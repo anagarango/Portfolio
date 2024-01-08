@@ -12,10 +12,12 @@ import Card from '@/src/app/components/card'
 import Contact from '@/src/app/components/contact'
 import Skills from '@/public/data/skills.json'
 import Projects from "@/public/data/project-list.json"
+import WorkExperience from "@/public/data/work-list.json"
 import SplashScreen from '@/src/app/components/splashscreen'
 import Reveal from '@/src/app/components/animationReveal'
 import Animate from '@/src/app/components/heading'
 import PageTransition from '@/src/app/components/pageTransition'
+import WorkCard from '@/src/app/components/workCard'
 
 export default function Home() {
   const [skill, setSkill] = useState(0)
@@ -44,10 +46,10 @@ export default function Home() {
             <Container width="100%" flexDir="column" aliIt="center">
               <Hero id="Home" className="hero" minHeight="100vh" bgPosition="bottom left" src='/SVG/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" padding="0px 150px" justCont="center" aliIt="center" width="100%">
                 <Box className="heroCont" maxWidth="775px" flexDir="column" width="50%" minHeight="fit-content" padding="0 45px 0 0">
-                  <Animate type="heading" delay={4.3} color="#B23C87" id="secondHeading" className="hometitleheading" padding="10px 0" fSize="25px" text="FRONT-END DEVELOPER"/>
-                  <Animate id="homenameheading" type="heading" delay={4.4} color='#EA638D' fSize="65px" padding="10px 0" text="Ana Arango"/>
-                  <Animate className="hometextheading" type="text" delay={4.5} starting="hiddenFromBottom" padding="50px 0" text="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications."/>
-                  <Reveal starting="hiddenFromBottom" delay={4.6}>
+                  <Animate type="heading" delay={3.5} color="#B23C87" id="secondHeading" className="hometitleheading" padding="10px 0" fSize="25px" text="FRONT-END DEVELOPER"/>
+                  <Animate id="homenameheading" type="heading" delay={3.5} color='#EA638D' fSize="65px" padding="10px 0" text="Ana Arango"/>
+                  <Animate className="hometextheading" type="text" delay={3.5} starting="hiddenFromBottom" padding="50px 0" text="A passionate Front-End Developer with a mission to find newer challenges in improving amazing user experiences optimization and visually-appealing websites and web-applications."/>
+                  <Reveal starting="hiddenFromBottom" delay={3.5}>
                     <Link href="/#Contact">
                       <CTA>Don't Be A Stranger</CTA>
                     </Link>  
@@ -55,7 +57,7 @@ export default function Home() {
                   
                 </Box>
                 <Box className="heroCont" maxWidth="775px" width="50%">
-                  <Reveal starting="hiddenFromRight" delay={4.5} display="flex" justCont="center">
+                  <Reveal starting="hiddenFromRight" delay={4} display="flex" justCont="center">
                     <Image initial={{ scale: 0.9 }} whileHover={{ scale: 1, rotate: [0, 5, 0, -5, 0] }} transition={{duration: 0.5, ease: [0, 0.71, 0.2, 1.01], scale: { type: "spring", damping: 5, stiffness: 100, restDelta: 0.001 } }} alt="gif of Ana Arango making faces" src="/Hero.gif" width={150} height={100} style={{width:"100%", height:"fit-content"}}></Image>
                   </Reveal>
                 </Box>
@@ -92,6 +94,15 @@ export default function Home() {
                 <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" widthReveal="100%"  color='#9DFFFF'  fSize="22px" padding="10px 0" margin="70px 0 0 0" text="Tools and Technologies I Use" />
                 <TechSlideshow />
                 <Box position="relative" top="-100px" height="121px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
+              </Container>
+
+              <Container id="WorkExperience" flexDir="column" width="100%" maxWidth="1850px" padding="100px 150px 150px 150px">
+                <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Work Experience"/>
+                {WorkExperience.map((o,i)=>{
+                  return(
+                      <WorkCard type={i} role={o.role} workplace={o.workplace} preview={o.preview} date={o.date} tech={o.tech} link={o.link} />
+                  )
+                })}
               </Container>
               
 

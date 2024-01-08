@@ -174,7 +174,7 @@ export const Tag = styled(motion.button)`
   background-color: #0a002c;
   border-radius:10px;
   border:0px;
-  color:#9D95DC;
+  color:rgb(120, 120, 150);
   font-size:14px;
   font-weight:500;
   margin:2.5px 5px 2.5px 0px;
