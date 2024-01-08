@@ -172,7 +172,7 @@ main{
     padding: 30px !important;
   }
 
-  #Projects, #ProjectPage{
+  #Projects, #ProjectPage, #WorkExperience{
     padding: 150px 30px 30px 30px !important;
   }
 
@@ -232,7 +232,7 @@ main{
     padding: 0px 0px 20px 0px !important
   }
 
-  #Home, #Projects, #About{
+  #Home, #Projects, #About, #WorkExperience{
     padding: 30px 30px 130px 30px !important;
   }
 
