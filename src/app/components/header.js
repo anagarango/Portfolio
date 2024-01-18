@@ -20,7 +20,7 @@ export default function Header({
                         <Image alt={o} className={o} src={`/SVG/${o}.svg`} width={33} height={33} />
                     </Link>
                 ))}
-                <a title="Resume" href="/AnaArango-Resume.pdf" download style={{ position:"absolute", bottom:55, padding:"10px"}}>
+                <a title="Resume" href="/AnaArango-Resume.pdf" target="_blank" style={{ position:"absolute", bottom:55, padding:"10px"}}>
                     <Image alt="Resume" className="Resume" src="/SVG/Resume.svg" width={33} height={33}/>
                 </a>
             </Box>
