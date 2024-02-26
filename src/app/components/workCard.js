@@ -31,7 +31,7 @@ export default function WorkCard({
     return(
         <Reveal starting={"hiddenFromLeft"} flexDir="column" margin="20px 0px" padding="30px" aliIt="stretch" width="100%" bgColor='rgb(39, 39, 76)' borderRadius="10px" overflow="hidden">
           <Box width="100%" justCont="space-between">
-            <Animate type="heading" starting={"hiddenFromLeft"} color='#9DFFFF' fSize="22px" text={role} />
+            <Animate type="heading" starting={"hiddenFromLeft"} color='#9DFFFF' fSize="19px" text={role} />
             <Animate type="text" starting={"hiddenFromLeft"}  color='rgb(120, 120, 150)' fontWeight="600" text={date} />
           </Box>
 

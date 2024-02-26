@@ -138,7 +138,7 @@ export const CTA = styled.button`
   border: 2px solid #9DFFFF;
   border-radius:10px;
   color:#9DFFFF;
-  font-size:16px;
+  font-size:14.5px;
   font-weight:600;
   cursor:pointer;
   transition: all 0.3s ease;
@@ -175,7 +175,7 @@ export const Tag = styled(motion.button)`
   border-radius:10px;
   border:0px;
   color:rgb(120, 120, 150);
-  font-size:14px;
+  font-size:13px;
   font-weight:500;
   margin:2.5px 5px 2.5px 0px;
   transition: all 0.3s ease;

@@ -8,7 +8,7 @@
     "roleName":"Lead Front-End Developer",
     "role":"I worked closely with my other front-end developer/project manager and took leadership in discussing how we can split tasks evenly. I would provide assistance when my partner needed help in completing their tasks when technical challenges arise. I provided my insights on front-end feasibility and developed dynamic features/components when necessary adhering to clean code and making them reusable. I tested the app to make sure all the functionalities are there and reported back to the team whenever I found a bug or if there’s something else we should consider adding to the app. I was responsible in converting our designers prototypes into code, so I regularly showed them the process of our work to ensure its up to par of what they expected.",
     "tech": [
-      "Next", "React", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Lottie Animation", "Storybook", "Git", "Figma"
+      "NextJS", "React", "HTML", "CSS", "JavaScript", "PostgreSQL", "Styled-Components", "Axios", "Framer Motion", "Material UI", "Lottie Animation", "Storybook", "Git", "Figma"
     ],
     "keyFeatures": [
       {
@@ -95,9 +95,9 @@
     "date":"December 2022 - February 2023",
     "projectOverview":"She’s A Keeper is a cleaning service website of a self-employed housekeeper offering her services in the Tri-Cities area of Metro Vancouver. Along with information such as services/skills, testimonials, and experience, new clients can be sure they will receive high-quality, efficient home cleaning. This was a solo freelance project I took on to help a family member refer potential clients about her services. Although my family member didn’t request anything specifically, I made sure to follow the requirements a house-cleaning website would have to provide the information a potential client would want.",
     "roleName":"Front-End Developer, Content Writer, and UI/UX Designer",
-    "role":"I came up with the design of the website, along with the content, and developed the whole website. I did thorough research to understand the target audience’s needs from visiting a house-cleaning website. I grabbed inspiration and gathered them in a Pinterest Board to create a mockup of the layout, navigation, and interactions. I created the brand identity (logo, colours, fonts, graphics) that was consistent throughout the website. I translated the mockup design into actual code using HTML, CSS, and JavaScript in the Next.js framework and prioritizing the responsive layout for user-friendliness. I worked closely with my client to have clear and accurate descriptions that highlight their business, including sections like the home, about, and contact.",
+    "role":"I came up with the design of the website, along with the content, and developed the whole website. I did thorough research to understand the target audience’s needs from visiting a house-cleaning website. I grabbed inspiration and gathered them in a Pinterest Board to create a mockup of the layout, navigation, and interactions. I created the brand identity (logo, colours, fonts, graphics) that was consistent throughout the website. I translated the mockup design into actual code using HTML, CSS, and JavaScript in the NextJS.js framework and prioritizing the responsive layout for user-friendliness. I worked closely with my client to have clear and accurate descriptions that highlight their business, including sections like the home, about, and contact.",
     "tech": [
-      "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "Git", "Figma", "Illustrator"
+      "NextJS", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "EmailJS", "Git", "Figma", "Illustrator"
     ],
     "keyFeatures": [
         {
@@ -176,7 +176,7 @@
     "roleName":"Front-End Developer",
     "role":"Since this was a solo project, I came up with the design for the icons as I wanted something colourful and have a consistent look for each icon. I crafted an intuitive and visually engaging interface that has a responsive design, utilizing my expertise in UI/UX design to ensure a seamless user experience. I carefully selected appropriate colour schemes depending on the weather, typography, and iconography to enhance readability and visual hierarchy. I had learned how to manipulate the API data taken from OpenWeatherAPI to select data that is most important for most users.",
     "tech": [
-      "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Lottie Animation", "Git", "Illustrator"
+      "NextJS", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Lottie Animation", "Git", "Illustrator"
     ],
     "keyFeatures": [
         {
@@ -185,11 +185,11 @@
         },
         {
           "title": "Tomorrow’s Forecasts",
-          "content": "The app displays the weather of the next 24 hours along with hour, weather condition, and temperature."
+          "content": "The app displays the weather of the NextJS 24 hours along with hour, weather condition, and temperature."
         },
         {
           "title": "6-Day Forecast",
-          "content": "A forecast that shows what the main weather will be for the next 6 days, along with the temperature and precipitation."
+          "content": "A forecast that shows what the main weather will be for the NextJS 6 days, along with the temperature and precipitation."
         }
       ],
     "designDevelopmentProcess": [
@@ -236,7 +236,7 @@
     "roleName":"Full Stack Developer",
     "role":"As this was a solo project, I took care of all the development and design of the web app. I had created the UI/UX of the application using front-end tools, developed a responsive design that fits all devices and screens, and ensuring an intuitive design that is simple and easy to use for new users. I built a RESTful API endpoints to perform specific operations for users to manage their posts and comments, facilitate the data exchange between the client and server which I converted into JSON format, and learned how to use server side rendering. I setup a PostgreSQL database to keep track of each user’s stored data, setup an authentication service so users would be allowed to sign in and post and comment. Many of these tasks I took on was time-consuming and a learning curve as this was the first time I had been exposed to back end development, and had to do a lot of Googling.",
     "tech": [
-      "Next", "React", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "NextAuth", "Git", "PostgreSQL", "CockroachDB", "Postman"
+      "NextJS", "React", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "NextAuth", "Git", "PostgreSQL", "CockroachDB", "Postman"
     ],
     "keyFeatures": [
         {
@@ -258,7 +258,7 @@
       ],
     "designDevelopmentProcess": [
         {
-            "content":"The main focus of this project was to test out more of the back-end technologies that I haven't played with before, such as Next-Auth, PostgreSQL, and CockroachDB. Because of that, a lot of Googling took place to make this project work. It took a month to make this project, so I made constant efforts throughout that month to add or make something work so the process was nice and easy. I did however create a rough Figma design along with some relevant inspirations to create a user interface that’s simple enough to interact with while fitting the theme of being a discussion web app for developers.",
+            "content":"The main focus of this project was to test out more of the back-end technologies that I haven't played with before, such as NextJS-Auth, PostgreSQL, and CockroachDB. Because of that, a lot of Googling took place to make this project work. It took a month to make this project, so I made constant efforts throughout that month to add or make something work so the process was nice and easy. I did however create a rough Figma design along with some relevant inspirations to create a user interface that’s simple enough to interact with while fitting the theme of being a discussion web app for developers.",
             "image": null,
             "alt": null,
             "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FxpQ2JUNJwmhxE0tkKTkM9u%2FCodeTipsTricks%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3D8W5ShsLqxbCcZYyE-1",
@@ -283,7 +283,7 @@
         },
         {
           "title": "Security",
-          "content": "I became more knowledgeable about security measures to take when adding user authentication. Although using Next-Auth was a bit confusing to implement it to the app, its completely necessary to have in an user-generated content app where several users will be interacting with the platform and other people."
+          "content": "I became more knowledgeable about security measures to take when adding user authentication. Although using NextJS-Auth was a bit confusing to implement it to the app, its completely necessary to have in an user-generated content app where several users will be interacting with the platform and other people."
         }
       ],
       "carousel":[
@@ -294,14 +294,14 @@
   },
   {
     "name": "DrinkUp",
-    "preview":"DrinkUp is a web app for new-legal aged people to find their favourite cocktails to order in their next pub, bar, and/or nightclub visit.",
+    "preview":"DrinkUp is a web app for new-legal aged people to find their favourite cocktails to order in their NextJS pub, bar, and/or nightclub visit.",
     "image":"/DrinkUp.png",
     "date":"March 2023",
-    "projectOverview":"DrinkUp is a web app for people who have little cocktail-knowledge experience or don’t know what the hell to order, look no further! A pain-point that became a project, inspired to help new-legal aged people to find their favourite cocktails to order in their next pub, bar, and/or nightclub visit. DrinkUp provides 3 boxes for you to fill out on your drink preferences, and our smart-finding-your-new-favourite-drink system will recommend you the best cocktails that fill your needs.",
+    "projectOverview":"DrinkUp is a web app for people who have little cocktail-knowledge experience or don’t know what the hell to order, look no further! A pain-point that became a project, inspired to help new-legal aged people to find their favourite cocktails to order in their NextJS pub, bar, and/or nightclub visit. DrinkUp provides 3 boxes for you to fill out on your drink preferences, and our smart-finding-your-new-favourite-drink system will recommend you the best cocktails that fill your needs.",
     "roleName":"Lead Front-End Developer",
     "role":"I was responsible creating the ui for the quiz where users will find results for their cocktail preferences and the nightclub page. I created the functionality of form handling and validation of the users inputs and running them through the API to only return the drinks that matched. This part was the toughest since the API was not organized in an optimal way I would want to use it but I would have to pay a monthly fee to have it organized it would work for me. I had to implement a dynamic way to call the API to retrieve all the results of drinks. I ensured the web app is responsive and adapts to different screen sizes. Along with my partner I was working with for this project, we came up with the theme to make it nightclub-like.",
     "tech": [
-      "Next", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "Git", "Playwright"
+      "NextJS", "React", "HTML", "CSS", "JavaScript", "Styled-Components", "Axios", "Framer Motion", "Git", "Playwright"
     ],
     "keyFeatures": [
         {
@@ -380,7 +380,7 @@
     "roleName":"Front-End Developer",
     "role":"This was a solo project, so I handled the design and development of this web app, although for design, it was all based off of course Google, so it looks like a Google Search Engine for just their Google Doodles, but I altered the name to Gooogle Dooodles, which for some reason, looks better having the extra O for me. For development, I used two API's, created the functionality so they both work together, and I created Playwright tests to test the interface and functionality of both pages I created.",
     "tech": [
-      "Next", "React", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "Lottie Animation", "Git", "Playwright"
+      "NextJS", "React", "HTML", "CSS", "JavaScript", "TailwindCSS", "Axios", "Lottie Animation", "Git", "Playwright"
     ],
     "keyFeatures": [
         {

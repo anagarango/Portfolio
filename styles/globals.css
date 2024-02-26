@@ -14,6 +14,10 @@ body {
   scroll-behavior: smooth !important;
 }
 
+p {
+  font-size: 14.5px;
+}
+
 #secondHeading{
   font-family: var(--font-staatliches);
 }
@@ -106,7 +110,7 @@ main{
     transform: translate(0);
   }
   100%{
-    transform: translateX(calc(-92.5px * 36));
+    transform: translateX(calc(-94.5px * 36));
   }
   
 }

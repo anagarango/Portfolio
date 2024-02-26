@@ -25,7 +25,7 @@ export default function TechSlideshow(){
               {imagesArray && imagesArray.map((o,i)=>(
                 <Box key={i} flexDir="column" aliIt="center" justCont="space-between" width="fit-content" margin="0px 10px">
                   <Image title={o.slice(0, -4)} className="techLogo" src={`/HorizontalLogos/${o}`} alt={o} width="auto" height="40px" margin="0 25px"></Image>
-                  <Heading style={{whiteSpace:"nowrap"}} fSize="15px" color='white' textAlign="center" padding="15px 0 0 0">{o.slice(0, -4)}</Heading>
+                  <Heading style={{whiteSpace:"nowrap"}} fSize="14px" color='white' textAlign="center" padding="15px 0 0 0">{o.slice(0, -4)}</Heading>
                 </Box>
                   
               ))}
