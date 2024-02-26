@@ -1,18 +1,17 @@
 'use client'
 
-import Head from 'next/head'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Header from '@/src/app/components/header'
 import Footer from '@/src/app/components/footer'
 import { Box, Hero, Container, Text, CTA, Image } from '@/src/app/components/globals'
 import BrowserModel from '@/src/app/components/browserModel'
 import TechSlideshow from '@/src/app/components/slideshow'
 import Card from '@/src/app/components/card'
-import Contact from '@/src/app/components/contact'
+import ContactComp from '@/src/app/components/contact'
 import Skills from '@/public/data/skills.json'
-import Projects from "@/public/data/project-list.json"
-import WorkExperience from "@/public/data/work-list.json"
+import ProjectsList from "@/public/data/project-list.json"
+import WorkExperienceList from "@/public/data/work-list.json"
 import SplashScreen from '@/src/app/components/splashscreen'
 import Reveal from '@/src/app/components/animationReveal'
 import Animate from '@/src/app/components/heading'
@@ -24,7 +23,27 @@ export default function Home() {
   const [loading, setLoading] = useState(true)
   const [afterLoad, setAfterLoad] = useState(false)
 
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const workExperienceRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const refs = {
+    'Home': homeRef,
+    'About': aboutRef,
+    'WorkExperience': workExperienceRef,
+    'Projects': projectsRef,
+    'Contact': contactRef
+  };
+
   const currentYear = new Date().getFullYear();
+
+  const handleItemClick = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   useEffect(()=>{
     setTimeout(() => {
@@ -35,16 +54,24 @@ export default function Home() {
     }, 4800);
   },[])
 
+  useEffect(() => {
+    const targetSection = localStorage.getItem('scrollTo');
+    if (refs[targetSection]?.current) {
+      refs[targetSection].current.scrollIntoView({ behavior: 'smooth' });
+      localStorage.removeItem('scrollTo');
+    }
+  }, [refs]);
+
   return (
     <>
       { loading && <SplashScreen /> }
       { afterLoad &&
         <main id="openingmain">
-          <Header/>
+          <Header handleItemClick={handleItemClick} refs={refs}/>
           <Footer/>
           <PageTransition initialState="100vh" animateState="0" exitState="-100vh">
             <Container width="100%" flexDir="column" aliIt="center">
-              <Hero id="Home" className="hero" minHeight="100vh" bgPosition="bottom left" src='/SVG/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" padding="0px 150px" justCont="center" aliIt="center" width="100%">
+              <Hero ref={homeRef} id="Home" className="hero" minHeight="100vh" bgPosition="bottom left" src='/SVG/Landing.svg' bgRepeat="no-repeat" bgSize="cover" flexDir="row" padding="0px 150px" justCont="center" aliIt="center" width="100%">
                 <Box className="heroCont" maxWidth="775px" flexDir="column" width="50%" minHeight="fit-content" padding="0 45px 0 0">
                   <Animate type="heading" delay={3.5} color="#B23C87" id="secondHeading" className="hometitleheading" padding="10px 0" fSize="25px" text="FRONT-END DEVELOPER"/>
                   <Animate id="homenameheading" type="heading" delay={3.5} color='#EA638D' fSize="65px" padding="10px 0" text="Ana Arango"/>
@@ -63,7 +90,7 @@ export default function Home() {
                 </Box>
               </Hero>
 
-              <Container id="About" flexDir="column" width="100%" maxWidth="1850px" padding="10px 150px" aliIt="flex-end">
+              <Container ref={aboutRef} id="About" flexDir="column" width="100%" maxWidth="1850px" padding="10px 150px" aliIt="flex-end">
                 <Animate id="secondHeading" type="heading" starting="hiddenFromRight" color='#B23C87' padding="10px 0" text="About Me"/>
                 <Box display="inline" width="100%">
                     <Image initial={{ opacity: 1, scale: 0.9 }}
@@ -96,9 +123,9 @@ export default function Home() {
                 <Box position="relative" top="-100px" height="121px" width="100%" style={{background:"linear-gradient(to right, rgba(10, 0, 44,1) 1%, rgba(163,153,226,0) 15%, rgba(163,153,226,0) 85%,rgba(10, 0, 44, 1) 99%)"}} />
               </Container>
 
-              <Container id="WorkExperience" flexDir="column" width="100%" maxWidth="1850px" padding="20px 150px 150px 150px">
+              <Container id="WorkExperience" ref={workExperienceRef} flexDir="column" width="100%" maxWidth="1850px" padding="20px 150px 150px 150px">
                 <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Work Experience"/>
-                {WorkExperience.map((o,i)=>{
+                {WorkExperienceList.map((o,i)=>{
                   return(
                       <WorkCard type={i} role={o.role} workplace={o.workplace} preview={o.preview} date={o.date} tech={o.tech} link={o.link} />
                   )
@@ -106,22 +133,22 @@ export default function Home() {
               </Container>
               
 
-              <Container id="Projects" flexDir="column" width="100%" maxWidth="1850px" padding="20px 150px 150px 150px">
+              <Container ref={projectsRef} id="Projects" flexDir="column" width="100%" maxWidth="1850px" padding="20px 150px 150px 150px">
                 <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Projects"/>
                 <Text>These are a few selected projects that I believe show what languages and modern practices I have applied to create easy-to-use and and modern web applications. Feel free to explore the links I attached on each post to explore the web application’s yourself!</Text>
-                {Projects.map((o,i)=>{
+                {ProjectsList.map((o,i)=>{
                   return(
                       <Card type={i} alt={o.name} src={o.image} heading={o.name} preview={o.preview} tech={o.tech} />
                   )
                 })}
               </Container>
 
-              <Container id="Contact" flexDir="column" width="100%" maxWidth="1850px" padding="0px 150px 100px 150px">
+              <Container ref={contactRef} id="Contact" flexDir="column" width="100%" maxWidth="1850px" padding="0px 150px 100px 150px">
                 <Animate id="secondHeading" type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Wanna Talk?" />
                 <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. <strong>Ttyl!</strong></Text>
                 <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
                   <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
-                  <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
+                  <ContactComp PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
                 </Box>
               </Container>
             </Container> 
