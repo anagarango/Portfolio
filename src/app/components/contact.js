@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Box, Form, Text, Image } from './globals';
+import { Box, Form, Text, Image, Hero } from './globals';
 import Inputs from './input';
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -30,6 +30,8 @@ export default function Contact({
 
 
   return (
+    <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
+      <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
     <Form ref={form} onSubmit={sendEmail}>
       {message &&  <AnimatePresence exitBeforeEnter>
             <motion.div  initial={{ x: 400 }} animate={{ x: 0, transition: { duration: 1, delay: 0 }}} exit={{ x: 400 }} style={{display:"flex", position:"fixed", zIndex:"15", left:"85vw", top:"100px", padding:"15px 30px", backgroundColor:"#4BDA4B", alignItems:"center", width:"fit-content"}}> 
@@ -51,5 +53,6 @@ export default function Contact({
         </Box>
         <Inputs type="submit" value="Send"/>
     </Form>
+    </Box>
   );
 };

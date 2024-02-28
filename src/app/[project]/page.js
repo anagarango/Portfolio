@@ -66,23 +66,24 @@ export default function Project(){
                 <Container width="100%" justCont="center">
                     <Container id="ProjectPage" flexDir="column" width="100%" maxWidth="1800px" padding="150px 150px 50px 150px" aliIt="center">
                         <Hero src="/SVG/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
-                            <Heading id="secondHeading" color='#9DFFFF' fSize="70px" margin="-125px 0 -20px 0"  textAlign="center">{project.name}</Heading>
+                            <Heading id="secondHeading" color='#9DFFFF' fSize="60px" margin="-125px 0 -20px 0"  textAlign="center">{project.name}</Heading>
                             <Image alt={project.preview || "no image available at the moment"} src={project.image || "/noImage.jpg"} width={600} height={300}  style={{width:"60vw", height:"auto", borderRadius:"10px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
-                            <Heading id="secondHeading" color='#9DFFFF' fSize="30px"  textAlign="center">{project.date}</Heading>
+                            <Heading id="secondHeading" color='#9DFFFF' fSize="25px"  textAlign="center">{project.date}</Heading>
                         </Hero>
-                        <Box position="sticky" zIndex="5" top="0px" width="25vw" minWidth="230px" aliIt="center" maxWidth="330px" bgColor="rgba(43,31,95,0.6)" borderRadius="10px" backdropFilter="blur(20px) saturate(1.5)" justCont="space-between">
+
+                        <Box position="sticky" zIndex="5" top="0px" width="30vw" minWidth="240px" aliIt="center" maxWidth="350px" bgColor="rgba(43,31,95,0.6)" borderRadius="10px" backdropFilter="blur(10px) saturate(1.5)" justCont="space-between">
                             <a href={project.github} target="_blank" onMouseOver={()=>setWord("GitHub")} onMouseOut={()=>setWord("")} style={{margin:"15px 25px"}}>
-                                <Image alt="github image" className='linkGithub' src="/Github/github.png" width={38} height={38}  />
+                                <Image alt="github image" className='linkGithub' src="/Github/github.png" width={35} height={35}  />
                             </a>
                             <Heading id="secondHeading" color='#EA638D' fontWeight="500" fSize="18px" >{word}</Heading>
                             {project.vercel &&
                                 <a href={project.vercel} target="_blank" onMouseOver={()=>setWord("Website")} onMouseOut={()=>setWord("")} style={{margin:"15px 25px"}}>
-                                    <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={38} height={38}  />
+                                    <Image alt="live webpage image" className='linkVercel' src="/Vercel/live.png" width={35} height={35}  />
                                 </a>
                             }
                         </Box>
+
                         <Box width="100%" flexDir="column">
-                            
                             <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Project Overview</Heading>
                             <Text padding="20px 0 0 0">{project.projectOverview}</Text>
 
@@ -91,7 +92,7 @@ export default function Project(){
                             <Text padding="20px 0 0 0">{project.role}</Text>
 
                             <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="90px 0 0 0">Technologies Used</Heading>
-                            <Box padding="20px 0 0 0" flexWrap="wrap" justCont="space-between">
+                            <Box padding="20px 0 0 0" flexWrap="wrap" justCont="space-between" gap="10px">
                                 {project.tech && project.tech.map((o,i)=>(
                                     <Reveal key={i} starting="hiddenFromLeft" delay={0.1*i + 0.2}>
                                         <TechCard src={o} alt={o} heading={o} />
@@ -114,7 +115,7 @@ export default function Project(){
                                 </Box>
                             ))}
                             
-                            <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="80px 0 20px 0">Code Snippets</Heading>
+                            <Heading id="secondHeading" color='#9DFFFF' fSize="22px" width="100%" padding="80px 0 20px 0">Code Snippets</Heading>
                             <Box width="100%" flexDir="column" aliIt="center">
                                 <Box width="100%">
                                     {project.carousel && project.carousel.map((o,i)=>(
@@ -123,32 +124,32 @@ export default function Project(){
                                 </Box>
                                 {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300}  style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"10px"}} />}
                             </Box>
-                            
 
-                            <Heading id="secondHeading" color='#9DFFFF'  fSize="22px" width="100%" padding="100px 0 15px 0">Lessons Learned</Heading>
+                            <Heading id="secondHeading" color='#9DFFFF' fSize="22px" width="100%" padding="100px 0 15px 0">Lessons Learned</Heading>
                             {project.lessonsLearned && project.lessonsLearned.map((o,i) => (
                                 <CollapseCard key={i} index={i} content={o} state={collapse} onClick={()=>setCollapse(i)} />
                             ))}
                         </Box>
-												<hr style={{width:"100%", margin:"100px 0", borderWidth:"5px", borderColor:"#B23C87", borderStyle: "dotted none none none"}} />
+
+						<hr style={{width:"100%", margin:"100px 0", borderWidth:"5px", borderColor:"#B23C87", borderStyle: "dotted none none none"}} />
+
                         <Container flexDir="column" width="100%">
-                            <Heading id="secondHeading"  color='#B23C87' padding="10px 0">Other Projects</Heading>
+                            <Heading id="secondHeading" fSize="22px" color='#B23C87' padding="10px 0">Other Projects</Heading>
                             <Box width="100%" borderRadius="10px" flexDir="column">
-															{ProjectList.filter((o) => o.name != project.name).map((filteredObj, i) => (
-																	<Link key={i} href={filteredObj.name} style={{ textDecoration: "none" }}>
-																			<RelatedCard alt={filteredObj.name} src={filteredObj.image} heading={filteredObj.name} preview={filteredObj.preview} />
-																	</Link>
-															))}
+                                {ProjectList.filter((o) => o.name != project.name).map((filteredObj, i) => (
+                                    <Link key={i} href={filteredObj.name} style={{ textDecoration: "none" }}>
+                                            <RelatedCard alt={filteredObj.name} src={filteredObj.image} heading={filteredObj.name} preview={filteredObj.preview} />
+                                    </Link>
+                                ))}
                             </Box>
                         </Container>
+
                         <Container flexDir="column" width="100%" padding="90px 0">
-                            <Heading id="secondHeading"  color='#B23C87'  padding="10px 0">Wanna Talk?</Heading>
+                            <Heading id="secondHeading" fSize="22px" color='#B23C87'  padding="10px 0">Wanna Talk?</Heading>
                             <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. OR check out my socials below. <strong>Ttyl!</strong></Text>
-                            <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
-                                <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
-                                <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
-                            </Box>
+                            <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
                         </Container>
+
                     </Container>
                 </Container>
             </PageTransition>

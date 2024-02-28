@@ -8,7 +8,7 @@ import { Box, Hero, Container, Text, CTA, Image } from '@/src/app/components/glo
 import BrowserModel from '@/src/app/components/browserModel'
 import TechSlideshow from '@/src/app/components/slideshow'
 import Card from '@/src/app/components/card'
-import ContactComp from '@/src/app/components/contact'
+import Contact from '@/src/app/components/contact'
 import Skills from '@/public/data/skills.json'
 import ProjectsList from "@/public/data/project-list.json"
 import WorkExperienceList from "@/public/data/work-list.json"
@@ -146,10 +146,7 @@ export default function Home() {
               <Container ref={contactRef} id="Contact" flexDir="column" width="100%" maxWidth="1850px" padding="0px 150px 100px 150px">
                 <Animate id="secondHeading" fSize="25px" type="heading" starting="hiddenFromLeft" color='#B23C87' padding="10px 0" text="Wanna Talk?" />
                 <Text padding="0 0 50px 0">If you're interested in working on a project together or just wanna reach out to me, fill out the form below. <strong>Ttyl!</strong></Text>
-                <Box width="100%" minHeight="250px" border="1px solid grey" borderRadius="10px" flexDir="column">
-                  <Hero src="/SVG/Browser.svg" bgSize="cover" bgRepeat="no-repeat" width="100%" height="45px" />
-                  <ContactComp PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
-                </Box>
+                <Contact PUBLICkey={process.env.NEXT_PUBLIC_PRIVATE_API_KEY} />
               </Container>
             </Container> 
           </PageTransition>
