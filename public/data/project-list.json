@@ -1,5 +1,76 @@
 [ 
   {
+  "name": "FictiChat",
+  "preview":"FictiChat is a AI chat app that enable users to engage in interactive conversations with famous characters and historical figures, whether for entertainment or educational purposes.",
+  "image":"/FictiChat.png",
+  "date":"February 2024 - March 2024",
+  "projectOverview":"FictiChat is an innovative AI-powered chat application that brings together users and a diverse cast of fictional characters and historical figures for engaging conversations. Through user-friendly features and cutting-edge technology, users can effortlessly interact with their favorite characters and delve into fascinating historical narratives. Whether seeking entertainment or educational enrichment, FictiChat offers a versatile platform where users can enjoy extended dialogues and discover new insights.",
+  "roleName":"Full Stack Developer",
+  "role":"This was a solo project that I had been wanting to develop for a few months because I wanted to try using AI in an application. Finally, I took the initiative to research how to do it. I had to research how to implement MySQL since it is a DBMS highly sought after in jobs, and this was an opportunity to learn how to use it. Additionally, I had to debug errors that occurred on both the frontend and backend. I wrote APIs and tested them with Postman. I built the frontend with appealing visual design and responsive design.",
+  "tech": [
+    "NextJS", "React", "HTML", "CSS", "TypeScript", "MySQL", "TailwindCSS", "Postman", "Axios", "Framer Motion", "Git", "Figma"
+  ],
+  "keyFeatures": [
+    {
+      "title": "Character Selection",
+      "content": "A diverse array of fictional characters and historical figures to choose from, each with their own distinct personalities and backgrounds. This character selection feature allows users to tailor their chat experience to their interests and preferences, ensuring a personalized and immersive interaction."
+    },
+    {
+      "title": "Stored Chat",
+      "content": "The app keeps a record of past conversations, allowing users to revisit previous chats, review insights gained, and continue ongoing discussions."
+    },
+    {
+      "title": "Feedback",
+      "content": "Users can submit their requests and suggestions for adding new characters to the platform. Users can provide details such as the name of the character, their background or historical significance, and why they believe the character would be a valuable addition to the app."
+    },
+    {
+      "title": "Private",
+      "content": "The app prioritizes user privacy and safety, implementing measures such as encryption, content moderation, and parental controls."
+    }
+  ],
+  "designDevelopmentProcess": [
+    {
+        "content":"Initially, in June 2023, I simply wanted to create a chat with Cher Horowitz from Clueless. I then considered adding more characters, with the intention of making the web app public to allow for conversations with different people. From the outset, I didn't want to include functionality that would allow users to create their own characters, as managing inappropriate characters that might arise if the app gained traction would be difficult. Before I began designing, I sought out other web applications with similar functionalities to determine what I wanted to incorporate into my own web app.",
+        "image": null,
+        "alt": null,
+        "figma": null,
+        "figmaAlt": null
+    },
+    {
+        "content":"To integrate AI, I checked out OpenAI's API, which looked pretty straightforward. So, I kicked off by setting it up in the backend and creating API routes to test the dialogues it churned out based on the prompts I fed it. Following the CI/CD pipeline, after every feature I planned, built, and released, I deployed it and kept an eye on how it performed live. This made troubleshooting a breeze because I could quickly spot where things went haywire on the live version, which sometimes acted differently than on localhost. Meanwhile, I just stashed chats using localStorage until I figured out how to hook up a MySQL database.",
+        "image": "/FictiChat/AI Backend.png",
+        "alt": "Image showing the implementation of OpenAI's API through a RESTful API route.",
+        "figma": null,
+        "figmaAlt": null
+    },
+    {
+        "content":"I began a Figma file to design the frontend and decide on the features I wanted to include, such as Sign Up, Chat History, Feedback Form, and Character Selection. I started implementing each feature separately, along with its backend, and was also learning MySQL to integrate it with the web app. Initially, I encountered problems because I didn't fully grasp why a hosted database was necessary. However, I eventually found one that simplified the implementation process, and after a few attempts, the database was operational on the live version. Once I verified the database implementation and ensured that all interactions were functioning properly as a user, I shifted my focus to checking the responsive design.",
+        "image": null,
+        "alt": null,
+        "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FOdqnqcB52qtTVxz1xaCWfK%2FFictichat%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DBzLWrUmyg3wAt0yz-1",
+        "figmaAlt": "Figma of all the screens I included in the final Fictichat app."
+    }
+  ],
+  "lessonsLearned": [
+    {
+      "title": "Back-End Tech",
+      "content": "Working on the backend this time was more exciting because I found it really rewarding to overcome the numerous errors and see it finally working. I delved into databases that could receive queries through APIs, which was a new experience for me. Surprisingly, it turned out to be simpler than I had initially thought after Googling a few examples to get a sense of what it would look like."
+    },
+    {
+      "title": "Security",
+      "content": "I stored user information within my databases, simplifying the process by using IDs to connect users with the chats they had with each character who also had the same ID. I ensured that this information couldn't be accessed via the URL query or within the code itself, both by the user and by anyone else. I preferred this method of storing user data compared to my past experiences with Next-Auth. The only tricky part was figuring out how to host my database online, which was a bit of a headache since it was my first time doing such research for a full-stack project."
+    },
+    {
+      "title": "API Integration",
+      "content": "I gained a better understanding of errors I would encounter with RESTful APIs by sending messages to myself through these API routes. Using Postman, I could easily see what was causing the errors, which made problem-solving more enjoyable. This hands-on experience allowed me to identify and diagnose issues directly within the application. Moreover, it emphasized the importance of thorough testing and iteration in the development process."
+    }
+  ],
+  "carousel":[
+    "/FictiChat/0.jpg","/FictiChat/1.jpg", "/FictiChat/2.jpg", "/FictiChat/3.jpg", "/FictiChat/4.jpg"
+  ],
+  "github":"https://github.com/anagarango/FictiChat",
+  "vercel":"https://fictichat.vercel.app/"
+  },{
     "name": "Rooty",
     "preview":"Rooty is a freelance marketplace app that helps BCIT students sell or barter their services to other students to improve their experience and build their portfolios.",
     "image":"/Rooty.png",
