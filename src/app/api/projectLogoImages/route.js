@@ -13,8 +13,8 @@ import { NextResponse } from 'next/server';
 export async function GET() {
   const folderPath = path.join(process.cwd(), 'public/HorizontalLogos');
 
-  console.log('Current working directory:', process.cwd());
-  console.log('Resolved folder path:', folderPath);
+  // console.log('Current working directory:', process.cwd());
+  // console.log('Resolved folder path:', folderPath);
 
   try {
     const fileNames = fs.readdirSync(folderPath)

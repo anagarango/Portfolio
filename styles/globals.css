@@ -1,10 +1,8 @@
-@import '../node_modules/swiper/swiper.min.css';
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: var(--font-raleway);
+  font-family: var(--font-raleway), Helvetica;
 }
 
 html,
@@ -19,12 +17,12 @@ p {
 }
 
 #secondHeading{
-  font-family: var(--font-staatliches);
+  font-family: var(--font-staatliches), Helvetica;
 }
 
 main{
   background-color: #0a002c;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 55px;
   width: 100vw;
   height: fit-content;
 }
@@ -36,6 +34,10 @@ main{
 #projectMain{
   height: 100vh;
   overflow: auto
+}
+
+#openingmain{
+  display:none
 }
 
 .linkVercel:hover{
@@ -93,9 +95,6 @@ main{
   animation-delay: 4s;
 }
 
-#openingmain{
-  animation: mainnoscroll 1s ease-in-out;
-}
 
 .projectcard{
   flex-direction: row !important

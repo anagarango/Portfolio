@@ -6,7 +6,7 @@ export default function Reveal({
   children, 
   widthReveal="fit-content", 
   starting, 
-  delay=0.8,
+  delay=0.3,
   ...props
 }){
   const ref = useRef(null)

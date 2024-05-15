@@ -6,11 +6,13 @@ const staatliches = Staatliches({
   subsets: ['latin'],
   variable: '--font-staatliches',
   display: 'swap',
+  fallback: [ "Helvetica", "Arial" ]
 })
 const raleway = Raleway({
   subsets: ['latin'],
   variable: '--font-raleway',
   display: 'swap',
+  fallback: [ "Helvetica", "Arial" ]
 })
 
 export const metadata = {

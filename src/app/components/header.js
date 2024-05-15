@@ -24,11 +24,11 @@ export default function Header({
   }
 
     return(
-      <Box width="60px" position="fixed" left="0" top="0" height={height} bgColor="#2B255B" flexDir="column" aliIt="center" zIndex="5">
+      <Box width="55px" position="fixed" left="0" top="0" height={height} bgColor="#2B255B" flexDir="column" aliIt="center" zIndex="5">
         {HeaderImage.map((o, i) => (
-            <div key={i} onClick={() => {type=="project" ? handleHeaderScrollItem(o) : handleItemClick(refs[o])}} style={{ display: 'flex', margin: '18px 0px', cursor:"pointer" }}>
-            <Image alt={o} src={`/SVG/${o}.svg`} width={33} height={33}/>
-            </div>
+          <div key={i} onClick={() => {type=="project" ? router.push("/") : handleItemClick(refs[o])}} style={{ display: 'flex', margin: '18px 0px', cursor:"pointer" }}>
+            <Image alt={o} src={`/SVG/${o}.svg`} width={30} height={30}/>
+          </div>
         ))}
 
         <a title="Resume" href="/AnaArango-Resume.pdf" target="_blank" style={{ position: 'absolute', bottom: 55, padding: '10px' }}>

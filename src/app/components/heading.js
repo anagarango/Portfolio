@@ -5,7 +5,7 @@ export default function Animate({
   text,
   widthReveal,
   starting="hiddenFromLeft",
-  delay=0.6,
+  delay=0.3,
   type,
   ...props
 }){

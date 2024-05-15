@@ -67,7 +67,7 @@ export default function Project(){
                     <Container id="ProjectPage" flexDir="column" width="100%" maxWidth="1800px" padding="150px 150px 50px 150px" aliIt="center">
                         <Hero src="/SVG/blob.svg" bgPosition="50% 35%" minHeight="75vh" width="100%" bgSize="contain" bgRepeat="no-repeat" aliIt="center" justCont="center" flexDir="column">
                             <Heading id="secondHeading" color='#9DFFFF' fSize="60px" margin="-125px 0 -20px 0"  textAlign="center">{project.name}</Heading>
-                            <Image alt={project.preview || "no image available at the moment"} src={project.image || "/noImage.jpg"} width={600} height={300}  style={{width:"60vw", height:"auto", borderRadius:"10px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
+                            <Image blurDataURL="data:..." placeholder="blur" alt={project.preview || "no image available at the moment"} src={project.image || "/noImage.jpg"} width={600} height={300}  style={{width:"60vw", height:"auto", borderRadius:"10px", boxShadow:"0px 5px 45px 1px #000000", zIndex:"2", minWidth:"200px", maxWidth:"1000px"}} />
                             <Heading id="secondHeading" color='#9DFFFF' fSize="25px"  textAlign="center">{project.date}</Heading>
                         </Hero>
 
@@ -119,10 +119,10 @@ export default function Project(){
                             <Box width="100%" flexDir="column" aliIt="center">
                                 <Box width="100%">
                                     {project.carousel && project.carousel.map((o,i)=>(
-                                        <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)}  style={{width:`calc(100% / ${project.carousel.length} - 10px)`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", margin:"0px 5px", border: o == imageCarousel ? "1px solid rgb(157, 149, 220)" : "1px solid transparent", transition: "0.8s ease", borderRadius:"10px", cursor:"pointer", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)"}} />
+                                        <Image key={i} alt={o} src={o} width={600} height={300} onClick={()=>setImageCarousel(o)} blurDataURL="data:..." placeholder="blur" style={{width:`calc(100% / ${project.carousel.length} - 10px)`, height:"100px", objectFit:"cover", objectPosition: "50% 10%", margin:"0px 5px", border: o == imageCarousel ? "1px solid rgb(157, 149, 220)" : "1px solid transparent", transition: "0.8s ease", borderRadius:"10px", cursor:"pointer", filter: o == imageCarousel ? "sepia(0%)  saturate(150%)" : "sepia(100%)"}} />
                                     ))}
                                 </Box>
-                                {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300}  style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"10px"}} />}
+                                {project.carousel && <Image alt={imageCarousel} src={imageCarousel} width={600} height={300} blurDataURL="data:..." placeholder="blur" style={{width:"100%", height:"auto", margin:"20px 0 0 0", maxWidth:"1200px", borderRadius:"10px"}} />}
                             </Box>
 
                             <Heading id="secondHeading" color='#9DFFFF' fSize="22px" width="100%" padding="100px 0 15px 0">Lessons Learned</Heading>

@@ -29,27 +29,25 @@ export default function WorkCard({
     const techControls = tech.map(() => useAnimation());
 
     return(
-        <Reveal starting={"hiddenFromLeft"} flexDir="column" margin="20px 0px" padding="30px" aliIt="stretch" width="100%" bgColor='rgb(39, 39, 76)' borderRadius="10px" overflow="hidden">
+        <Reveal starting={"hiddenFromBottom"} flexDir="column" margin="20px 0px" padding="30px" aliIt="stretch" width="100%" bgColor='rgb(39, 39, 76)' borderRadius="10px" overflow="hidden">
           <Box width="100%" justCont="space-between">
-            <Animate type="heading" starting={"hiddenFromLeft"} color='#9DFFFF' fSize="19px" text={role} />
-            <Animate type="text" starting={"hiddenFromLeft"}  color='rgb(120, 120, 150)' fontWeight="600" text={date} />
+            <Animate type="heading" starting={"hiddenFromBottom"} color='#9DFFFF' fSize="19px" text={role} />
+            <Animate type="text" starting={"hiddenFromBottom"}  color='rgb(120, 120, 150)' fontWeight="600" text={date} />
           </Box>
-
-          <Animate width="fit-content" type="text" starting={"hiddenFromLeft"} color='rgb(120, 120, 150)' fSize="18px" padding="0 0 10px 0" fontWeight="600" text={workplace} />
-          <Animate width="fit-content" type="text" starting={"hiddenFromLeft"} text={preview} />
-          <Box ref={ref} className="projectcardtech" flexWrap="wrap" padding="20px 0px" overflow="hidden">
+          <Reveal starting={"hiddenFromBottom"} flexDir="column" width="100%" bgColor='rgb(39, 39, 76)' borderRadius="10px">
+            <Text width="fit-content" color='rgb(120, 120, 150)' fSize="18px" padding="0 0 10px 0" fontWeight="600">{workplace}</Text>
+            <Text width="fit-content">{preview}</Text>
+            <Box ref={ref} className="projectcardtech" flexWrap="wrap" padding="20px 0px">
               {tech.map((text, index) => (
-                  <Tag key={index} initial={{opacity:0, x:-275}} animate={techControls[index]} transition={{ duration: 0.5, delay: index * 0.1}} >
-                  {text}
+                  <Tag key={index} transition={{ duration: 0.5, delay: index * 0.1}} >
+                    {text}
                   </Tag>
               ))}
-          </Box>
-          <Reveal width="fit-content" starting={"hiddenFromLeft"}>
+            </Box>
             <Link href={link} target="_blank" style={{textDecoration:"none"}}>
               <CTA>Visit</CTA>
-              </Link>
+            </Link>
           </Reveal>
-            
         </Reveal>
     )
 }
