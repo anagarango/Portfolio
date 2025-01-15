@@ -1,76 +1,222 @@
 [ 
   {
-  "name": "FictiChat",
-  "preview":"FictiChat is a AI chat app that enable users to engage in interactive conversations with famous characters and historical figures, whether for entertainment or educational purposes.",
-  "image":"/FictiChat.png",
-  "date":"February 2024 - March 2024",
-  "projectOverview":"FictiChat is an innovative AI-powered chat application that brings together users and a diverse cast of fictional characters and historical figures for engaging conversations. Through user-friendly features and cutting-edge technology, users can effortlessly interact with their favorite characters and delve into fascinating historical narratives. Whether seeking entertainment or educational enrichment, FictiChat offers a versatile platform where users can enjoy extended dialogues and discover new insights.",
+    "name": "FictiChat",
+    "preview":"FictiChat is a AI chat app that enable users to engage in interactive conversations with famous characters and historical figures, whether for entertainment or educational purposes.",
+    "image":"/FictiChat.png",
+    "date":"February 2024 - March 2024",
+    "projectOverview":"FictiChat is an innovative AI-powered chat application that brings together users and a diverse cast of fictional characters and historical figures for engaging conversations. Through user-friendly features and cutting-edge technology, users can effortlessly interact with their favorite characters and delve into fascinating historical narratives. Whether seeking entertainment or educational enrichment, FictiChat offers a versatile platform where users can enjoy extended dialogues and discover new insights.",
+    "roleName":"Full Stack Developer",
+    "role":"This was a solo project that I had been wanting to develop for a few months because I wanted to try using AI in an application. Finally, I took the initiative to research how to do it. I had to research how to implement MySQL since it is a DBMS highly sought after in jobs, and this was an opportunity to learn how to use it. Additionally, I had to debug errors that occurred on both the frontend and backend. I wrote RESTful APIs and tested them with Postman. I built the frontend with appealing visual design and responsive design.",
+    "tech": [
+      "NextJS", "React", "HTML", "CSS", "TypeScript", "MySQL", "TailwindCSS", "Postman", "Axios", "Framer Motion", "Git", "Figma"
+    ],
+    "keyFeatures": [
+      {
+        "title": "Character Selection",
+        "content": "A diverse array of fictional characters and historical figures to choose from, each with their own distinct personalities and backgrounds. This character selection feature allows users to tailor their chat experience to their interests and preferences, ensuring a personalized and immersive interaction."
+      },
+      {
+        "title": "Stored Chat",
+        "content": "The app keeps a record of past conversations, allowing users to revisit previous chats, review insights gained, and continue ongoing discussions."
+      },
+      {
+        "title": "Feedback",
+        "content": "Users can submit their requests and suggestions for adding new characters to the platform. Users can provide details such as the name of the character, their background or historical significance, and why they believe the character would be a valuable addition to the app."
+      },
+      {
+        "title": "Private",
+        "content": "The app prioritizes user privacy and safety, implementing measures such as encryption, content moderation, and parental controls."
+      }
+    ],
+    "designDevelopmentProcess": [
+      {
+          "content":"Initially, in June 2023, I simply wanted to create a chat with Cher Horowitz from Clueless. I then considered adding more characters, with the intention of making the web app public to allow for conversations with different people. From the outset, I didn't want to include functionality that would allow users to create their own characters, as managing inappropriate characters that might arise if the app gained traction would be difficult. Before I began designing, I sought out other web applications with similar functionalities to determine what I wanted to incorporate into my own web app.",
+          "image": null,
+          "alt": null,
+          "figma": null,
+          "figmaAlt": null
+      },
+      {
+          "content":"To integrate AI, I checked out OpenAI's API, which looked pretty straightforward. So, I kicked off by setting it up in the backend and creating API routes to test the dialogues it churned out based on the prompts I fed it. Following the CI/CD pipeline, after every feature I planned, built, and released, I deployed it and kept an eye on how it performed live. This made troubleshooting a breeze because I could quickly spot where things went haywire on the live version, which sometimes acted differently than on localhost. Meanwhile, I just stashed chats using localStorage until I figured out how to hook up a MySQL database.",
+          "image": "/FictiChat/AI Backend.png",
+          "alt": "Image showing the implementation of OpenAI's API through a RESTful API route.",
+          "figma": null,
+          "figmaAlt": null
+      },
+      {
+          "content":"I began a Figma file to design the frontend and decide on the features I wanted to include, such as Sign Up, Chat History, Feedback Form, and Character Selection. I started implementing each feature separately, along with its backend, and was also learning MySQL to integrate it with the web app. Initially, I encountered problems because I didn't fully grasp why a hosted database was necessary. However, I eventually found one that simplified the implementation process, and after a few attempts, the database was operational on the live version. Once I verified the database implementation and ensured that all interactions were functioning properly as a user, I shifted my focus to checking the responsive design.",
+          "image": null,
+          "alt": null,
+          "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FOdqnqcB52qtTVxz1xaCWfK%2FFictichat%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DBzLWrUmyg3wAt0yz-1",
+          "figmaAlt": "Figma of all the screens I included in the final Fictichat app."
+      }
+    ],
+    "lessonsLearned": [
+      {
+        "title": "Back-End Tech",
+        "content": "Working on the backend this time was more exciting because I found it really rewarding to overcome the numerous errors and see it finally working. I delved into databases that could receive queries through APIs, which was a new experience for me. Surprisingly, it turned out to be simpler than I had initially thought after Googling a few examples to get a sense of what it would look like."
+      },
+      {
+        "title": "Security",
+        "content": "I stored user information within my databases, simplifying the process by using IDs to connect users with the chats they had with each character who also had the same ID. I ensured that this information couldn't be accessed via the URL query or within the code itself, both by the user and by anyone else. I preferred this method of storing user data compared to my past experiences with Next-Auth. The only tricky part was figuring out how to host my database online, which was a bit of a headache since it was my first time doing such research for a full-stack project."
+      },
+      {
+        "title": "API Integration",
+        "content": "I gained a better understanding of errors I would encounter with RESTful APIs by sending messages to myself through these API routes. Using Postman, I could easily see what was causing the errors, which made problem-solving more enjoyable. This hands-on experience allowed me to identify and diagnose issues directly within the application. Moreover, it emphasized the importance of thorough testing and iteration in the development process."
+      }
+    ],
+    "carousel":[
+      "/FictiChat/0.jpg","/FictiChat/1.jpg", "/FictiChat/2.jpg", "/FictiChat/3.jpg", "/FictiChat/4.jpg"
+    ],
+    "github":"https://github.com/anagarango/FictiChat",
+    "vercel":"https://fictichat.vercel.app/"
+  },{
+  "name": "ChefWilly",
+  "preview":"ChefWilly is designed to assist users (mostly for my brother) in finding recipes based on the ingredients they have on hand. Whether you're looking to whip up a quick meal or get creative with what's in your pantry, ChefWilly has you covered.",
+  "image":"/ChefWilly.png",
+  "date":"March 2024 - April 2024",
+  "projectOverview":"ChefWilly is a recipe application that allows users to find recipes with the ingredients they have on hand. Through user-friendly features, users can effortlessly sign in to store their ingredients and favourite recipes. Simply designed to show most relevant recipes based on the least missing ingredients based on what you have entered as ingredients.",
   "roleName":"Full Stack Developer",
-  "role":"This was a solo project that I had been wanting to develop for a few months because I wanted to try using AI in an application. Finally, I took the initiative to research how to do it. I had to research how to implement MySQL since it is a DBMS highly sought after in jobs, and this was an opportunity to learn how to use it. Additionally, I had to debug errors that occurred on both the frontend and backend. I wrote APIs and tested them with Postman. I built the frontend with appealing visual design and responsive design.",
+  "role":"This was a solo project I made for my brother who wanted an app where he can store all the ingredients he has in his pantry and can easily look for recipes based on what he has at home. I found an API that has many API calls which gave me more options on which data I would like to receive and display. Since I wanted to have the feature of being able to favourite recipes and not have to re-enter the ingredients everytime, I needed to implement a database which I chose MySQL since it is a DBMS highly sought after in jobs, and took that as an opportunity. I built the backend of writing RESTful APIs for the API calls and tested them with Postman, and implemented authhorization for signing in and storing ingredients and recipes. I built the frontend with appealing visual design and responsive design.",
   "tech": [
-    "NextJS", "React", "HTML", "CSS", "TypeScript", "MySQL", "TailwindCSS", "Postman", "Axios", "Framer Motion", "Git", "Figma"
+    "NextJS", "React", "HTML", "CSS", "TypeScript", "MySQL", "Chakra UI", "Postman", "Axios", "Framer Motion", "Git", "Figma"
   ],
   "keyFeatures": [
     {
-      "title": "Character Selection",
-      "content": "A diverse array of fictional characters and historical figures to choose from, each with their own distinct personalities and backgrounds. This character selection feature allows users to tailor their chat experience to their interests and preferences, ensuring a personalized and immersive interaction."
+      "title": "Recipe Details",
+      "content": "View detailed information about each recipe, including ingredients, cooking instructions, preparation time, and serving sizes. Nutritional icons are included showing what diets these recipes fall into."
     },
     {
-      "title": "Stored Chat",
-      "content": "The app keeps a record of past conversations, allowing users to revisit previous chats, review insights gained, and continue ongoing discussions."
+      "title": "Filtering Options",
+      "content": "Refine recipe search results based on various criteria such as cuisine type, dietary restrictions, or meal types."
     },
     {
-      "title": "Feedback",
-      "content": "Users can submit their requests and suggestions for adding new characters to the platform. Users can provide details such as the name of the character, their background or historical significance, and why they believe the character would be a valuable addition to the app."
+      "title": "Ingredient Storage",
+      "content": "Once signed in, users can store their commonly used ingredients. The app provides a database with autocomplete suggestions for users to update/delete their stored ingredients as needed."
     },
     {
-      "title": "Private",
-      "content": "The app prioritizes user privacy and safety, implementing measures such as encryption, content moderation, and parental controls."
+      "title": "Cookbook Storage",
+      "content": "Save your favorite recipes to your personalized cookbook for easy access later."
+    },
+    {
+      "title": "Secure Authentication",
+      "content": "Users can create accounts and sign in securely to manage their saved recipes and stored ingredients, ensuring personalization and data persistence across sessions"
     }
   ],
   "designDevelopmentProcess": [
     {
-        "content":"Initially, in June 2023, I simply wanted to create a chat with Cher Horowitz from Clueless. I then considered adding more characters, with the intention of making the web app public to allow for conversations with different people. From the outset, I didn't want to include functionality that would allow users to create their own characters, as managing inappropriate characters that might arise if the app gained traction would be difficult. Before I began designing, I sought out other web applications with similar functionalities to determine what I wanted to incorporate into my own web app.",
+        "content":"The target audience includes my brother and users with similar needs, prioritizing simplicity and utility. So I directly worked with him and took in his feedback to have an end product where he would like to visit back and use it when he needs recipe ideas. I started to research which features a recipe app would have and looked into how I would design the ingredient and cookbook storage that was easily accessible and easy to understand since I hadn't come across such features.",
         "image": null,
         "alt": null,
         "figma": null,
         "figmaAlt": null
     },
     {
-        "content":"To integrate AI, I checked out OpenAI's API, which looked pretty straightforward. So, I kicked off by setting it up in the backend and creating API routes to test the dialogues it churned out based on the prompts I fed it. Following the CI/CD pipeline, after every feature I planned, built, and released, I deployed it and kept an eye on how it performed live. This made troubleshooting a breeze because I could quickly spot where things went haywire on the live version, which sometimes acted differently than on localhost. Meanwhile, I just stashed chats using localStorage until I figured out how to hook up a MySQL database.",
-        "image": "/FictiChat/AI Backend.png",
-        "alt": "Image showing the implementation of OpenAI's API through a RESTful API route.",
+        "content":"For the technology stack, I chose Next.js for the frontend due to its fast performance, while TypeScript ensures type safety and maintainable code. I selected Chakra UI to provide a cohesive, customizable, and visually appealing design system. On the backend, I handled the RESTful APIs logic within Next.js, chose MySQL for its popularity in job descriptions database, and used Axios for API calls to the external recipe API.",
+        "image": "/ChefWilly/IngredientAPI.jpg",
+        "alt": "Image showing the implementation of a RESTful API route interacting with the database.",
         "figma": null,
         "figmaAlt": null
     },
     {
-        "content":"I began a Figma file to design the frontend and decide on the features I wanted to include, such as Sign Up, Chat History, Feedback Form, and Character Selection. I started implementing each feature separately, along with its backend, and was also learning MySQL to integrate it with the web app. Initially, I encountered problems because I didn't fully grasp why a hosted database was necessary. However, I eventually found one that simplified the implementation process, and after a few attempts, the database was operational on the live version. Once I verified the database implementation and ensured that all interactions were functioning properly as a user, I shifted my focus to checking the responsive design.",
+        "content":"I started with user interface design such as a mockup to visualize the app layouts, focusing on responsive design to ensure usability on different devices. Once the design was finished and approved by my brother after some iterations, I started developing the frontend creating components using Next.js and Chakra UI. When I was done with frontend with buttons that weren't clicking to anything, I started the backend to manage user authentication, ingredient storage, and interactions with the recipe API. I used Postman to ensure accurate and efficient data handling and implemented after a MySQL database to manage user accounts, stored ingredients, and favorite recipes.",
         "image": null,
         "alt": null,
-        "figma": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FOdqnqcB52qtTVxz1xaCWfK%2FFictichat%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DBzLWrUmyg3wAt0yz-1",
-        "figmaAlt": "Figma of all the screens I included in the final Fictichat app."
+        "figma": "https://www.figma.com/file/1J7dkkqb5CPB9YzYt5fNXc?embed_host=share&kind=file&mode=design&node-id=0%3A1&page-selector=0&t=BzLWrUmyg3wAt0yz-1&type=design&viewer=1",
+        "figmaAlt": "Figma of all the screens I included in the final ChefWilly app."
     }
   ],
   "lessonsLearned": [
     {
       "title": "Back-End Tech",
-      "content": "Working on the backend this time was more exciting because I found it really rewarding to overcome the numerous errors and see it finally working. I delved into databases that could receive queries through APIs, which was a new experience for me. Surprisingly, it turned out to be simpler than I had initially thought after Googling a few examples to get a sense of what it would look like."
+      "content": "Designing RESTful APIs and testing them with Postman highlighted the importance of planning endpoints for scalability and ensuring clean data flow between the frontend and backend."
     },
     {
       "title": "Security",
-      "content": "I stored user information within my databases, simplifying the process by using IDs to connect users with the chats they had with each character who also had the same ID. I ensured that this information couldn't be accessed via the URL query or within the code itself, both by the user and by anyone else. I preferred this method of storing user data compared to my past experiences with Next-Auth. The only tricky part was figuring out how to host my database online, which was a bit of a headache since it was my first time doing such research for a full-stack project."
+      "content": "Adding user authentication taught me about securing user data through encryption, session management, and implementing secure sign-in workflows."
     },
     {
       "title": "API Integration",
-      "content": "I gained a better understanding of errors I would encounter with RESTful APIs by sending messages to myself through these API routes. Using Postman, I could easily see what was causing the errors, which made problem-solving more enjoyable. This hands-on experience allowed me to identify and diagnose issues directly within the application. Moreover, it emphasized the importance of thorough testing and iteration in the development process."
+      "content": "Working with a recipe API taught me how to evaluate and utilize third-party APIs effectively, including understanding documentation, managing API limits, and filtering relevant data for ChefWilly."
     }
   ],
   "carousel":[
-    "/FictiChat/0.jpg","/FictiChat/1.jpg", "/FictiChat/2.jpg", "/FictiChat/3.jpg", "/FictiChat/4.jpg"
+    "/ChefWilly/0.jpg","/ChefWilly/1.jpg", "/ChefWilly/2.jpg", "/ChefWilly/3.jpg", "/ChefWilly/4.jpg"
   ],
-  "github":"https://github.com/anagarango/FictiChat",
-  "vercel":"https://fictichat.vercel.app/"
+  "github":"https://github.com/anagarango/ChefWilly",
+  "vercel":"https://chefwilly.starbooks.ca"
   },{
+    "name": "Drop QR-bility",
+    "preview":"Drop QR-bility developed using TypeScript that allows users to generate QR codes from an array of strings. The generated QR codes are available for download in .svg format",
+    "image":"/Drop QR-bility.png",
+    "date":"October 2024",
+    "projectOverview":"Drop QR-bility is a TypeScript Next.js project that simplifies QR code generation by allowing users to input multiple strings and create customizable QR codes for each as a technical assignment for Drop Mobility. It features flexible options to adjust padding, size, color, background, and error correction levels, ensuring tailored results for every need. Using the qrcode-svg library and MUI for styling, the project generates high-quality, scalable QR codes in .svg format, making them easy to download and use.",
+    "roleName":"Full Stack Developer",
+    "role":"I was the developer for Drop QR-bility, a technical assessment I took when interviewing for Drop Mobility, I designed and implemented a feature-rich QR code generation tool using TypeScript and Next.js. My responsibilities included building a responsive, user-friendly interface with MUI for styling and leveraging the qrcode-svg library to create customizable QR codes. I enabled dynamic customization options such as padding, size, color, background, and error correction levels to ensure the QR codes met diverse user needs. I also incorporated functionality for downloading the generated QR codes in scalable .svg format. This project showcased my ability to understand technical requirements, translate them into an efficient solution, and deliver high-quality, functional software within a tight timeline.",
+    "tech": [
+      "NextJS", "React", "HTML", "CSS", "TypeScript", "Material UI", "Git", "Figma"
+    ],
+    "keyFeatures": [
+      {
+        "title": "Input",
+        "content": "Accepts as many inputs as you want (array of strings) to generate QR codes for each one."
+      },
+      {
+        "title": "Output",
+        "content": "Generates customizable and downloadable QR code svgs."
+      },
+      {
+        "title": "Customization",
+        "content": "Users can change the padding, size, color, background, and error correction level for each QR code."
+      }
+    ],
+    "designDevelopmentProcess": [
+      {
+          "content":"The design and development process for the QR-Code Generator began with analyzing the requirements. The first step was determining the input format, which consisted of an array of strings, and ensuring that each string could be converted into a separate QR code in .svg format. I chose TypeScript and Next.js for maintainable code, using the qrcode-svg library for generating high-quality QR codes and MUI for a clean, user-friendly interface.",
+          "image": null,
+          "alt": null,
+          "figma": null,
+          "figmaAlt": null
+      },
+      {
+          "content":"I focused on providing customization options for users, including adjustable QR code size, padding, color, background, and error correction levels. This flexibility ensured the tool could meet various use cases. I also prioritized input validation to handle edge cases and prevent errors, such as ensuring the input array contained valid strings.",
+          "image": null,
+          "alt": null,
+          "figma": null,
+          "figmaAlt": null
+      },
+      {
+          "content":"For the download functionality, I ensured that the generated QR codes could be easily downloaded by users in .svg format. I also included error handling throughout the application to manage invalid inputs or failed QR code generation. Throughout development, I focused on clean, readable code with thorough testing to ensure a smooth user experience. Finally, I uploaded the project to GitHub and prepared to discuss my approach and challenges in the interview.",
+          "image": null,
+          "alt": null,
+          "figma": "https://www.figma.com/file/fDZEsneEJKldO7W02jw3WS?embed_host=share&kind=file&mode=design&node-id=0%3A1&page-selector=0&t=BzLWrUmyg3wAt0yz-1&type=design&viewer=1",
+          "figmaAlt": "Figma of the screen I included in the final Drop QR-bility app."
+      }
+    ],
+    "lessonsLearned": [
+      {
+        "title": "Adaptability",
+        "content": "Adapt to the requirements of the technical assignment, customizing the QR code generator with features like size, padding, and error correction, while also incorporating user-friendly functionality"
+      },
+      {
+        "title": "API Integration",
+        "content": "By using the qrcode-svg library for QR code generation, I gained experience integrating third-party libraries into a project to extend its functionality."
+      },
+      {
+        "title": "User Experience",
+        "content": "I focused on creating a clean and intuitive interface using MUI, ensuring the tool was easy to use, with clear options for customization and a smooth download process."
+      },
+      {
+        "title": "Documentation",
+        "content": "I ensured my code was clean, well-documented, and easy to understand, making it maintainable and accessible for future updates or collaboration."
+      }
+    ],
+    "carousel":[
+      "/Drop QR-bility/0.jpg","/Drop QR-bility/1.jpg", "/Drop QR-bility/2.jpg", "/Drop QR-bility/3.jpg"
+    ],
+    "github":"https://github.com/anagarango/drop_mobility_tech_assignment",
+    "vercel":"https://drop-mobility-tech-assignment.vercel.app/"
+    },{
     "name": "Rooty",
     "preview":"Rooty is a freelance marketplace app that helps BCIT students sell or barter their services to other students to improve their experience and build their portfolios.",
     "image":"/Rooty.png",
