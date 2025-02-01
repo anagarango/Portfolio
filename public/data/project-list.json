@@ -144,7 +144,7 @@
     "/ChefWilly/0.jpg","/ChefWilly/1.jpg", "/ChefWilly/2.jpg", "/ChefWilly/3.jpg", "/ChefWilly/4.jpg"
   ],
   "github":"https://github.com/anagarango/ChefWilly",
-  "vercel":"https://chefwilly.starbooks.ca"
+  "vercel":"https://chefwilly.anagarango.ca"
   },{
     "name": "Drop QR-bility",
     "preview":"Drop QR-bility developed using TypeScript that allows users to generate QR codes from an array of strings. The generated QR codes are available for download in .svg format",
@@ -383,7 +383,7 @@
         "/She's A Keeper/0.jpg","/She's A Keeper/1.jpg", "/She's A Keeper/2.jpg", "/She's A Keeper/3.jpg", "/She's A Keeper/4.jpg"
       ],
     "github":"https://github.com/anagarango/sandracleaning",
-    "vercel":"https://shesakeeper.starbooks.ca"
+    "vercel":"https://shesakeeper.anagarango.ca"
   },{
     "name": "Check WeatHER",
     "preview":"Check WeatHER is a weather web app that shows the day's conditions, tomorrow's forecast, and 6-day forecast depending on which city the user writes on the input.",

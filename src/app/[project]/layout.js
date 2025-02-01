@@ -19,7 +19,7 @@ const raleway = Raleway({
 export async function generateMetadata({ params, searchParams, props }, parent) {
   var data
   try {
-    const response = await fetch(`https://starbooks.ca/api/projects?url=${params.project}`)
+    const response = await fetch(`https://anagarango.ca/api/projects?url=${params.project}`)
     data = await response.json();
   } catch (error) {
     console.error('Error parsing JSON:', error);
